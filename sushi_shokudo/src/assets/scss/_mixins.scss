@@ -1,5 +1,12 @@
 @use 'sass:color';
 
+/*
+$property: color or background-color
+$color: rgb or hex color
+$opacity: float between 0 and 1
+
+apply to a css class : set $property with $color and $opacity
+*/
 @mixin color-variation-opacity($property, $color, $opacity) {
 	@if $property == color or $property == background-color {
 		@if $opacity >= 0 and $opacity <= 1 {
@@ -17,5 +24,5 @@
 }
 
 @mixin border-color-style-opacity($border-style, $border-color, $border-opacity) {
-	
+
 }
