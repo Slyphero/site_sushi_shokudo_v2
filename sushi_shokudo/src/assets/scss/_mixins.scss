@@ -1,0 +1,21 @@
+@use 'sass:color';
+
+@mixin color-variation-opacity($property, $color, $opacity) {
+	@if $property == color or $property == background-color {
+		@if $opacity >= 0 and $opacity <= 1 {
+			// color: rgba(red($color), green($color), blue($color), $opacity);
+			$r: color.channel($color, "red", $space: rgb);
+			$g: color.channel($color, "green", $space: rgb);
+			$b: color.channel($color, "blue", $space: rgb);
+			#{$property}: rgba($r, $g, $b, $opacity);
+		} @else {
+				color: $color;
+		}
+	} @else {
+		@warn "#{$property} is not a valid color property";
+	}
+}
+
+@mixin border-color-style-opacity($border-style, $border-color, $border-opacity) {
+	
+}
