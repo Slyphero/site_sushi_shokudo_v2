@@ -5,7 +5,7 @@ import { RouterLink } from 'vue-router'
 </script>
 
 <template>
-	<p>Restaurant familial de <span class="accent-text">Sushis</span></p>
+	A propos	
 </template>
 
 <style scoped lang="scss">

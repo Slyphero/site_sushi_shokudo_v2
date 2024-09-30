@@ -1,25 +1,27 @@
 <script setup>
 import { RouterLink, RouterView } from 'vue-router'
+
+const navEntries = [
+	{ name: 'Accueil', link: '/accueil' },
+	{ name: 'Menu', link: '/menu' },
+	{ name: 'Commander', link: '/commander' },
+	{ name: 'A propos', link: '/a-propos' }
+]
 </script>
 
 <template>
   <header>
     <h1>Sushi Shokudo</h1>
-		<p>Restaurant familial de <span class="accent-text">Sushis</span></p>
+		<RouterLink v-for="navEntry in navEntries" :to=navEntry.link>{{ navEntry.name }}</RouterLink>
   </header>
   <RouterView />
   <footer>
-
   </footer>
 </template>
 
 <style lang="scss">
 	* {
 		font-family: 'Gabarito';
-	}
-
-	p {
-		font-size: 1.3em;
 	}
 
 	h1, .accent-text {
