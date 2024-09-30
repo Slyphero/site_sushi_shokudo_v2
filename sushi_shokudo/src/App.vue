@@ -11,7 +11,7 @@ const navEntries = [
 
 <template>
   <header>
-    <h1>Sushi Shokudo</h1>
+    <h1 class="heading">Sushi Shokudo</h1>
 		<RouterLink v-for="navEntry in navEntries" :to=navEntry.link>{{ navEntry.name }}</RouterLink>
   </header>
   <RouterView />
@@ -21,10 +21,14 @@ const navEntries = [
 
 <style lang="scss">
 	* {
-		font-family: 'Gabarito';
+		font-family: $body-font;
 	}
 
-	h1, .accent-text {
+	.heading {
+		font-family: $headings-font;
+	}
+
+	.heading, .accent-text {
 		@include color-variation-opacity(color, $primary-color, 1);
 	}
 </style>
