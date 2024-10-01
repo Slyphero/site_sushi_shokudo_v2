@@ -1,4 +1,10 @@
 @use 'sass:color';
+@use 'sass:list';
+
+$properties-color-list: color, background-color;
+$border-valid-sides: border, border-top, border-right, border-bottom, border-left;
+$border-valid-styles: dotted, dashed, solid, double, groove, ridge, inset, outset, none;
+$valid-colors: $primary-color, $text-color, $secondary-color, $background-color;
 
 /*
 $property: color or background-color
@@ -7,18 +13,25 @@ $opacity: float between 0 and 1
 
 apply to a css class : set $property with $color and $opacity
 */
-@mixin color-variation-opacity($property, $color, $opacity) {
-	@if $property == color or $property == background-color {
-		@if $opacity >= 0 and $opacity <= 1 {
-			$r: color.channel($color, "red", $space: rgb);
-			$g: color.channel($color, "green", $space: rgb);
-			$b: color.channel($color, "blue", $space: rgb);
-			#{$property}: rgba($r, $g, $b, $opacity);
-		} @else {
-			color: $color;
-		}
+@mixin property-color-opacity($property, $color, $opacity) {
+	@if list.index($properties-color-list, $property) and 
+	$opacity >= 0 and $opacity <= 1 
+	and list.index($valid-colors, $color) {
+		$r: color.channel($color, "red", $space: rgb);
+		$g: color.channel($color, "green", $space: rgb);
+		$b: color.channel($color, "blue", $space: rgb);
+		#{$property}: rgba($r, $g, $b, $opacity);
 	} @else {
-		@warn "#{$property} is not a valid color property";
+		@warn "check $property, $color, $opacity values";
 	}
 }
 
+@mixin border-color-style-width-radius-opacity(
+	$border,
+	$border-color,
+	$border-style,
+	$border-width,
+	$border-radius,
+	$opacity
+) {
+}

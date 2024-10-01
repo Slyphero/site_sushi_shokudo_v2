@@ -48,7 +48,7 @@ const navEntries: NavEntry[] = [
 	}
 
 	.heading, .accent-text {
-		@include color-variation-opacity(color, $primary-color, 1);
+		@include property-color-opacity(color, $primary-color, 1);
 	}
 
 	.header-container {
