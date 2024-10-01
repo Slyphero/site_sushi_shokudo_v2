@@ -1,7 +1,12 @@
 <script setup lang="ts">
 import { RouterLink, RouterView } from 'vue-router'
 
-const navEntries = [
+interface NavEntry {
+	name: string;
+	link: string;
+}
+
+const navEntries: NavEntry[] = [
 	{ name: 'Accueil', link: '/accueil' },
 	{ name: 'Menu', link: '/menu' },
 	{ name: 'Commander', link: '/commander' },
