@@ -1,11 +1,9 @@
-<script setup>
-
-import { RouterLink } from 'vue-router'
+<script setup lang="ts">
 
 </script>
 
 <template>
-Commander
+	
 </template>
 
 <style scoped lang="scss">

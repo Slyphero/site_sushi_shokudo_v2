@@ -1,4 +1,4 @@
-<script setup>
+<script setup lang="ts">
 import { RouterLink, RouterView } from 'vue-router'
 
 const navEntries = [
@@ -32,3 +32,4 @@ const navEntries = [
 		@include color-variation-opacity(color, $primary-color, 1);
 	}
 </style>
+

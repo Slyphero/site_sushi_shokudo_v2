@@ -4,7 +4,6 @@ import HomeView from '../views/HomeView.vue'
 import MenuView from '../views/MenuView.vue'
 import OrderView from '../views/OrderView.vue'
 import AboutView from '../views/AboutView.vue'
-import { compile } from 'vue'
 
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
