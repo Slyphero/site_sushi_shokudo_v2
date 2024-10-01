@@ -27,7 +27,7 @@ apply to a css class : set $property with $color and $opacity
 		$r: color.channel($color, "red", $space: rgb);
 		$g: color.channel($color, "green", $space: rgb);
 		$b: color.channel($color, "blue", $space: rgb);
-		#{$property}: rgba($r, $g, $b, $opacity);
+		background-color: rgba($r, $g, $b, $opacity);
 	} @else {
 		color: $color;
 	}
