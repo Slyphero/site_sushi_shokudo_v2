@@ -10,13 +10,12 @@ apply to a css class : set $property with $color and $opacity
 @mixin color-variation-opacity($property, $color, $opacity) {
 	@if $property == color or $property == background-color {
 		@if $opacity >= 0 and $opacity <= 1 {
-			// color: rgba(red($color), green($color), blue($color), $opacity);
 			$r: color.channel($color, "red", $space: rgb);
 			$g: color.channel($color, "green", $space: rgb);
 			$b: color.channel($color, "blue", $space: rgb);
 			#{$property}: rgba($r, $g, $b, $opacity);
 		} @else {
-				color: $color;
+			color: $color;
 		}
 	} @else {
 		@warn "#{$property} is not a valid color property";
