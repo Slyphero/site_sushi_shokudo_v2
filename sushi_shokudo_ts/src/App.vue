@@ -22,13 +22,30 @@ const navEntries: NavEntry[] = [
 				<img :src="logo" alt="">
 			</div>
 			
-			<nav>
-				<RouterLink v-for="navEntry in navEntries" :to=navEntry.link>{{ navEntry.name }}</RouterLink>
+			<nav class="header-links">
+				<RouterLink class="header-link" v-for="navEntry in navEntries" :to=navEntry.link>{{ navEntry.name }}</RouterLink>
 			</nav>
 		</header>
 	</div>
   <RouterView />
   <footer>
+		<nav class="footer-links">
+			<RouterLink class="footer-link" v-for="navEntry in navEntries" :to=navEntry.link>{{ navEntry.name }}</RouterLink>
+		</nav>
+
+		<div class="contact-container">
+			<ul>
+				<li>sushi.shokudo.lyon@gmail.com</li>
+				<li>Numéro</li>
+			</ul>
+		</div>
+
+		<div class="socials-container">
+			<ul>
+				<li>Lien facebook</li>
+				<li>Lien insta</li>
+			</ul>
+		</div>
   </footer>
 </template>
 
@@ -57,20 +74,49 @@ const navEntries: NavEntry[] = [
 		border-bottom: 1px solid rgba(0, 0, 0, .2);
 
 		header {
-			width: 50%;
+			width: 90%;
 			display: flex;
 			flex-direction: row;
 			align-items: center;
 			justify-content: space-between;
 
-			nav {
-				width: 50%;
+			.logo-container {
+				padding: 10px;
+			}
+
+			.header-links {
+				font-size: 24px;
+				width: 40%;
 				display: flex;
 				justify-content: space-between;
+
+				.header-link {
+					text-decoration: none;
+					@include property-color-opacity(color, $text-color, 1);
+				}
+
+				.header-link:hover {
+					text-decoration: underline;
+				}
 			}
 		}
 	}
 
+	footer {
+		@include property-color-opacity(background-color, $secondary-color, .2);
+		.footer-links {
+			display: flex;
+			flex-direction: column;
+			
+			.footer-link {
+				text-decoration: none;
+			}
+
+			.footer-link:hover {
+				text-decoration: underline;
+			}
+		}
+	}
 	
 </style>
 
