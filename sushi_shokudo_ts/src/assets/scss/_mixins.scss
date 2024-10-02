@@ -22,13 +22,3 @@ apply to a css class : set $property with $color and $opacity
 		@warn "check $property, $color, $opacity values";
 	}
 }
-
-@mixin border-color-style-width-radius-opacity(
-	$border,
-	$border-color,
-	$border-style,
-	$border-width,
-	$border-radius,
-	$opacity
-) {
-}
