@@ -18,8 +18,8 @@ const navEntries: NavEntry[] = [
 <template>
   <div class="header-container">
 		<header>
-			<div class="logo-container">
-				<img :src="logo" alt="">
+			<div class="header-logo-container">
+				<img class="header-logo" :src="logo" alt="">
 			</div>
 			
 			<nav class="header-links">
@@ -30,6 +30,10 @@ const navEntries: NavEntry[] = [
   <RouterView />
   <div class="footer-container">
 		<footer>
+			<div class="footer-logo-container">
+				<img class="footer-logo" :src="logo" alt="">
+			</div>
+			
 			<nav class="footer-links">
 				<RouterLink class="footer-link" v-for="navEntry in navEntries" :to=navEntry.link>{{ navEntry.name }}</RouterLink>
 			</nav>
@@ -58,7 +62,7 @@ const navEntries: NavEntry[] = [
 		font-family: $body-font;
 	}
 
-	img {
+	.header-logo {
 		height: 100px;
 	}
 
@@ -83,7 +87,7 @@ const navEntries: NavEntry[] = [
 			align-items: center;
 			justify-content: space-between;
 
-			.logo-container {
+			.header-logo-container {
 				padding: 10px;
 			}
 
@@ -115,15 +119,26 @@ const navEntries: NavEntry[] = [
 			width: 80%;
 			display: flex;
 			justify-content: space-between;
-			flex-direction: row;
+			align-items: center;
 
 			ul {
 				list-style-type: none;
 			}
 
+			.footer-logo {
+				height: 200px;
+			}
+
+			.footer-logo-container {
+				padding: 20px;
+			}
+
 			.footer-links {
 				display: flex;
 				flex-direction: column;
+				justify-content: space-between;
+				font-size: 24px;
+				height: 80%;
 				
 				.footer-link {
 					text-decoration: none;
