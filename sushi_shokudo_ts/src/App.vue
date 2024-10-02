@@ -50,20 +50,20 @@ const navEntries: NavEntry[] = [
     <div class="infos-container">
       <ul>
         <li class="info-entry">
-          <a href="">
+          <a href="https://www.google.fr/maps/place/124+Cr+Lafayette,+69003+Lyon/@45.7635062,4.8493545,17z/data=!4m6!3m5!1s0x47f4ea8aa3f6f099:0xfbb971d766f67042!8m2!3d45.7635025!4d4.8519294!16s%2Fg%2F11bw422mm8?entry=ttu&g_ep=EgoyMDI0MDkzMC4wIKXMDSoASAFQAw%3D%3D" class="link">
             <FontAwesomeIcon :icon="faLocationDot" /> 124 Cours Lafayette, 69003 Lyon 3
           </a>
         </li>
 
         <li class="info-entry">
-          <a href="">
+          <a href="mailto:sushi.shokudo.lyon@gmail.com" class="link">
             <FontAwesomeIcon :icon="faEnvelope" /> sushi.shokudo.lyon@gmail.com
           </a>
         </li>
 
         <li class="info-entry">
-          <a href="">
-            <FontAwesomeIcon :icon="faPhone" />09 82 78 19 41
+          <a href="tel:0982781941" class="link">
+            <FontAwesomeIcon :icon="faPhone" /> 09 82 78 19 41
           </a>
         </li>
       </ul>
