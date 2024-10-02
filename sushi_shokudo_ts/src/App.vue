@@ -50,7 +50,7 @@ const navEntries: NavEntry[] = [
     <div class="infos-container">
       <ul>
         <li class="info-entry">
-          <a href="https://www.google.fr/maps/place/124+Cr+Lafayette,+69003+Lyon/@45.7635062,4.8493545,17z/data=!4m6!3m5!1s0x47f4ea8aa3f6f099:0xfbb971d766f67042!8m2!3d45.7635025!4d4.8519294!16s%2Fg%2F11bw422mm8?entry=ttu&g_ep=EgoyMDI0MDkzMC4wIKXMDSoASAFQAw%3D%3D" class="link">
+          <a href="https://maps.app.goo.gl/gUXJruNjZMACemWh9" class="link">
             <FontAwesomeIcon :icon="faLocationDot" /> 124 Cours Lafayette, 69003 Lyon 3
           </a>
         </li>
