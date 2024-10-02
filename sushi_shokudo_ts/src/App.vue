@@ -1,6 +1,11 @@
 <script setup lang="ts">
+
 import { RouterLink, RouterView } from 'vue-router'
 import logo from './assets/img/logo_normal_transparent.png'
+
+import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome'
+import { faEnvelope, faPhone } from '@fortawesome/free-solid-svg-icons';
+import { faFacebook, faInstagram } from '@fortawesome/free-brands-svg-icons'
 
 interface NavEntry {
 	name: string;
@@ -23,7 +28,7 @@ const navEntries: NavEntry[] = [
 			</div>
 			
 			<nav class="header-links">
-				<RouterLink class="header-link" v-for="navEntry in navEntries" :to=navEntry.link>{{ navEntry.name }}</RouterLink>
+				<RouterLink class="header-link link" v-for="navEntry in navEntries" :to=navEntry.link>{{ navEntry.name }}</RouterLink>
 			</nav>
 		</header>
 	</div>
@@ -35,20 +40,20 @@ const navEntries: NavEntry[] = [
 			</div>
 			
 			<nav class="footer-links">
-				<RouterLink class="footer-link" v-for="navEntry in navEntries" :to=navEntry.link>{{ navEntry.name }}</RouterLink>
+				<RouterLink class="footer-link link" v-for="navEntry in navEntries" :to=navEntry.link>{{ navEntry.name }}</RouterLink>
 			</nav>
 
 			<div class="contact-container">
 				<ul>
-					<li>sushi.shokudo.lyon@gmail.com</li>
-					<li>09 82 78 19 41</li>
+					<li><FontAwesomeIcon :icon="faEnvelope" /> sushi.shokudo.lyon@gmail.com</li>
+					<li><FontAwesomeIcon :icon="faPhone" /> 09 82 78 19 41</li>
 				</ul>
 			</div>
 
 			<div class="socials-container">
 				<ul>
-					<li>Lien facebook</li>
-					<li>Lien insta</li>
+					<li><a href="#"><FontAwesomeIcon :icon="faInstagram" class="social-link link" /></a></li>
+					<li><a href="#"><FontAwesomeIcon :icon="faFacebook" class="social-link link" /></a></li>
 				</ul>
 			</div>
 		</footer>
@@ -60,6 +65,10 @@ const navEntries: NavEntry[] = [
 		margin: 0;
 		padding: 0;
 		font-family: $body-font;
+	}
+
+	.link {
+		@include property-color-opacity(color, $text-color, 1);
 	}
 
 	.header-logo {
@@ -100,7 +109,7 @@ const navEntries: NavEntry[] = [
 
 				.header-link {
 					text-decoration: none;
-					@include property-color-opacity(color, $text-color, 1);
+					
 				}
 
 				.header-link:hover {
@@ -124,6 +133,10 @@ const navEntries: NavEntry[] = [
 
 			ul {
 				list-style-type: none;
+				.social-link {
+					font-size: 72px;
+					padding: 10px 0;
+				}
 			}
 
 			.footer-logo {

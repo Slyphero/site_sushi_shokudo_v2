@@ -14,8 +14,8 @@ import { RouterLink, RouterView } from 'vue-router'
 					<h1>Restaurant familial de <span class="accent-text">Sushis</span></h1>
 				</div>
 				<div class="home-buttons-container">
-					<RouterLink class="primary-button home-link" to="/menu">Menus</RouterLink>
-					<RouterLink class="secondary-button home-link" to="/commander">Commander</RouterLink>
+					<RouterLink class="primary-button home-link link" to="/menu">Menus</RouterLink>
+					<RouterLink class="secondary-button home-link link" to="/commander">Commander</RouterLink>
 				</div>
 			</div>
 		</div>
@@ -66,7 +66,6 @@ import { RouterLink, RouterView } from 'vue-router'
 					}
 
 					.secondary-button {
-						@include property-color-opacity(color, $text-color, 1);
 						@include property-color-opacity(background-color, $secondary-color, 1);
 					}
 
