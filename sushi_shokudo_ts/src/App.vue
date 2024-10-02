@@ -28,25 +28,27 @@ const navEntries: NavEntry[] = [
 		</header>
 	</div>
   <RouterView />
-  <footer>
-		<nav class="footer-links">
-			<RouterLink class="footer-link" v-for="navEntry in navEntries" :to=navEntry.link>{{ navEntry.name }}</RouterLink>
-		</nav>
+  <div class="footer-container">
+		<footer>
+			<nav class="footer-links">
+				<RouterLink class="footer-link" v-for="navEntry in navEntries" :to=navEntry.link>{{ navEntry.name }}</RouterLink>
+			</nav>
 
-		<div class="contact-container">
-			<ul>
-				<li>sushi.shokudo.lyon@gmail.com</li>
-				<li>Numéro</li>
-			</ul>
-		</div>
+			<div class="contact-container">
+				<ul>
+					<li>sushi.shokudo.lyon@gmail.com</li>
+					<li>Numéro</li>
+				</ul>
+			</div>
 
-		<div class="socials-container">
-			<ul>
-				<li>Lien facebook</li>
-				<li>Lien insta</li>
-			</ul>
-		</div>
-  </footer>
+			<div class="socials-container">
+				<ul>
+					<li>Lien facebook</li>
+					<li>Lien insta</li>
+				</ul>
+			</div>
+		</footer>
+	</div>
 </template>
 
 <style lang="scss">
@@ -69,6 +71,7 @@ const navEntries: NavEntry[] = [
 	}
 
 	.header-container {
+		width: 100%;
 		display: flex;
 		justify-content: center;
 		border-bottom: 1px solid rgba(0, 0, 0, .2);
@@ -102,21 +105,36 @@ const navEntries: NavEntry[] = [
 		}
 	}
 
-	footer {
+	.footer-container {
+		width: 100%;
 		@include property-color-opacity(background-color, $secondary-color, .2);
-		.footer-links {
+		display: flex;
+		justify-content: center;
+
+		footer {
+			width: 80%;
 			display: flex;
-			flex-direction: column;
-			
-			.footer-link {
-				text-decoration: none;
+			justify-content: space-between;
+			flex-direction: row;
+
+			ul {
+				list-style-type: none;
 			}
 
-			.footer-link:hover {
-				text-decoration: underline;
+			.footer-links {
+				display: flex;
+				flex-direction: column;
+				
+				.footer-link {
+					text-decoration: none;
+				}
+
+				.footer-link:hover {
+					text-decoration: underline;
+				}
 			}
 		}
 	}
-	
+
 </style>
 
