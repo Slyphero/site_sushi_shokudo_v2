@@ -88,7 +88,7 @@ const navEntries: NavEntry[] = [
 			justify-content: space-between;
 
 			.header-logo-container {
-				padding: 10px;
+				padding: 10px 0px;
 			}
 
 			.header-links {
@@ -130,7 +130,7 @@ const navEntries: NavEntry[] = [
 			}
 
 			.footer-logo-container {
-				padding: 20px;
+				padding: 20px 0px;
 			}
 
 			.footer-links {
