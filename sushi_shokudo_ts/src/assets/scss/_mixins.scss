@@ -17,10 +17,7 @@ apply to a css class : set $property with $color and $opacity
 	@if list.index($properties-color-list, $property) and 
 	$opacity >= 0 and $opacity <= 1 
 	and list.index($valid-colors, $color) {
-		$r: color.channel($color, "red", $space: rgb);
-		$g: color.channel($color, "green", $space: rgb);
-		$b: color.channel($color, "blue", $space: rgb);
-		#{$property}: rgba($r, $g, $b, $opacity);
+		#{$property}: rgba($color, $opacity);
 	} @else {
 		@warn "check $property, $color, $opacity values";
 	}

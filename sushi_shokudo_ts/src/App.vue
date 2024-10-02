@@ -41,7 +41,7 @@ const navEntries: NavEntry[] = [
 			<div class="contact-container">
 				<ul>
 					<li>sushi.shokudo.lyon@gmail.com</li>
-					<li>Numéro</li>
+					<li>09 82 78 19 41</li>
 				</ul>
 			</div>
 
@@ -75,13 +75,14 @@ const navEntries: NavEntry[] = [
 	}
 
 	.header-container {
+		@include property-color-opacity(background-color, $secondary-color, .2);
 		width: 100%;
 		display: flex;
 		justify-content: center;
-		border-bottom: 1px solid rgba(0, 0, 0, .2);
 
 		header {
-			width: 90%;
+			width: 60%;
+			min-height: 12vh;
 			display: flex;
 			flex-direction: row;
 			align-items: center;
@@ -93,7 +94,7 @@ const navEntries: NavEntry[] = [
 
 			.header-links {
 				font-size: 24px;
-				width: 40%;
+				width: 50%;
 				display: flex;
 				justify-content: space-between;
 
@@ -116,7 +117,7 @@ const navEntries: NavEntry[] = [
 		justify-content: center;
 
 		footer {
-			width: 80%;
+			width: 70%;
 			display: flex;
 			justify-content: space-between;
 			align-items: center;
