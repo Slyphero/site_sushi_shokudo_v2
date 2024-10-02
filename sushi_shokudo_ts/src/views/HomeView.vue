@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import logo from '../assets/img/logo_normal_transparent.png'
+import logo from '../assets/img/logo_normal_transparent.webp'
 import { RouterLink, RouterView } from 'vue-router'
 </script>
 

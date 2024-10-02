@@ -1,7 +1,7 @@
 <script setup lang="ts">
 
 import { RouterLink, RouterView } from 'vue-router'
-import logo from './assets/img/logo_normal_transparent.png'
+import logo from './assets/img/logo_normal_transparent.webp'
 
 import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome'
 import { faEnvelope, faPhone, faLocationDot } from '@fortawesome/free-solid-svg-icons';
