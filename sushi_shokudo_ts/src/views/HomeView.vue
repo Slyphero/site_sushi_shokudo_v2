@@ -59,7 +59,7 @@ import { RouterLink, RouterView } from 'vue-router'
 
       height: 50%;
       width: 50%;
-      
+
       .home-title-container {
         h1 {
           font-size: 72px;
@@ -79,7 +79,9 @@ import { RouterLink, RouterView } from 'vue-router'
         }
 
         .home-link:hover {
-          opacity: 0.5;
+          @include property-color-opacity(background-color, $background-color, 1);
+          @include property-color-opacity(color, $text-color, 1);
+          transition: 0.2s ease-in-out;
         }
 
         .primary-button {

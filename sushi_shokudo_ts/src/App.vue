@@ -103,7 +103,8 @@ const navEntries: NavEntry[] = [
   }
 
   .link:hover {
-    text-decoration: underline;
+    @include property-color-opacity(color, $primary-color, 1);
+    transition: 0.2s ease-in-out;
   }
 
   .heading {
@@ -182,10 +183,6 @@ const navEntries: NavEntry[] = [
       .social-link {
         font-size: 72px;
         padding: 10px 0;
-      }
-
-      .social-link:hover {
-        opacity: 0.5;
       }
     }
   }
