@@ -4,7 +4,7 @@ import { RouterLink, RouterView } from 'vue-router'
 import logo from './assets/img/logo_normal_transparent.png'
 
 import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome'
-import { faEnvelope, faPhone } from '@fortawesome/free-solid-svg-icons';
+import { faEnvelope, faPhone, faLocationDot } from '@fortawesome/free-solid-svg-icons';
 import { faFacebook, faInstagram } from '@fortawesome/free-brands-svg-icons'
 
 interface NavEntry {
@@ -21,149 +21,174 @@ const navEntries: NavEntry[] = [
 </script>
 
 <template>
-  <div class="header-container">
-		<header>
-			<div class="header-logo-container">
-				<img class="header-logo" :src="logo" alt="">
-			</div>
-			
-			<nav class="header-links">
-				<RouterLink class="header-link link" v-for="navEntry in navEntries" :to=navEntry.link>{{ navEntry.name }}</RouterLink>
-			</nav>
-		</header>
-	</div>
-  <RouterView />
-  <div class="footer-container">
-		<footer>
-			<div class="footer-logo-container">
-				<img class="footer-logo" :src="logo" alt="">
-			</div>
-			
-			<nav class="footer-links">
-				<RouterLink class="footer-link link" v-for="navEntry in navEntries" :to=navEntry.link>{{ navEntry.name }}</RouterLink>
-			</nav>
+<div class="header-container">
+  <header>
+    <div class="header-logo-container">
+      <img class="header-logo" :src="logo" alt="">
+    </div>
+    
+    <nav class="header-links">
+      <RouterLink class="header-link link" v-for="navEntry in navEntries" :to=navEntry.link>
+        {{ navEntry.name }}
+      </RouterLink>
+    </nav>
+  </header>
+</div>
+<RouterView />
+<div class="footer-container">
+  <footer>
+    <div class="footer-logo-container">
+      <img class="footer-logo" :src="logo" alt="">
+    </div>
+    
+    <nav class="footer-links">
+      <RouterLink class="footer-link link" v-for="navEntry in navEntries" :to=navEntry.link>
+        {{ navEntry.name }}
+      </RouterLink>
+    </nav>
 
-			<div class="contact-container">
-				<ul>
-					<li><FontAwesomeIcon :icon="faEnvelope" /> sushi.shokudo.lyon@gmail.com</li>
-					<li><FontAwesomeIcon :icon="faPhone" /> 09 82 78 19 41</li>
-				</ul>
-			</div>
+    <div class="infos-container">
+      <ul>
+        <li class="info-entry">
+          <a href="">
+            <FontAwesomeIcon :icon="faLocationDot" /> 124 Cours Lafayette, 69003 Lyon 3
+          </a>
+        </li>
 
-			<div class="socials-container">
-				<ul>
-					<li><a href="#"><FontAwesomeIcon :icon="faInstagram" class="social-link link" /></a></li>
-					<li><a href="#"><FontAwesomeIcon :icon="faFacebook" class="social-link link" /></a></li>
-				</ul>
-			</div>
-		</footer>
-	</div>
+        <li class="info-entry">
+          <a href="">
+            <FontAwesomeIcon :icon="faEnvelope" /> sushi.shokudo.lyon@gmail.com
+          </a>
+        </li>
+
+        <li class="info-entry">
+          <a href="">
+            <FontAwesomeIcon :icon="faPhone" />09 82 78 19 41
+          </a>
+        </li>
+      </ul>
+    </div>
+
+    <div class="socials-container">
+      <ul>
+        <li>
+          <a href="#">
+            <FontAwesomeIcon :icon="faInstagram" class="social-link link" />
+          </a>
+        </li>
+
+        <li>
+          <a href="#">
+            <FontAwesomeIcon :icon="faFacebook" class="social-link link" />
+          </a>
+        </li>
+      </ul>
+    </div>
+  </footer>
+</div>
 </template>
 
 <style lang="scss">
-	* {
-		margin: 0;
-		padding: 0;
-		font-family: $body-font;
-	}
+* {
+  margin: 0;
+  padding: 0;
+  font-family: $body-font;
+  ul {
+    list-style-type: none;
+  }
 
-	.link {
-		@include property-color-opacity(color, $text-color, 1);
-	}
+  .link {
+    @include property-color-opacity(color, $text-color, 1);
+    text-decoration: none;
+  }
 
-	.header-logo {
-		height: 100px;
-	}
+  .link:hover {
+    text-decoration: underline;
+  }
 
-	.heading {
-		font-family: $headings-font;
-	}
+  .heading {
+    font-family: $headings-font;
+  }
 
-	.heading, .accent-text {
-		@include property-color-opacity(color, $primary-color, 1);
-	}
+  .heading, .accent-text {
+    @include property-color-opacity(color, $primary-color, 1);
+  }
+}
 
-	.header-container {
-		@include property-color-opacity(background-color, $secondary-color, .2);
-		width: 100%;
-		display: flex;
-		justify-content: center;
+.header-container {
+  @include property-color-opacity(background-color, $secondary-color, .2);
+  width: 100%;
+  display: flex;
+  justify-content: center;
 
-		header {
-			width: 60%;
-			min-height: 12vh;
-			display: flex;
-			flex-direction: row;
-			align-items: center;
-			justify-content: space-between;
+  header {
+    width: 60%;
+    min-height: 12vh;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
 
-			.header-logo-container {
-				padding: 10px 0px;
-			}
+    .header-logo-container {
+      padding: 10px 0px;
+      .header-logo {
+        height: 100px;
+      }
+    }
 
-			.header-links {
-				font-size: 24px;
-				width: 50%;
-				display: flex;
-				justify-content: space-between;
+    .header-links {
+      font-size: 24px;
+      width: 50%;
+      display: flex;
+      justify-content: space-between;
+    }
+  }
+}
 
-				.header-link {
-					text-decoration: none;
-					
-				}
+.footer-container {
+  width: 100%;
+  @include property-color-opacity(background-color, $secondary-color, .2);
+  display: flex;
+  justify-content: center;
 
-				.header-link:hover {
-					text-decoration: underline;
-				}
-			}
-		}
-	}
+  footer {
+    width: 70%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 
-	.footer-container {
-		width: 100%;
-		@include property-color-opacity(background-color, $secondary-color, .2);
-		display: flex;
-		justify-content: center;
+    .footer-logo-container {
+      padding: 20px 0px;
+      .footer-logo {
+        height: 200px;
+      }
+    }
 
-		footer {
-			width: 70%;
-			display: flex;
-			justify-content: space-between;
-			align-items: center;
+    .footer-links {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      font-size: 24px;
+      height: 80%;
+    }
 
-			ul {
-				list-style-type: none;
-				.social-link {
-					font-size: 72px;
-					padding: 10px 0;
-				}
-			}
+    .infos-container {
+      .info-entry {
+        font-size: 24px;
+      }
+    }
 
-			.footer-logo {
-				height: 200px;
-			}
+    .socials-container {
+      .social-link {
+        font-size: 72px;
+        padding: 10px 0;
+      }
 
-			.footer-logo-container {
-				padding: 20px 0px;
-			}
-
-			.footer-links {
-				display: flex;
-				flex-direction: column;
-				justify-content: space-between;
-				font-size: 24px;
-				height: 80%;
-				
-				.footer-link {
-					text-decoration: none;
-				}
-
-				.footer-link:hover {
-					text-decoration: underline;
-				}
-			}
-		}
-	}
-
+      .social-link:hover {
+        opacity: 0.5;
+      }
+    }
+  }
+}
 </style>
 
