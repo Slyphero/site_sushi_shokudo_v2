@@ -2,6 +2,7 @@
 import { menuEntries } from '@/assets/constants/menuEntriesConstants'
 
 import MenuEntry from '@/components/MenuEntry.vue'
+
 </script>
 
 <template>
