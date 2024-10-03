@@ -1,26 +1,24 @@
 <script setup lang="ts">
+import type { FoodEntry } from '@/assets/models/menuInterface'
+
 defineProps<{
-  title: string 
-  image: string 
-  piecesNumber: number
-  price: number 
-  elements?: string[]
+  foodEntry: FoodEntry
 }>()
 </script>
 
 <template>
 <div class="menu-entry-container">
   <div class="entry-image-container">
-    <img :src=image alt="">
+    <img :src=foodEntry.image alt="">
   </div>
   <div class="entry-description-container">
     <div class="entry-title-container">
-      <h6 v-if="piecesNumber > 1">{{ title }} ({{ piecesNumber }} pièces) : {{ price.toFixed(2) }} €</h6>
-      <h6 v-else>{{ title }} ({{ piecesNumber }} pièce) : {{ price.toFixed(2) }} €</h6>
+      <h6 v-if="foodEntry.piecesNumber > 1">{{ foodEntry.title }} ({{ foodEntry.piecesNumber }} pièces) : {{ foodEntry.price.toFixed(2) }} €</h6>
+      <h6 v-else>{{ foodEntry.title }} ({{ foodEntry.piecesNumber }} pièce) : {{ foodEntry.price.toFixed(2) }} €</h6>
     </div>
     <div class="entry-elements-container">
       <ul>
-        <li v-for="element in elements">{{ element }}</li>
+        <li v-for="element in foodEntry.elements">{{ element }}</li>
       </ul>
     </div>
   </div>
@@ -38,6 +36,12 @@ defineProps<{
     justify-content: left;
     align-items: center;
     border-radius: 5px;
+
+    .entry-image-container {
+      img {
+        height: 150px;
+      }
+    }
 
     .entry-description-container {
       display: flex;
