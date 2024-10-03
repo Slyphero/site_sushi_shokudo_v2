@@ -3,7 +3,7 @@
 </script>
 
 <template>
-  Commander
+Commander
 </template>
 
 <style scoped lang="scss">

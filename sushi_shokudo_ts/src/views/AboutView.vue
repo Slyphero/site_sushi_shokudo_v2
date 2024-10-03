@@ -3,7 +3,7 @@
 </script>
 
 <template>
-	A propos
+A propos
 </template>
 
 <style scoped lang="scss">
