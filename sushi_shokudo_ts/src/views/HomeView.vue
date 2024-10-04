@@ -8,7 +8,7 @@ import { RouterLink } from 'vue-router'
   <div class="home-slide-container">
     <img class="homepage-logo" :src="logo" alt="">
 
-    <div class="home-title-buttons-container">
+    <section class="home-title-buttons-container">
       <h1>
         Restaurant familial de <strong class="accent-text">Sushis</strong>
       </h1>
@@ -26,7 +26,7 @@ import { RouterLink } from 'vue-router'
           </RouterLink>
         </li>
       </ul>
-    </div>
+    </section>
   </div>
 </div>
 </template>
