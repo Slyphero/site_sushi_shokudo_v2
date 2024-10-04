@@ -1,6 +1,7 @@
 <script setup lang="ts">
 import { menuEntries } from '@/assets/constants/menuEntriesConstants'
 import { sushisEntries } from '@/assets/constants/sushisEntriesConstants'
+import { makisEntries } from '@/assets/constants/makisEntriesConstants'
 
 import MenuEntry from '@/components/MenuEntry.vue'
 
@@ -16,13 +17,17 @@ import MenuEntry from '@/components/MenuEntry.vue'
   <MenuEntry v-for="sushiEntry in sushisEntries" :foodEntry=sushiEntry />
 </div>
 
+<div class="food-entry-container">
+  <MenuEntry v-for="makiEntry in makisEntries" :foodEntry=makiEntry />
+</div>
+
 </template>
 
 <style scoped lang="scss">
-  .food-entry-container {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: center;
-  }
+.food-entry-container {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+}
 </style>

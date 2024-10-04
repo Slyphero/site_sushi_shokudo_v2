@@ -1,6 +1,6 @@
 import type { FoodEntry } from "../models/menuInterface";
 
-const imageFolderPath: string = 'src/assets/img/'
+import { imageFolderPath } from "./imageFolderPathConstant";
 
 export const menuEntries: FoodEntry[] = [
   {

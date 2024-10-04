@@ -1,6 +1,5 @@
 import type { FoodEntry } from '../models/menuInterface'
-
-const imageFolderPath: string = 'src/assets/img/'
+import { imageFolderPath } from "./imageFolderPathConstant";
 
 export const sushisEntries: FoodEntry[] = [
   {
@@ -8,7 +7,10 @@ export const sushisEntries: FoodEntry[] = [
     piecesNumber: 2,
     price: 3,
     image: imageFolderPath.concat('sushi_shokudo.webp'), 
-    elements: ['avocat', 'feuille de nori']
+    elements: [
+      'avocat', 
+      'feuille de nori'
+    ]
   },
   {
     title: 'Sushi saumon',
@@ -21,14 +23,21 @@ export const sushisEntries: FoodEntry[] = [
     piecesNumber: 2,
     price: 3.9,
     image: imageFolderPath.concat('sushi_shokudo.webp'), 
-    elements: ['saumon snacké', 'teriyaki', 'sésame']
+    elements: [
+      'saumon snacké', 
+      'teriyaki', 
+      'sésame'
+    ]
   },
   {
     title: 'Sushi saumon cheese',
     piecesNumber: 2,
     price: 4.5,
     image: imageFolderPath.concat('sushi_shokudo.webp'), 
-    elements: ['Cream cheese', '7 épices']
+    elements: [
+      'Cream cheese', 
+      '7 épices'
+    ]
   },
   {
     title: 'Sushi thon',
@@ -41,7 +50,10 @@ export const sushisEntries: FoodEntry[] = [
     piecesNumber: 2,
     price: 4.5,
     image: imageFolderPath.concat('sushi_shokudo.webp'), 
-    elements: ['mayonnaise épicée', 'piment en topping']
+    elements: [
+      'mayonnaise épicée', 
+      'piment en topping'
+    ]
   },
   {
     title: 'Sushi thon snacké',
