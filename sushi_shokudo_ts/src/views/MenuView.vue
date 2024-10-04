@@ -4,6 +4,7 @@ import { sushisEntries } from '@/assets/constants/sushisEntriesConstants'
 import { makisEntries } from '@/assets/constants/makisEntriesConstants'
 import { sashimisEntries } from '@/assets/constants/sashimisEntriesConstants';
 import { tazunasEntries } from '@/assets/constants/tazunasEntriesConstants';
+import { temakisEntries } from '@/assets/constants/temakisEntriesConstants';
 
 import MenuEntry from '@/components/MenuEntry.vue'
 
@@ -29,6 +30,10 @@ import MenuEntry from '@/components/MenuEntry.vue'
 
 <div class="food-entry-container">
   <MenuEntry v-for="tazunaEntry in tazunasEntries" :foodEntry=tazunaEntry />
+</div>
+
+<div class="food-entry-container">
+  <MenuEntry v-for="temakiEntry in temakisEntries" :foodEntry=temakiEntry />
 </div>
 
 </template>
