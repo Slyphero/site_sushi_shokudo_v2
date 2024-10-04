@@ -1,4 +1,4 @@
-import type { FoodEntry } from '../models/menuInterface'
+import type { FoodEntry } from '../models/foodEntryInterface'
 import { imageFolderPath } from "./imageFolderPathConstant";
 
 export const makisEntries: FoodEntry[] = [

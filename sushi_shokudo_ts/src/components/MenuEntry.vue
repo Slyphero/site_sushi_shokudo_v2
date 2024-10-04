@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import type { FoodEntry } from '@/assets/models/menuInterface'
+import type { FoodEntry } from '@/assets/models/foodEntryInterface'
 
 defineProps<{
   foodEntry: FoodEntry
