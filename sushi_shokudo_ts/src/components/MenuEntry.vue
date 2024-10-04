@@ -29,7 +29,7 @@ defineProps<{
   .menu-entry-container {
     width: 25%;
     @include property-color-opacity(background-color, $secondary-color, .2);
-    margin: 10px;
+    margin: 10px 0;
     padding: 10px;
     display: flex;
     flex-direction: column;

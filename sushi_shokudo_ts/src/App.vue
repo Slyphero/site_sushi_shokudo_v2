@@ -110,6 +110,12 @@ const navEntries: NavEntry[] = [
   .heading {
     font-family: $headings-font;
     border-bottom: 1px solid rgba($primary-color, .2);
+    text-transform: uppercase;
+    margin: 10px 0;
+  }
+
+  h2 {
+    font-size: 36px;
   }
 
   .heading, .accent-text {

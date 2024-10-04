@@ -6,26 +6,26 @@ import { RouterLink } from 'vue-router'
 <template>
 <div class="home-container">
   <div class="home-slide-container">
-    <div class="home-logo-container">
-      <img class="homepage-logo" :src="logo" alt="">
-    </div>
+    <img class="homepage-logo" :src="logo" alt="">
 
     <div class="home-title-buttons-container">
-      <div class="home-title-container">
-        <h1>
-          Restaurant familial de <span class="accent-text">Sushis</span>
-        </h1>
-      </div>
+      <h1>
+        Restaurant familial de <strong class="accent-text">Sushis</strong>
+      </h1>
 
-      <div class="home-buttons-container">
-        <RouterLink class="primary-button home-link link" to="/menu">
-          Menus
-        </RouterLink>
+      <ul class="home-buttons-container">
+        <li>
+          <RouterLink class="primary-button home-link link" to="/menu">
+            Menus
+          </RouterLink>
+        </li>
 
-        <RouterLink class="secondary-button home-link link" to="/commander">
-          Commander
-        </RouterLink>
-      </div>
+        <li>
+          <RouterLink class="secondary-button home-link link" to="/commander">
+            Commander
+          </RouterLink>
+        </li>
+      </ul>
     </div>
   </div>
 </div>
@@ -46,10 +46,8 @@ import { RouterLink } from 'vue-router'
     width: 70%;
     padding: 100px 0;
 
-    .home-logo-container {
-      .homepage-logo {
-        height: 500px;
-      }
+    .homepage-logo {
+      height: 500px;
     }
 
     .home-title-buttons-container {
@@ -60,10 +58,8 @@ import { RouterLink } from 'vue-router'
       height: 50%;
       width: 50%;
 
-      .home-title-container {
-        h1 {
-          font-size: 72px;
-        }
+      h1 {
+        font-size: 72px;
       }
 
       .home-buttons-container {
