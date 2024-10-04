@@ -13,8 +13,8 @@ defineProps<{
   </div>
   <div class="entry-description-container">
     <div class="entry-title-container">
-      <h6 v-if="foodEntry.piecesNumber > 1">{{ foodEntry.title }} ({{ foodEntry.piecesNumber }} pièces) : {{ foodEntry.price.toFixed(2) }} €</h6>
-      <h6 v-else>{{ foodEntry.title }} ({{ foodEntry.piecesNumber }} pièce) : {{ foodEntry.price.toFixed(2) }} €</h6>
+      <h6 v-if="foodEntry.piecesNumber > 1">{{ foodEntry.title }} ({{ foodEntry.piecesNumber }} pièces) : {{ foodEntry.price.toFixed(2) }}€</h6>
+      <h6 v-else>{{ foodEntry.title }} ({{ foodEntry.piecesNumber }} pièce) : {{ foodEntry.price.toFixed(2) }}€</h6>
     </div>
     <div class="entry-elements-container">
       <ul>
@@ -51,6 +51,7 @@ defineProps<{
       .entry-title-container {
         display: flex;
         justify-content: center;
+        text-align: center;
         h6 {
           font-size: 24px;
         }
