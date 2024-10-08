@@ -109,7 +109,8 @@ function scrollToTop() {
     bottom: 30px;
     right: 30px;
     font-size: 36px; 
-    padding: 20px;
+    width: 60px;
+    height: 60px;
     @include property-color-opacity(background-color, $secondary-color, 1);
     border-radius: 100%;
     border: none;
