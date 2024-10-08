@@ -1,13 +1,13 @@
 import type { MenuCategory } from '../models/menuCategoryInterface'
 
-import { menusEntries } from '@/assets/constants/menusEntriesConstants'
-import { sushisEntries } from '@/assets/constants/sushisEntriesConstants'
-import { makisEntries } from '@/assets/constants/makisEntriesConstants'
-import { sashimisEntries } from '@/assets/constants/sashimisEntriesConstants'
-import { tazunasEntries } from '@/assets/constants/tazunasEntriesConstants'
-import { temakisEntries } from '@/assets/constants/temakisEntriesConstants'
-import { californiasEntries } from '@/assets/constants/californiasEntriesConstants'
-import { springsEntries } from '@/assets/constants/springsEntriesConstants'
+import { menusEntries } from './menusEntriesConstants'
+import { sushisEntries } from './sushisEntriesConstants'
+import { makisEntries } from './makisEntriesConstants'
+import { sashimisEntries } from './sashimisEntriesConstants'
+import { tazunasEntries } from './tazunasEntriesConstants'
+import { temakisEntries } from './temakisEntriesConstants'
+import { californiasEntries } from './californiasEntriesConstants'
+import { springsEntries } from './springsEntriesConstants'
 
 export const menuCategories: MenuCategory[] = [
   {
