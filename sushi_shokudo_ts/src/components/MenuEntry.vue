@@ -27,7 +27,7 @@ defineProps<{
 
 <style scoped lang="scss">
   .menu-entry-container {
-    width: 25%;
+    width: 30%;
     @include property-color-opacity(background-color, $secondary-color, .2);
     margin: 10px 0;
     padding: 10px;

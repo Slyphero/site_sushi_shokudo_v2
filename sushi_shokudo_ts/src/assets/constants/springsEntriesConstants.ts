@@ -1,5 +1,5 @@
 import type { FoodEntry } from '../models/foodEntryInterface'
-import { imageFolderPath } from "./imageFolderPathConstant";
+import { imageFolderPath } from "./imageFolderPathConstant"
 
 export const springsEntries: FoodEntry[] = [
   {

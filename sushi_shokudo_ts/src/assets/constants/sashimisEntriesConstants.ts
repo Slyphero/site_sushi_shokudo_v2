@@ -1,5 +1,4 @@
 import type { FoodEntry } from '../models/foodEntryInterface'
-
 import { imageFolderPath } from './imageFolderPathConstant'
 
 export const sashimisEntries: FoodEntry[] = [

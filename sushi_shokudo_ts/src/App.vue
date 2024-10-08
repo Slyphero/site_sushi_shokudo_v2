@@ -8,8 +8,8 @@ import { faEnvelope, faPhone, faLocationDot, faArrowUp } from '@fortawesome/free
 import { faFacebook, faInstagram } from '@fortawesome/free-brands-svg-icons'
 
 interface NavEntry {
-	name: string;
-	link: string;
+	name: string
+	link: string
 }
 
 const navEntries: NavEntry[] = [
