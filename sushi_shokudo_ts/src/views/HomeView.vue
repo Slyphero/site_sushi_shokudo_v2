@@ -33,7 +33,7 @@ import { RouterLink } from 'vue-router'
 
 <style scoped lang="scss">
 .home-container {
-  background-color: rgba(#B8F0F9, 0.3);
+  @include property-color-opacity(background-color, $complementary-color, 0.3);
   display: flex;
   justify-content: center;
   min-height: 88vh;

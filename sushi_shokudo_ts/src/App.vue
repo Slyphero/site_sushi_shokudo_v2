@@ -159,7 +159,7 @@ function scrollToTop() {
     .header-logo-container {
       padding: 10px 0px;
       .header-logo {
-        height: 100px;
+        height: 10vh;
       }
     }
 
@@ -187,7 +187,7 @@ function scrollToTop() {
     .footer-logo-container {
       padding: 20px 0px;
       .footer-logo {
-        height: 200px;
+        height: 20vh;
       }
     }
 

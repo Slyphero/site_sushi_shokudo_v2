@@ -50,7 +50,7 @@ export const menusEntries: FoodEntry[] = [
       '10 sushis saumon',
       'Edamame',
       'Salade de chou',
-    ]
+    ],
   },
   {
     title: 'Plateau Sushi Mix',
@@ -62,7 +62,7 @@ export const menusEntries: FoodEntry[] = [
       '5 sushis thon',
       'Edamame', 
       'Salade de chou',
-    ]
+    ],
   },
   {
     title: 'Sushi Lovers',
@@ -90,7 +90,7 @@ export const menusEntries: FoodEntry[] = [
       '2 sushis ikura',
       'Edamame',
       'Salade de chou',
-    ]
+    ],
   },
   {
     title: 'Plateau California',
@@ -105,7 +105,7 @@ export const menusEntries: FoodEntry[] = [
       '3 californias saumon cheese avocat',
       'Edamame',
       'Salade de chou',
-    ]
+    ],
   },
   {
     title: 'Plateau Spring',
@@ -120,7 +120,7 @@ export const menusEntries: FoodEntry[] = [
       '3 springs concombre cheese',
       'Edamame',
       'Salade de chou'
-    ]
+    ],
   },
   {
     title: 'Plateau Salmon',
@@ -134,7 +134,7 @@ export const menusEntries: FoodEntry[] = [
       '6 springs saumon avocat',
       'Edamame',
       'Salade de chou',
-    ]
+    ],
   },
   {
     title: 'Plateau Assortiment',
@@ -149,7 +149,7 @@ export const menusEntries: FoodEntry[] = [
       '6 makis salmon roll',
       'Edamame',
       'Salade de chou',
-    ]
+    ],
   },
   {
     title: 'Plateau Royal',
@@ -200,7 +200,7 @@ export const menusEntries: FoodEntry[] = [
       '2 sushis thon',
       '3 sashimis saumon',
       '3 sashimis thon',
-    ]
+    ],
   },
   {
     title: 'Box Sushi Shokudo',
@@ -217,7 +217,7 @@ export const menusEntries: FoodEntry[] = [
       '6 springs crevette avocat',
       '6 springs tataki saumon',
       '8 tazuna rolls salmon teriyaki',
-    ]
+    ],
   },
   {
     title: 'Box à partager',
@@ -238,6 +238,6 @@ export const menusEntries: FoodEntry[] = [
       '6 springs saumon avocat',
       '4 sashimis saumon',
       '4 sashimis thon',
-    ]
+    ],
   }
 ]

@@ -11,14 +11,29 @@ defineProps<{
   <div class="entry-image-container">
     <img :src=foodEntry.image alt="">
   </div>
+
   <div class="entry-description-container">
     <div v-if="foodEntry.piecesNumber !== undefined" class="entry-title-container">
-      <h6 v-if="foodEntry.piecesNumber > 1">{{ foodEntry.title }} ({{ foodEntry.piecesNumber }} pièces) : {{ foodEntry.price.toFixed(2) }}€</h6>
-      <h6 v-else>{{ foodEntry.title }} ({{ foodEntry.piecesNumber }} pièce) : {{ foodEntry.price.toFixed(2) }}€</h6>
+      <h6 v-if="foodEntry.piecesNumber > 1">
+        {{ foodEntry.title }} ({{ foodEntry.piecesNumber }} pièces) : {{ foodEntry.price.toFixed(2) }}€
+      </h6>
+
+      <h6 v-else>
+        {{ foodEntry.title }} ({{ foodEntry.piecesNumber }} pièce) : {{ foodEntry.price.toFixed(2) }}€
+      </h6>
     </div>
-    <div class="entry-elements-container">
+
+    <div v-else class="entry-title-container">
+      <h6>
+        {{ foodEntry.title }} : {{ foodEntry.price.toFixed(2) }}€
+      </h6>
+    </div>
+
+    <div v-if="foodEntry.elements !== undefined" class="entry-elements-container">
       <ul>
-        <li v-for="element in foodEntry.elements">{{ element }}</li>
+        <li v-for="element in foodEntry.elements">
+          {{ element }}
+        </li>
       </ul>
     </div>
   </div>

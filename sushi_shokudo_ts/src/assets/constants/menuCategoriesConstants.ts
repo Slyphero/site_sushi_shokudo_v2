@@ -1,4 +1,6 @@
 import type { MenuCategory } from '../models/menuCategoryInterface'
+import type { MenuTitleEntry } from '../models/menuTitleEntryInterface'
+import { imageFolderPath } from "@/assets/constants/imageFolderPathConstant"
 
 import { menusEntries } from './menusEntriesConstants'
 import { sushisEntries } from './sushisEntriesConstants'
@@ -13,63 +15,84 @@ import { yakitorisEntries } from './yakitorisEntriesConstants'
 
 export const menuCategories: MenuCategory[] = [
   {
-    headingName: 'Menus',
+    menuTitleEntry: {
+      title: 'Menus',
+      image: imageFolderPath.concat('sushi_shokudo.webp'),
+      description: 'Notre sélection de menus.'
+    },
     foodEntriesArray: menusEntries,
-    isDrink: false, 
-    isCountable: true
   },
   {
-    headingName: 'Sushis',
+    menuTitleEntry: {
+      title: 'Sushis',
+      image: imageFolderPath.concat('sushi_shokudo.webp'),
+      description: 'Notre sélection de sushis.'
+    },
     foodEntriesArray: sushisEntries,
-    isDrink: false, 
-    isCountable: true
   },
   {
-    headingName: 'Makis',
+    menuTitleEntry: {
+      title: 'Makis',
+      image: imageFolderPath.concat('sushi_shokudo.webp'),
+      description: 'Notre sélection de makis.'
+    },
     foodEntriesArray: makisEntries,
-    isDrink: false, 
-    isCountable: true
   },
   {
-    headingName: 'Sashimis',
+    menuTitleEntry: {
+      title: 'Sashimis',
+      image: imageFolderPath.concat('sushi_shokudo.webp'),
+      description: 'Notre sélection de sashimis.'
+    },
     foodEntriesArray: sashimisEntries,
-    isDrink: false, 
-    isCountable: true
   },
   {
-    headingName: 'Tazunas',
+    menuTitleEntry: {
+      title: 'Tazunas',
+      image: imageFolderPath.concat('sushi_shokudo.webp'),
+      description: 'Notre sélection de tazunas.'
+    },
     foodEntriesArray: tazunasEntries,
-    isDrink: false, 
-    isCountable: true
   },
   {
-    headingName: 'Temakis',
+    menuTitleEntry: {
+      title: 'Temakis',
+      image: imageFolderPath.concat('sushi_shokudo.webp'),
+      description: 'Notre sélection de temakis.'
+    },
     foodEntriesArray: temakisEntries,
-    isDrink: false, 
-    isCountable: true
   },
   {
-    headingName: 'Californias',
+    menuTitleEntry: {
+      title: 'Californias',
+      image: imageFolderPath.concat('sushi_shokudo.webp'),
+      description: 'Notre sélection de californias.'
+    },
     foodEntriesArray: californiasEntries,
-    isDrink: false, 
-    isCountable: true
   },
   {
-    headingName: 'Springs',
+    menuTitleEntry: {
+      title: 'Springs',
+      image: imageFolderPath.concat('sushi_shokudo.webp'),
+      description: 'Notre sélection de springs.'
+    },
     foodEntriesArray: springsEntries,
-    isDrink: false, 
-    isCountable: true
+
   },
   {
-    headingName: 'Gyozas',
+    menuTitleEntry: {
+      title: 'Gyozas',
+      image: imageFolderPath.concat('sushi_shokudo.webp'),
+      description: 'Notre sélection de gyozas.'
+    },
     foodEntriesArray: gyozasEntries,
-    isDrink: false, 
-    isCountable: true
   }, 
   {
-    headingName: 'Yakitoris',
+    menuTitleEntry: {
+      title: 'Yakitoris',
+      image: imageFolderPath.concat('sushi_shokudo.webp'),
+      description: 'Notre sélection de yakitoris.'
+    },
     foodEntriesArray: yakitorisEntries,
-    isDrink: false, 
-    isCountable: true
   }
 ]

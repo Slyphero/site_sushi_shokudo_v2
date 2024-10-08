@@ -11,8 +11,6 @@ export const makisEntries: FoodEntry[] = [
       'concombre',
       'cream cheese'
     ],
-    isDrink: false,
-    isCountable: true,
   },
   {
     title: 'Maki avocat cheese',
@@ -23,16 +21,12 @@ export const makisEntries: FoodEntry[] = [
       'avocat',
       'cream cheese'
     ],
-    isDrink: false,
-    isCountable: true,
   },
   {
     title: 'Maki saumon',
     piecesNumber: 6,
     price: 4.5,
     image: imageFolderPath.concat('sushi_shokudo.webp'), 
-    isDrink: false,
-    isCountable: true,
   },
   {
     title: 'Maki saumon spicy',
@@ -44,16 +38,12 @@ export const makisEntries: FoodEntry[] = [
       'mayonnaise épicée',
       'ciboulette'
     ],
-    isDrink: false,
-    isCountable: true,
   },
   {
     title: 'Maki thon',
     piecesNumber: 6,
     price: 4.5,
     image: imageFolderPath.concat('sushi_shokudo.webp'), 
-    isDrink: false,
-    isCountable: true,
   },
   {
     title: 'Maki thon spicy',
@@ -65,8 +55,6 @@ export const makisEntries: FoodEntry[] = [
       'mayonnaise épicée',
       'ciboulette'
     ],
-    isDrink: false,
-    isCountable: true,
   },
   {
     title: 'Maki daurade yuzu',
@@ -78,8 +66,6 @@ export const makisEntries: FoodEntry[] = [
       'coriandre',
       'mayonnaise mis yuzu'
     ],
-    isDrink: false,
-    isCountable: true,
   },
   {
     title: 'Maki salmon roll',
@@ -89,16 +75,12 @@ export const makisEntries: FoodEntry[] = [
     elements: [
       'Riz et cream cheese enroulés de saumon'
     ],
-    isDrink: false,
-    isCountable: true,
   },
   {
     title: 'Maki thon cuit',
     piecesNumber: 6,
     price: 4.5,
     image: imageFolderPath.concat('sushi_shokudo.webp'), 
-    isDrink: false,
-    isCountable: true,
   },   
   {
     title: 'Maki crevette',
@@ -111,8 +93,6 @@ export const makisEntries: FoodEntry[] = [
       '7 épices',
       'mangue'
     ],
-    isDrink: false,
-    isCountable: true,
   },
   {
     title: 'Maki crabe',
@@ -123,8 +103,6 @@ export const makisEntries: FoodEntry[] = [
       'crabe',
       'mayonnaise'
     ],
-    isDrink: false,
-    isCountable: true,
   },
   {
     title: 'Maki végétarien',
@@ -138,7 +116,5 @@ export const makisEntries: FoodEntry[] = [
       'concombre',
       'roquette'
     ],
-    isDrink: false,
-    isCountable: true,
   },
 ]
