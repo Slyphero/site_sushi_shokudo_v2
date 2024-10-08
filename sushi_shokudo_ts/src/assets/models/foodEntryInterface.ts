@@ -4,4 +4,6 @@ export interface FoodEntry {
   piecesNumber: number
   price: number 
   elements?: string[]
+  isDrink: boolean 
+  isCountable: boolean
 }

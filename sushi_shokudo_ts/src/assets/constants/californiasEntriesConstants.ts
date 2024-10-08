@@ -11,7 +11,7 @@ export const californiasEntries: FoodEntry[] = [
       'saumon',
       'avocat',
       'sésame',
-    ]
+    ],
   },
   {
     title: 'California saumon avocat cheese',
@@ -25,7 +25,7 @@ export const californiasEntries: FoodEntry[] = [
       'ciboulette',
       'avocat',
       'sésame',
-    ]
+    ],
   },
   {
     title: 'California saumon wasabi',
@@ -38,7 +38,7 @@ export const californiasEntries: FoodEntry[] = [
       'avocat',
       'ciboulette',
       'roquette'
-    ]
+    ],
   },
   {
     title: 'California thon avocat',
@@ -49,7 +49,7 @@ export const californiasEntries: FoodEntry[] = [
       'Thon',
       'avocat',
       'sésame'
-    ]
+    ],
   },
   {
     title: 'California thon cuit avocat',
@@ -60,7 +60,7 @@ export const californiasEntries: FoodEntry[] = [
       'Thon cuit',
       'avocat',
       'sésame'
-    ]
+    ],
   },
   {
     title: 'California Ebi fry',
@@ -72,7 +72,7 @@ export const californiasEntries: FoodEntry[] = [
       'mayonnaise épicée',
       'crevette tempura',
       'avocat'
-    ]
+    ],
   },
   {
     title: 'California Salmon Burrito',
@@ -84,7 +84,7 @@ export const californiasEntries: FoodEntry[] = [
       'saumon',
       'cream cheese',
       'ciboulette'
-    ]
+    ],
   },
   {
     title: 'California végétarien',
@@ -98,7 +98,7 @@ export const californiasEntries: FoodEntry[] = [
       'mangue',
       'avocat',
       'concombre'
-    ]
+    ],
   },
   {
     title: 'California daurade wasabi',
@@ -112,7 +112,7 @@ export const californiasEntries: FoodEntry[] = [
       'roquette',
       'avocat',
       'ciboulette'
-    ]
+    ],
   },
   {
     title: 'California foie gras',
@@ -124,7 +124,7 @@ export const californiasEntries: FoodEntry[] = [
       'Praline',
       'Confiture de figues',
       'Avocat'
-    ]
+    ],
   },
   {
     title: 'California poulet pané',
@@ -137,7 +137,7 @@ export const californiasEntries: FoodEntry[] = [
       'Mayonnaise',
       'Roquette',
       'Avocat'
-    ]
+    ],
   },
   {
     title: 'California crabe avocat',
@@ -149,7 +149,7 @@ export const californiasEntries: FoodEntry[] = [
       'Crabe',
       'Mayonnaise japonaise',
       'Avocat'
-    ]
+    ],
   },
   {
     title: 'California crevette avocat sésame',
@@ -160,6 +160,6 @@ export const californiasEntries: FoodEntry[] = [
       'Crevette',
       'Avocat',
       'Sésame'
-    ]
+    ],
   },
 ]
