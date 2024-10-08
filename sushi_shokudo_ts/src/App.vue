@@ -7,17 +7,7 @@ import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome'
 import { faEnvelope, faPhone, faLocationDot, faArrowUp } from '@fortawesome/free-solid-svg-icons';
 import { faFacebook, faInstagram } from '@fortawesome/free-brands-svg-icons'
 
-interface NavEntry {
-	name: string
-	link: string
-}
-
-const navEntries: NavEntry[] = [
-	{ name: 'Accueil', link: '/accueil' },
-	{ name: 'Menu', link: '/menu' },
-	{ name: 'Commander', link: '/commander' },
-	{ name: 'A propos', link: '/a-propos' }
-]
+import { navEntries } from './assets/constants/navEntriesConstants';
 
 function scrollToTop() {
   window.scrollTo({top: 0, behavior: 'smooth'})
@@ -27,7 +17,7 @@ function scrollToTop() {
 
 <template>
 
-<button @click="scrollToTop" class="scroll-up-button">
+<button @click="scrollToTop" class="scroll-up-button" id="scroll-up-button">
   <FontAwesomeIcon :icon=faArrowUp />
 </button>
 

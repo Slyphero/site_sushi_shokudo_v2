@@ -1,14 +1,7 @@
 <script setup lang="ts">
-import { menuEntries } from '@/assets/constants/menuEntriesConstants'
-import { sushisEntries } from '@/assets/constants/sushisEntriesConstants'
-import { makisEntries } from '@/assets/constants/makisEntriesConstants'
-import { sashimisEntries } from '@/assets/constants/sashimisEntriesConstants';
-import { tazunasEntries } from '@/assets/constants/tazunasEntriesConstants';
-import { temakisEntries } from '@/assets/constants/temakisEntriesConstants';
-import { californiasEntries } from '@/assets/constants/californiasEntriesConstants';
-import { springsEntries } from '@/assets/constants/springsEntriesConstants';
-
 import MenuEntry from '@/components/MenuEntry.vue'
+
+import { menuCategories } from '@/assets/constants/menuCategoriesConstants';
 
 </script>
 
@@ -16,64 +9,12 @@ import MenuEntry from '@/components/MenuEntry.vue'
 
 <div class="menus-page-container">
   <div class="menus-container">
-    
-    <section class="food-container">
-      <h2 class="heading">Menus</h2>
+    <section class="food-container" v-for="menuCategory in menuCategories">
+      <h2 class="heading">{{ menuCategory.headingName }}</h2>
       <div class="food-entry-container">
-        <MenuEntry v-for="menuEntry in menuEntries" :foodEntry=menuEntry />
+        <MenuEntry v-for="entry in menuCategory.foodEntriesArray" :foodEntry=entry />
       </div>
     </section>
-
-    <section class="food-container">
-      <h2 class="heading">Sushis</h2>
-      <div class="food-entry-container">
-        <MenuEntry v-for="sushiEntry in sushisEntries" :foodEntry=sushiEntry />
-      </div>
-    </section>
-
-    <section class="food-container">
-      <div class="heading-container">
-        <h2 class="heading">Makis</h2>
-      </div>
-      <div class="food-entry-container">
-        <MenuEntry v-for="makiEntry in makisEntries" :foodEntry=makiEntry />
-      </div>
-    </section>
-
-    <section class="food-container">
-      <h2 class="heading">Sashimis</h2>
-      <div class="food-entry-container">
-        <MenuEntry v-for="sashimiEntry in sashimisEntries" :foodEntry=sashimiEntry />
-      </div>
-    </section>
-    
-    <section class="food-container">
-      <h2 class="heading">Tazunas</h2>
-      <div class="food-entry-container">
-        <MenuEntry v-for="tazunaEntry in tazunasEntries" :foodEntry=tazunaEntry />
-      </div>
-    </section>
-
-    <section class="food-container">
-      <h2 class="heading">Temakis</h2>
-      <div class="food-entry-container">
-        <MenuEntry v-for="temakiEntry in temakisEntries" :foodEntry=temakiEntry />
-      </div>
-    </section>
-
-    <section class="food-container">
-      <h2 class="heading">Californias</h2>
-      <div class="food-entry-container">
-        <MenuEntry v-for="californiaEntry in californiasEntries" :foodEntry=californiaEntry />
-      </div>
-    </section>
-
-    <div class="food-container">
-      <h2 class="heading">Springs</h2>
-      <div class="food-entry-container">
-        <MenuEntry v-for="springEntry in springsEntries" :foodEntry=springEntry />
-      </div>
-    </div>
   </div>
 </div>
 

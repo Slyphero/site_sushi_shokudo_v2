@@ -1,7 +1,7 @@
 import type { FoodEntry } from "../models/foodEntryInterface"
 import { imageFolderPath } from "./imageFolderPathConstant"
 
-export const menuEntries: FoodEntry[] = [
+export const menusEntries: FoodEntry[] = [
   {
     title: 'Plateau Original',
     piecesNumber: 12,
