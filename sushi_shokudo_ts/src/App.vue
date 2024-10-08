@@ -4,7 +4,7 @@ import { RouterLink, RouterView } from 'vue-router'
 import logo from '@/assets/img/sushi_shokudo.webp'
 
 import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome'
-import { faEnvelope, faPhone, faLocationDot } from '@fortawesome/free-solid-svg-icons';
+import { faEnvelope, faPhone, faLocationDot, faArrowUp } from '@fortawesome/free-solid-svg-icons';
 import { faFacebook, faInstagram } from '@fortawesome/free-brands-svg-icons'
 
 interface NavEntry {
@@ -18,9 +18,19 @@ const navEntries: NavEntry[] = [
 	{ name: 'Commander', link: '/commander' },
 	{ name: 'A propos', link: '/a-propos' }
 ]
+
+function scrollToTop() {
+  window.scrollTo({top: 0, behavior: 'smooth'})
+}
+
 </script>
 
 <template>
+
+<button @click="scrollToTop" class="scroll-up-button">
+  <FontAwesomeIcon :icon=faArrowUp />
+</button>
+
 <div class="header-container">
   <header>
     <div class="header-logo-container">
@@ -93,6 +103,24 @@ const navEntries: NavEntry[] = [
   margin: 0;
   padding: 0;
   font-family: $body-font;
+
+  .scroll-up-button {
+    position: fixed; 
+    bottom: 30px;
+    right: 30px;
+    font-size: 36px; 
+    padding: 20px;
+    @include property-color-opacity(background-color, $secondary-color, 1);
+    border-radius: 100%;
+    border: none;
+  }
+
+  .scroll-up-button:hover {
+    cursor: pointer;
+    @include property-color-opacity(background-color, $primary-color, 1);
+    transition: 0.2s ease-in-out;
+  }
+
   ul {
     list-style-type: none;
   }
