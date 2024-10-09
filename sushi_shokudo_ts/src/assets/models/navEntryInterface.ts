@@ -1,4 +1,5 @@
-export interface NavEntry {
-  name: string 
-  link: string
+export interface NavEntry 
+{
+	name: string; 
+	link: string;
 }

@@ -13,12 +13,17 @@ $opacity: float between 0 and 1
 
 apply to a css class : set $property with $color and $opacity
 */
-@mixin property-color-opacity($property, $color, $opacity) {
-	@if list.index($properties-color-list, $property) and 
-	$opacity >= 0 and $opacity <= 1 
-	and list.index($valid-colors, $color) {
+@mixin property-color-opacity($property, $color, $opacity) 
+{
+	@if list.index($properties-color-list, $property) 
+		and $opacity >= 0 and $opacity <= 1 
+		and list.index($valid-colors, $color) 
+	{
 		#{$property}: rgba($color, $opacity);
-	} @else {
+	} 
+	
+	@else 
+	{
 		@warn "check $property, $color, $opacity values";
 	}
 }
