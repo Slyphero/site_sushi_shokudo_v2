@@ -72,6 +72,7 @@ defineProps<{
 			display: flex;
 			justify-content: center;
 			text-align: center;
+			
 			h6 
 			{
 				font-size: 24px;

@@ -58,7 +58,6 @@ import { RouterLink } from "vue-router";
 			display: flex;
 			flex-direction: column;
 			justify-content: space-between;
-
 			height: 50%;
 			width: 50%;
 

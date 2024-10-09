@@ -17,7 +17,7 @@ defineProps<{
 		<div class="menu-title-description-container">
 			<div class="menu-title">
 				<h2>
-				{{ menuTitle.title }}
+					{{ menuTitle.title }}
 				</h2>
 			</div>
 
@@ -33,7 +33,7 @@ defineProps<{
 		<div class="menu-title-description-container">
 			<div class="menu-title">
 				<h2>
-				{{ menuTitle.title }}
+					{{ menuTitle.title }}
 				</h2>
 			</div>
 
@@ -70,6 +70,7 @@ defineProps<{
 			{
 				height: 30vh;
 			}
+			
 			padding: 10px 0;
 		}
 	}
