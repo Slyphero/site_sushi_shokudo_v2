@@ -22,6 +22,12 @@ function createIndexPrefixId(prefix: string, index: number): string
 			<MenuEntry v-for="entry in menuCategory.foodEntriesArray" :foodEntry=entry />
 		</div>
 	</div>
+
+	<div v-for="(menuCategory, index) in menuCategories" class="category-container">
+		<div class="category-title-container" :id="createIndexPrefixId('category', index)">
+			<MenuTitle :menuTitle=menuCategory.menuTitleEntry :index=index />
+		</div>
+	</div>
 </div>
 
 </template>

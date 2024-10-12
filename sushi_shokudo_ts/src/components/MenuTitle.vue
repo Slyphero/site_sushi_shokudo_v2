@@ -10,7 +10,7 @@ defineProps<{
 <template>
 <div v-if="index % 2 === 0" class="menu-title-container">
 	<div class="menu-image-title-container">
-		<div class="menu-image-container">
+		<div v-if="menuTitle.image !== undefined" class="menu-image-container">
 			<img :src=menuTitle.image alt="">
 		</div>
 
@@ -42,7 +42,7 @@ defineProps<{
 			</div>
 		</div>
 
-		<div class="menu-image-container">
+		<div v-if="menuTitle.image !== undefined" class="menu-image-container">
 			<img :src=menuTitle.image alt="">
 		</div>
 	</div>
