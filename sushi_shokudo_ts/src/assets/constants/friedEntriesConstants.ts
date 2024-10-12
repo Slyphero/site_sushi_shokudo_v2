@@ -14,4 +14,16 @@ export const friedEntries: FoodEntry[] = [
         price: 7.3,
         image: imageFolderPath.concat("sushi_shokudo.webp"),
     },
+    {
+        title: "Nem au poulet",
+        piecesNumber: 4,
+        price: 6.5,
+        image: imageFolderPath.concat("sushi_shokudo.webp"),
+    },
+    {
+        title: "Nem au légumes",
+        piecesNumber: 4,
+        price: 6.5,
+        image: imageFolderPath.concat("sushi_shokudo.webp"),
+    },
 ]

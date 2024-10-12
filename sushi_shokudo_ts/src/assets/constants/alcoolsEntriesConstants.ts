@@ -47,9 +47,9 @@ export const alcoolsEntries: DrinkEntry[] = [
         title: "Verre de vin",
         price: 4,
         elements: [
-            "Blanc (Chardonnay)",
-            "Rosé (La Gayotte)",
-            "Rouge (Fond Croze Confidence)"
+            "Blanc (Chardonnay 14 %)",
+            "Rosé (La Gayolle 13.5%)",
+            "Rouge (Fond Croze Confidence 14.5 %)"
         ]
     }
 ]
