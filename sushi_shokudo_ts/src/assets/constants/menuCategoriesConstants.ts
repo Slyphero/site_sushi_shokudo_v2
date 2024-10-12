@@ -14,6 +14,9 @@ import { yakitorisEntries } from "./yakitorisEntriesConstants";
 import { tartaresEntries } from "./tartaresEntriesConstants";
 import { chirashisEntries } from "./chirashisEntriesConstants";
 import { pokeBowlsEntries } from "./pokeBowlsEntriesConstants";
+import { friedEntries } from "./friedEntriesConstants";
+import { sidesEntries } from "./sidesEntriesConstants";
+import { dessertsEntries } from "./dessertsEntriesConstants";
 
 export const menuCategories: MenuCategory[] = [
 	{
@@ -119,5 +122,29 @@ export const menuCategories: MenuCategory[] = [
 			description: "Un gyoza est un ravioli japonais, à la fois grillé à la poêle et cuit à la vapeur d'eau."
 		},
 		foodEntriesArray: gyozasEntries,
+	}, 
+	{
+		menuTitleEntry: {
+			title: "Fritures",
+			image: imageFolderPath.concat("sushi_shokudo.webp"),
+			description: "Notre sélection de fritures."
+		},
+		foodEntriesArray: friedEntries,
+	}, 
+	{
+		menuTitleEntry: {
+			title: "Accompagnements",
+			image: imageFolderPath.concat("sushi_shokudo.webp"),
+			description: "Notre sélection d'accompagnements."
+		},
+		foodEntriesArray: sidesEntries,
+	}, 
+	{
+		menuTitleEntry: {
+			title: "Desserts",
+			image: imageFolderPath.concat("sushi_shokudo.webp"),
+			description: "Notre sélection de desserts."
+		},
+		foodEntriesArray: dessertsEntries,
 	}, 
 ];
