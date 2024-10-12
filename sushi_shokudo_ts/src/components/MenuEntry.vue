@@ -8,7 +8,7 @@ defineProps<{
 
 <template>
 <div class="menu-entry-container">
-	<div class="entry-image-container">
+	<div v-if="foodEntry.image !== undefined" class="entry-image-container">
 		<img :src=foodEntry.image alt="">
 	</div>
 
