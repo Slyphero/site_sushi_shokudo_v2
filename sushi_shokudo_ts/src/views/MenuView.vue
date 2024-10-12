@@ -60,52 +60,64 @@ function formatAlcoolEntry(
 	</div>
 
 	<h3>Sans alcool</h3>
-	<table>
-		<tr>
-			<th>Boisson</th>
-			<th>Prix</th>
-		</tr>
-		<tr v-for="drinkEntry in drinksEntries">
-			<td v-if="drinkEntry.piecesNumber !== undefined && drinkEntry.elements === undefined">
-				{{ formatDrinkEntry(drinkEntry.title, drinkEntry.piecesNumber) }}
-			</td>
-			<td v-else-if="drinkEntry.piecesNumber !== undefined && drinkEntry.elements !== undefined">
-				{{ 
-					formatDrinkEntry(
-						drinkEntry.title, 
-						drinkEntry.piecesNumber).concat(
-							" : ", 
-							drinkEntry.elements.join(", ")
-						) 
-				}}
-			</td>
-			<td>{{ drinkEntry.price.toFixed(2) }}€</td>
-		</tr>
-	</table>
+	<div class="drinks-container">
+		<table>
+			<thead>
+				<tr>
+					<th class="drink-column">Boisson</th>
+					<th class="price-column">Prix</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr v-for="drinkEntry in drinksEntries">
+					<td v-if="drinkEntry.piecesNumber !== undefined && drinkEntry.elements === undefined">
+						{{ formatDrinkEntry(drinkEntry.title, drinkEntry.piecesNumber) }}
+					</td>
+					<td v-else-if="drinkEntry.piecesNumber !== undefined && drinkEntry.elements !== undefined">
+						{{ 
+							formatDrinkEntry(
+								drinkEntry.title, 
+								drinkEntry.piecesNumber).concat(
+									" : ", 
+									drinkEntry.elements.join(", ")
+								) 
+						}}
+					</td>
+					<td class="price-column">{{ drinkEntry.price.toFixed(2) }}€</td>
+				</tr>
+			</tbody>
+		</table>
+	</div>
 
 	<h3>Alcools</h3>
-	<table>
-		<tr>
-			<th>Alcool</th>
-			<th>Prix</th>
-		</tr>
+	<div class="drinks-container">
+		<table>
+			<thead>
+				<tr>
+					<th class="drink-column">Alcool</th>
+					<th class="price-column">Prix</th>
+				</tr>
+			</thead>
 
-		<tr v-for="alcoolEntry in alcoolsEntries">
-			<td v-if="alcoolEntry.piecesNumber !== undefined && alcoolEntry.alcoolVolume !== undefined && alcoolEntry.elements === undefined">
-				{{ formatAlcoolEntry(alcoolEntry.title, alcoolEntry.piecesNumber, alcoolEntry.alcoolVolume) }}
-			</td>
-			<td v-if="alcoolEntry.piecesNumber !== undefined && alcoolEntry.alcoolVolume !== undefined && alcoolEntry.elements === undefined">{{ alcoolEntry.price.toFixed(2) }}€</td>
-		</tr>
+			<tbody>
+				<tr v-for="alcoolEntry in alcoolsEntries">
+					<td v-if="alcoolEntry.piecesNumber !== undefined && alcoolEntry.alcoolVolume !== undefined && alcoolEntry.elements === undefined" class="drink-column">
+						{{ formatAlcoolEntry(alcoolEntry.title, alcoolEntry.piecesNumber, alcoolEntry.alcoolVolume) }}
+					</td>
+					<td v-if="alcoolEntry.piecesNumber !== undefined && alcoolEntry.alcoolVolume !== undefined && alcoolEntry.elements === undefined" class="price-column">{{ alcoolEntry.price.toFixed(2) }}€</td>
+				</tr>
 
-		<tr>
-			<td v-if="vins.elements !== undefined">
-				{{
-					vins.title.concat(" : ", vins.elements.join(", "))
-				}}
-			</td>
-			<td>{{ vins.price.toFixed(2) }}€</td>
-		</tr>
-	</table>
+				<tr>
+					<td v-if="vins.elements !== undefined" class="drink-column">
+						{{
+							vins.title.concat(" : ", vins.elements.join(", "))
+						}}
+					</td>
+					<td class="price-column">{{ vins.price.toFixed(2) }}€</td>
+				</tr>
+			</tbody>
+		</table>
+	</div>
 </div>
 
 </template>
@@ -153,6 +165,290 @@ function formatAlcoolEntry(
 	{
 		text-align: center;
 		font-size: 48px;
+	}
+
+	.drinks-container 
+	{
+		font-size: 1.1em;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+
+		table 
+		{
+			width: 50%;
+
+			td, th
+			{
+				padding: 10px 0;
+			}
+
+			th 
+			{
+				font-size: 1.2em;
+			}
+
+			.drink-column
+			{
+				width: 90%;
+				text-align: left;
+			}
+
+			.price-column
+			{
+				text-align: right;
+				width: 10%;
+			}
+		}
+	}
+}
+
+@media only screen and (max-width: 1500px)
+{
+	.menus-page-container 
+	{
+		.category-container 
+		{
+			display: flex; 
+			flex-direction: column;
+			justify-content: center;
+			align-items: center;
+
+			.category-title-container 
+			{
+				width: 100%;
+			}
+
+			.category-list-container 
+			{
+				width: 90%;
+				display: flex;
+				flex-direction: row;
+				flex-wrap: wrap;
+				justify-content: space-between;
+			}
+		}
+
+		.drinks-container-title 
+		{
+			display: flex;
+			flex-direction: row;
+			justify-content: center;
+			align-items: center;
+			height: 20vh;
+
+			h2 
+			{
+				font-size: 72px;
+			}
+		}
+
+		h3 
+		{
+			text-align: center;
+			font-size: 48px;
+		}
+
+		.drinks-container 
+		{
+			font-size: 1.1em;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+
+			table 
+			{
+				width: 90%;
+
+				td, th
+				{
+					padding: 10px 0;
+				}
+
+				th 
+				{
+					font-size: 1.2em;
+				}
+
+				.drink-column
+				{
+					width: 90%;
+					text-align: left;
+				}
+
+				.price-column
+				{
+					text-align: right;
+					width: 10%;
+				}
+			}
+		}
+	}
+}
+
+@media only screen and (max-width: 1200px)
+{
+	.menus-page-container 
+	{
+		.category-container 
+		{
+			display: flex; 
+			flex-direction: column;
+			justify-content: center;
+			align-items: center;
+
+			.category-title-container 
+			{
+				width: 100%;
+			}
+
+			.category-list-container 
+			{
+				width: 90%;
+				display: flex;
+				flex-direction: row;
+				flex-wrap: wrap;
+				justify-content: space-around;
+			}
+		}
+
+		.drinks-container-title 
+		{
+			display: flex;
+			flex-direction: row;
+			justify-content: center;
+			align-items: center;
+			height: 20vh;
+
+			h2 
+			{
+				font-size: 72px;
+			}
+		}
+
+		h3 
+		{
+			text-align: center;
+			font-size: 48px;
+		}
+
+		.drinks-container 
+		{
+			font-size: 1.1em;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+
+			table 
+			{
+				width: 80%;
+
+				td, th
+				{
+					padding: 10px 0;
+				}
+
+				th 
+				{
+					font-size: 1.2em;
+				}
+
+				.drink-column
+				{
+					width: 90%;
+					text-align: left;
+				}
+
+				.price-column
+				{
+					text-align: right;
+					width: 10%;
+				}
+			}
+		}
+	}
+}
+
+@media only screen and (max-width: 600px)
+{
+	.menus-page-container 
+	{
+		.category-container 
+		{
+			display: flex; 
+			flex-direction: column;
+			justify-content: center;
+			align-items: center;
+
+			.category-title-container 
+			{
+				width: 100%;
+			}
+
+			.category-list-container 
+			{
+				width: 70%;
+				display: flex;
+				flex-direction: row;
+				flex-wrap: wrap;
+				justify-content: space-between;
+			}
+		}
+
+		.drinks-container-title 
+		{
+			display: flex;
+			flex-direction: row;
+			justify-content: center;
+			align-items: center;
+			height: 20vh;
+
+			h2 
+			{
+				font-size: 72px;
+			}
+		}
+
+		h3 
+		{
+			text-align: center;
+			font-size: 48px;
+		}
+
+		.drinks-container 
+		{
+			font-size: 1.1em;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+
+			table 
+			{
+				width: 90%;
+
+				td, th
+				{
+					padding: 10px 0;
+				}
+
+				th 
+				{
+					font-size: 1.2em;
+				}
+
+				.drink-column
+				{
+					width: 90%;
+					text-align: left;
+				}
+
+				.price-column
+				{
+					text-align: right;
+					width: 10%;
+				}
+			}
+		}
 	}
 }
 </style>

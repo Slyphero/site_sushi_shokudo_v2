@@ -57,7 +57,7 @@ defineProps<{
 	{
 		img 
 		{
-			height: 150px;
+			height: 15vh;
 		}
 	}
 
@@ -84,6 +84,30 @@ defineProps<{
 			display: flex;
 			justify-content: center;
 		}
+	}
+}
+
+@media only screen and (max-width: 1200px) 
+{
+	.menu-entry-container 
+	{
+		width: 40%;
+	}
+}
+
+@media only screen and (max-width: 900px) 
+{
+	.menu-entry-container 
+	{
+		width: 80%;
+	}
+}
+
+@media only screen and (max-width: 600px) 
+{
+	.menu-entry-container 
+	{
+		width: 90%;
 	}
 }
 </style>
