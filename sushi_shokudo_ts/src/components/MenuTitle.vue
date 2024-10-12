@@ -64,21 +64,33 @@ defineProps<{
 		justify-content: space-between;
 		width: 50%;
 
-		.menu-title 
+		.menu-title-description-container 
 		{
-			h2 
-			{
-				font-size: 72px;
-			}
-		}
+			width: 70%;
+			display: flex;
+			flex-direction: column;
+			justify-content: center;
+			align-items: center;
 
-		.menu-description 
-		{
-			font-size: 24px;
+			.menu-title 
+			{
+				h2 
+				{
+					font-size: 72px;
+				}
+			}
+
+			.menu-description 
+			{
+				font-size: 24px;
+			}
 		}
 
 		.menu-image-container 
 		{
+			width: 30%;
+			display: flex;
+			justify-content: center;
 			img 
 			{
 				height: 30vh;

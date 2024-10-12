@@ -12,6 +12,8 @@ import { springsEntries } from "./springsEntriesConstants";
 import { gyozasEntries } from "./gyozasEntriesConstants";
 import { yakitorisEntries } from "./yakitorisEntriesConstants";
 import { tartaresEntries } from "./tartaresEntriesConstants";
+import { chirashisEntries } from "./chirashisEntriesConstants";
+import { pokeBowlsEntries } from "./pokeBowlsEntriesConstants";
 
 export const menuCategories: MenuCategory[] = [
 	{
@@ -26,7 +28,7 @@ export const menuCategories: MenuCategory[] = [
 		menuTitleEntry: {
 			title: "Sushis",
 			image: imageFolderPath.concat("sushi_shokudo.webp"),
-			description: "Notre sélection de sushis."
+			description: "Un sushi est une quenelle de riz vinaigré sur laquelle nous déposons une tranche de poisson."
 		},
 		foodEntriesArray: sushisEntries,
 	},
@@ -42,7 +44,7 @@ export const menuCategories: MenuCategory[] = [
 		menuTitleEntry: {
 			title: "Makis",
 			image: imageFolderPath.concat("sushi_shokudo.webp"),
-			description: "Notre sélection de makis."
+			description: "Un maki est un cube de riz entouré d'une feuille de nori. Il est agrémenté de poisson cru et de crudités."
 		},
 		foodEntriesArray: makisEntries,
 	},
@@ -50,7 +52,7 @@ export const menuCategories: MenuCategory[] = [
 		menuTitleEntry: {
 			title: "Californias",
 			image: imageFolderPath.concat("sushi_shokudo.webp"),
-			description: "Notre sélection de californias."
+			description: "Un california est un cube de riz agrémenté de sésame à l'extérieur ainsi que d'une feuille de nori et de poisson à l'intérieur."
 		},
 		foodEntriesArray: californiasEntries,
 	},
@@ -58,7 +60,7 @@ export const menuCategories: MenuCategory[] = [
 		menuTitleEntry: {
 			title: "Springs",
 			image: imageFolderPath.concat("sushi_shokudo.webp"),
-			description: "Notre sélection de springs."
+			description: "Un spring est un cube de riz agrémenté de poisson et de crudités entouré d'une feuille de riz."
 		},
 		foodEntriesArray: springsEntries,
 	},
@@ -74,7 +76,7 @@ export const menuCategories: MenuCategory[] = [
 		menuTitleEntry: {
 			title: "Sashimis",
 			image: imageFolderPath.concat("sushi_shokudo.webp"),
-			description: "Notre sélection de sashimis."
+			description: "Un sashimi est une tranche de poisson frais."
 		},
 		foodEntriesArray: sashimisEntries,
 	},
@@ -88,6 +90,22 @@ export const menuCategories: MenuCategory[] = [
 	},
 	{
 		menuTitleEntry: {
+			title: "Chirashis",
+			image: imageFolderPath.concat("sushi_shokudo.webp"),
+			description: "Un chirashi est un plat à base de tranches de poissons sur un lit de riz vinaigré. Nous l'accompagnons d'une soupe miso."
+		},
+		foodEntriesArray: chirashisEntries,
+	},
+	{
+		menuTitleEntry: {
+			title: "Poke Bowls",
+			image: imageFolderPath.concat("sushi_shokudo.webp"),
+			description: "Un poke bowl est un plat composé d'une base de riz vinaigré. Tous nos poke bowls sont agrémentés d'avocat, d'edamame, de concombre, de radis, de tomates cerises, de carottes et de sésame."
+		},
+		foodEntriesArray: pokeBowlsEntries,
+	},
+	{
+		menuTitleEntry: {
 			title: "Yakitoris",
 			image: imageFolderPath.concat("sushi_shokudo.webp"),
 			description: "Notre sélection de yakitoris."
@@ -98,7 +116,7 @@ export const menuCategories: MenuCategory[] = [
 		menuTitleEntry: {
 			title: "Gyozas",
 			image: imageFolderPath.concat("sushi_shokudo.webp"),
-			description: "Notre sélection de gyozas."
+			description: "Un gyoza est un ravioli japonais, à la fois grillé à la poêle et cuit à la vapeur d'eau."
 		},
 		foodEntriesArray: gyozasEntries,
 	}, 
