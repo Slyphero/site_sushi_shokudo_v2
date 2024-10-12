@@ -85,7 +85,7 @@ export const sushisEntries: FoodEntry[] = [
 	{
 		title: "Sushi oeufs de saumon",
 		piecesNumber: 2,
-		price: 6,
+		price: 7,
 		image: imageFolderPath.concat("sushi_shokudo.webp"), 
 	},
 	{

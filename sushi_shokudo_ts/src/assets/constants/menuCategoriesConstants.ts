@@ -11,6 +11,7 @@ import { californiasEntries } from "./californiasEntriesConstants";
 import { springsEntries } from "./springsEntriesConstants";
 import { gyozasEntries } from "./gyozasEntriesConstants";
 import { yakitorisEntries } from "./yakitorisEntriesConstants";
+import { tartaresEntries } from "./tartaresEntriesConstants";
 
 export const menuCategories: MenuCategory[] = [
 	{
@@ -31,35 +32,19 @@ export const menuCategories: MenuCategory[] = [
 	},
 	{
 		menuTitleEntry: {
-			title: "Makis",
-			image: imageFolderPath.concat("sushi_shokudo.webp"),
-			description: "Notre sélection de makis."
-		},
-		foodEntriesArray: makisEntries,
-	},
-	{
-		menuTitleEntry: {
-			title: "Sashimis",
-			image: imageFolderPath.concat("sushi_shokudo.webp"),
-			description: "Notre sélection de sashimis."
-		},
-		foodEntriesArray: sashimisEntries,
-	},
-	{
-		menuTitleEntry: {
-			title: "Tazunas",
-			image: imageFolderPath.concat("sushi_shokudo.webp"),
-			description: "Notre sélection de tazunas."
-		},
-		foodEntriesArray: tazunasEntries,
-	},
-	{
-		menuTitleEntry: {
 			title: "Temakis",
 			image: imageFolderPath.concat("sushi_shokudo.webp"),
 			description: "Notre sélection de temakis."
 		},
 		foodEntriesArray: temakisEntries,
+	},
+	{
+		menuTitleEntry: {
+			title: "Makis",
+			image: imageFolderPath.concat("sushi_shokudo.webp"),
+			description: "Notre sélection de makis."
+		},
+		foodEntriesArray: makisEntries,
 	},
 	{
 		menuTitleEntry: {
@@ -79,12 +64,28 @@ export const menuCategories: MenuCategory[] = [
 	},
 	{
 		menuTitleEntry: {
-			title: "Gyozas",
+			title: "Tazunas",
 			image: imageFolderPath.concat("sushi_shokudo.webp"),
-			description: "Notre sélection de gyozas."
+			description: "Notre sélection de tazunas."
 		},
-		foodEntriesArray: gyozasEntries,
-	}, 
+		foodEntriesArray: tazunasEntries,
+	},
+	{
+		menuTitleEntry: {
+			title: "Sashimis",
+			image: imageFolderPath.concat("sushi_shokudo.webp"),
+			description: "Notre sélection de sashimis."
+		},
+		foodEntriesArray: sashimisEntries,
+	},
+	{
+		menuTitleEntry: {
+			title: "Tartares",
+			image: imageFolderPath.concat("sushi_shokudo.webp"),
+			description: "Notre sélection de tartares"
+		},
+		foodEntriesArray: tartaresEntries,
+	},
 	{
 		menuTitleEntry: {
 			title: "Yakitoris",
@@ -92,5 +93,13 @@ export const menuCategories: MenuCategory[] = [
 			description: "Notre sélection de yakitoris."
 		},
 		foodEntriesArray: yakitorisEntries,
-	}
+	},
+	{
+		menuTitleEntry: {
+			title: "Gyozas",
+			image: imageFolderPath.concat("sushi_shokudo.webp"),
+			description: "Notre sélection de gyozas."
+		},
+		foodEntriesArray: gyozasEntries,
+	}, 
 ];

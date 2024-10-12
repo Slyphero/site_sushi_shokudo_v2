@@ -206,7 +206,7 @@ function scrollToTop()
 		.footer-logo-container 
 		{
 			padding: 20px 0px;
-			
+
 			.footer-logo 
 			{
 				height: 20vh;
