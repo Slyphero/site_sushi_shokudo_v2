@@ -13,6 +13,7 @@ $opacity: float between 0 and 1
 
 apply to a css class : set $property with $color and $opacity
 */
+
 @mixin property-color-opacity($property, $color, $opacity) 
 {
 	@if list.index($properties-color-list, $property) 
@@ -21,7 +22,6 @@ apply to a css class : set $property with $color and $opacity
 	{
 		#{$property}: rgba($color, $opacity);
 	} 
-	
 	@else 
 	{
 		@warn "check $property, $color, $opacity values";

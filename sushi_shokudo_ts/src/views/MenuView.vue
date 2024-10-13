@@ -1,4 +1,6 @@
 <script setup lang="ts">
+import { onMounted } from "vue";
+
 import MenuEntry from "@/components/MenuEntry.vue";
 import MenuTitle from "@/components/MenuTitle.vue";
 
@@ -8,8 +10,13 @@ import { drinksEntries } from "@/assets/constants/drinksEntriesConstants";
 import { alcoolsEntries } from "@/assets/constants/alcoolsEntriesConstants";
 import type { DrinkEntry } from "@/assets/models/drinkEntryInterface";
 
+import { FontAwesomeIcon } from "@fortawesome/vue-fontawesome";
+import { faX, faArrowRight } from "@fortawesome/free-solid-svg-icons";
+
 const vinsArray: DrinkEntry[] = alcoolsEntries.slice(-1);
 const vins: DrinkEntry = vinsArray[0];
+
+let h2Array: NodeListOf<HTMLHeadingElement>;
 
 function createIndexPrefixId(prefix: string, index: number): string 
 {
@@ -41,13 +48,101 @@ function formatAlcoolEntry(
 	);
 }
 
+function smoothScrollTo(target: string): void 
+{
+	let titleElement: HTMLElement | null = document.getElementById(target);
+	if (titleElement)
+	{
+		window.scrollTo({
+			top: titleElement.offsetTop,
+			behavior: "smooth"
+		});
+	}
+}
+
+function createAsideLinks(headingsElements: NodeListOf<HTMLHeadingElement>): void 
+{
+	const ul: HTMLElement | null = document.getElementById("table-of-contents-links");
+	let li: HTMLLIElement | null;
+	let node: Text | null;
+
+	// for (let headingElement of headingsElements)
+	// {
+	// 	li = document.createElement("li");
+	// 	if (headingElement.textContent !== null)
+	// 	{
+	// 		node = document.createTextNode(headingElement.textContent);
+	// 		if (ul !== null)
+	// 		{
+	// 			li.appendChild(node); 
+	// 			li.classList.add("table-of-contents-link");
+	// 			li.addEventListener("click", () => {
+	// 				smoothScrollTo(headingElement.id)
+	// 			});
+
+
+
+	// 			ul.appendChild(li);
+	// 		}
+	// 	}
+	// }
+	for (let i = 0; i < headingsElements.length; i++)
+	{
+		li = document.createElement("li");
+		if (headingsElements[i].textContent !== null)
+		{
+			node = document.createTextNode(headingsElements[i].textContent);
+			if (ul !== null)
+			{
+				li.appendChild(node); 
+				li.classList.add("table-of-contents-link");
+				li.setAttribute("style", "padding: 10px 30px; font-size: 1.5em; cursor: pointer; overflow: auto")
+				li.addEventListener("click", () => {
+					smoothScrollTo(headingsElements[i].id)
+				});
+
+				ul.appendChild(li);
+			}
+		}
+	}
+}
+
+function showTableOfContents(): void
+{
+	document.getElementById("aside-container")?.classList.add("show");
+}
+
+function hideTableOfContents(): void 
+{
+	document.getElementById("aside-container")?.classList.remove("show");
+}
+
+onMounted(() => {
+	h2Array = document.querySelectorAll("h2");
+	createAsideLinks(h2Array);
+})
 </script>
 
 <template>
+<div class="table-of-contents-button-container" @click="showTableOfContents">
+	<FontAwesomeIcon :icon=faArrowRight class="table-of-contents-button" />
+</div>
+
+<div id="aside-container" class="aside-container">
+	<aside>
+		<h5>Carte</h5>
+		<div class="close-table-of-contents-button-container" @click="hideTableOfContents">
+			<FontAwesomeIcon :icon=faX class="table-of-contents-close-button" />
+		</div>
+		<ul id="table-of-contents-links">
+			<!-- Contenu chargé par code Typescript -->
+		</ul>
+	</aside>
+</div>
 
 <div class="menus-page-container">
 	<div v-for="(menuCategory, index) in menuCategories" class="category-container">
-		<div class="category-title-container" :id="createIndexPrefixId('category', index)">
+		<div class="category-title-container">
 			<MenuTitle :menuTitle=menuCategory.menuTitleEntry :index=index />
 		</div>
 		<div class="category-list-container">
@@ -56,7 +151,7 @@ function formatAlcoolEntry(
 	</div>
 
 	<div class="drinks-container-title">
-		<h2 class="drinks-title">Boissons</h2>
+		<h2 id="drinks-title" class="drinks-title">Boissons</h2>
 	</div>
 
 	<h3>Sans alcool</h3>
@@ -123,6 +218,56 @@ function formatAlcoolEntry(
 </template>
 
 <style scoped lang="scss">
+.table-of-contents-button-container 
+{
+	position: fixed;
+	top: 0;
+	padding: 10px;
+	.table-of-contents-button 
+	{
+		font-size: 2em;
+	}
+}
+
+.aside-container 
+{
+	position: fixed;
+	left: -100%;
+	top: 0;
+	@include property-color-opacity(background-color, $background-color, 1);
+	height: 100%;
+	width: 25%;
+
+	aside 
+	{
+		height: 100%;
+		h5 
+		{
+			font-size: 2em;
+			text-align: center;
+		}
+
+		.close-table-of-contents-button-container 
+		{
+			padding: 10px 30px;
+			.table-of-contents-close-button 
+			{
+				font-size: 2em;
+			}
+		}
+	}
+
+	transition: 0.5s ease-in-out;
+}
+
+.show 
+{
+	left: 0;
+	transition: 0.5s ease-in-out;
+}
+
+
+
 .menus-page-container 
 {
 	.category-container 
@@ -205,6 +350,10 @@ function formatAlcoolEntry(
 
 @media only screen and (max-width: 1500px)
 {
+	.aside-container 
+	{
+		width: 30%;
+	}
 	.menus-page-container 
 	{
 		.category-container 
@@ -227,6 +376,10 @@ function formatAlcoolEntry(
 
 @media only screen and (max-width: 900px)
 {
+	.aside-container 
+	{
+		width: 100%;
+	}
 	.menus-page-container 
 	{
 		.category-container

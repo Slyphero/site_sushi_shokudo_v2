@@ -392,6 +392,7 @@ function showNavMenu(): void
 			.header-links
 			{
 				display: none;
+				top: -100%;
 				flex-direction: column;
 				justify-content: center;
 				align-items: center;

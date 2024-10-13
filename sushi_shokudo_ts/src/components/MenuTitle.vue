@@ -1,10 +1,16 @@
 <script setup lang="ts">
 import type { MenuTitleEntry } from "@/assets/models/menuTitleEntryInterface";
+import { createDocumentRegistry } from "typescript";
 
 defineProps<{
     menuTitle: MenuTitleEntry;
     index: number;
 }>()
+
+function createIdTitle(index: number): string
+{
+	return "category-" + index;
+}
 </script>
 
 <template>
@@ -16,7 +22,7 @@ defineProps<{
 
 		<div class="menu-title-description-container">
 			<div class="menu-title">
-				<h2>
+				<h2 :id=createIdTitle(index)>
 					{{ menuTitle.title }}
 				</h2>
 			</div>
@@ -32,7 +38,7 @@ defineProps<{
 	<div class="menu-image-title-container">
 		<div class="menu-title-description-container">
 			<div class="menu-title">
-				<h2>
+				<h2 :id=createIdTitle(index)>
 					{{ menuTitle.title }}
 				</h2>
 			</div>
