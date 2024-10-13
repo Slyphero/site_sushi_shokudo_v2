@@ -4,14 +4,24 @@ import { RouterLink, RouterView } from "vue-router";
 import logo from "@/assets/img/sushi_shokudo.webp";
 
 import { FontAwesomeIcon } from "@fortawesome/vue-fontawesome";
-import { faEnvelope, faPhone, faLocationDot, faArrowUp } from "@fortawesome/free-solid-svg-icons";
+import { faEnvelope, faPhone, faLocationDot, faArrowUp, faBars } from "@fortawesome/free-solid-svg-icons";
 import { faFacebook, faInstagram } from "@fortawesome/free-brands-svg-icons";
 
 import { navEntries } from "./assets/constants/navEntriesConstants";
 
-function scrollToTop() 
+function scrollToTop(): void
 {
  	window.scrollTo({top: 0, behavior: "smooth"})
+}
+
+function showNavMenu(): void
+{
+	let nav: HTMLElement | null = document.getElementById("nav-menu");
+
+	if (nav !== null)
+	{
+		nav.classList.toggle("show");
+	}
 }
 
 </script>
@@ -24,11 +34,15 @@ function scrollToTop()
 
 <div class="header-container">
 	<header>
-		<div class="header-logo-container">
-			<img class="header-logo" :src="logo" alt="">
+		<div class="logo-nav-menu-button-container">
+			<div class="header-logo-container">
+				<img class="header-logo" :src="logo" alt="">
+			</div>
+
+			<FontAwesomeIcon @click="showNavMenu()" :icon="faBars" class="nav-menu-icon" />
 		</div>
-		
-		<nav class="header-links">
+
+		<nav id="nav-menu" class="header-links">
 			<RouterLink class="header-link link" v-for="navEntry in navEntries" :to=navEntry.link>
 				{{ navEntry.name }}
 			</RouterLink>
@@ -44,48 +58,52 @@ function scrollToTop()
 			<img class="footer-logo" :src="logo" alt="">
 		</div>
 		
-		<nav class="footer-links">
-			<RouterLink class="footer-link link" v-for="navEntry in navEntries" :to=navEntry.link>
-				{{ navEntry.name }}
-			</RouterLink>
-		</nav>
+		<div class="footer-links-container">
+			<nav class="footer-links">
+				<RouterLink class="footer-link link" v-for="navEntry in navEntries" :to=navEntry.link>
+					{{ navEntry.name }}
+				</RouterLink>
+			</nav>
 
-		<div class="infos-container">
-			<ul>
-				<li class="info-entry">
-					<a href="https://maps.app.goo.gl/gUXJruNjZMACemWh9" class="link">
-						<FontAwesomeIcon :icon="faLocationDot" /> 124 Cours Lafayette, 69003 Lyon 3
-					</a>
-				</li>
+			<div class="infos-socials-container">
+				<div class="infos-container">
+					<ul>
+						<li class="info-entry">
+							<a href="https://maps.app.goo.gl/gUXJruNjZMACemWh9" class="link">
+								<FontAwesomeIcon :icon="faLocationDot" /> 124 Cours Lafayette, 69003 Lyon 3
+							</a>
+						</li>
 
-				<li class="info-entry">
-					<a href="mailto:sushi.shokudo.lyon@gmail.com" class="link">
-						<FontAwesomeIcon :icon="faEnvelope" /> sushi.shokudo.lyon@gmail.com
-					</a>
-				</li>
+						<li class="info-entry">
+							<a href="mailto:sushi.shokudo.lyon@gmail.com" class="link">
+								<FontAwesomeIcon :icon="faEnvelope" /> sushi.shokudo.lyon@gmail.com
+							</a>
+						</li>
 
-				<li class="info-entry">
-					<a href="tel:0982781941" class="link">
-						<FontAwesomeIcon :icon="faPhone" /> 09 82 78 19 41
-					</a>
-				</li>
-			</ul>
-		</div>
+						<li class="info-entry">
+							<a href="tel:0982781941" class="link">
+								<FontAwesomeIcon :icon="faPhone" /> 09 82 78 19 41
+							</a>
+						</li>
+					</ul>
+				</div>
 
-		<div class="socials-container">
-			<ul>
-				<li>
-					<a href="#">
-						<FontAwesomeIcon :icon="faInstagram" class="social-link link" />
-					</a>
-				</li>
+				<div class="socials-container">
+					<ul>
+						<li>
+							<a href="#">
+								<FontAwesomeIcon :icon="faInstagram" class="social-link link" />
+							</a>
+						</li>
 
-				<li>
-					<a href="#">
-						<FontAwesomeIcon :icon="faFacebook" class="social-link link" />
-					</a>
-				</li>
-			</ul>
+						<li>
+							<a href="#">
+								<FontAwesomeIcon :icon="faFacebook" class="social-link link" />
+							</a>
+						</li>
+					</ul>
+				</div>
+			</div>
 		</div>
 	</footer>
 </div>
@@ -186,6 +204,12 @@ function scrollToTop()
 			display: flex;
 			justify-content: space-between;
 		}
+
+		.nav-menu-icon 
+		{
+			display: none;
+			font-size: 2em;
+		}
 	}
 }
 
@@ -213,29 +237,221 @@ function scrollToTop()
 			}
 		}
 
-		.footer-links 
+		.footer-links-container
 		{
+			width: 70%;
 			display: flex;
-			flex-direction: column;
+			flex-direction: row;
 			justify-content: space-between;
-			font-size: 24px;
-			height: 80%;
-		}
+			align-items: center;
 
-		.infos-container 
-		{
-			.info-entry 
+			.footer-links 
 			{
-				font-size: 24px;
+				display: flex;
+				flex-direction: column;
+				justify-content: space-between;
+				font-size: 28px;
+				height: 80%;
+			}
+
+			.infos-socials-container
+			{
+				width: 65%;
+				display: flex;
+				flex-direction: row;
+				justify-content: space-between;
+				align-items: center;
+
+				.infos-container 
+				{
+					.info-entry 
+					{
+						font-size: 24px;
+					}
+				}
+
+				.socials-container 
+				{
+					.social-link 
+					{
+						font-size: 72px;
+						padding: 10px 0;
+					}
+				}
 			}
 		}
+	}
+}
 
-		.socials-container 
+@media only screen and (max-width: 1500px)
+{
+	.header-container 
+	{
+		header 
 		{
-			.social-link 
+			width: 80%;
+		}
+	}
+
+	.footer-container
+	{
+		footer 
+		{
+			.footer-links-container
 			{
-				font-size: 72px;
-				padding: 10px 0;
+				width: 80%;
+
+				.infos-socials-container
+				{
+					width: 70%;
+				}
+			}
+		}
+	}
+}
+
+@media only screen and (max-width: 1200px) 
+{
+	.header-container
+	{
+		header
+		{
+			.header-links
+			{
+				width: 70%;
+			}
+		}
+	}
+
+	.footer-container 
+	{
+		footer 
+		{
+			width: 90%;
+			flex-direction: column;
+			.footer-links-container
+			{
+				width: 90%;
+				justify-content: space-between;
+
+				.infos-socials-container
+				{
+					width: 65%;
+				}
+			}
+		}
+	}
+}
+
+@media only screen and (max-width: 900px)
+{
+	.header-container
+	{
+		header 
+		{
+			.header-links 
+			{
+				width: 80%;
+			}
+		}
+	}
+
+	.footer-container 
+	{
+		footer 
+		{
+			width: 98%;
+			.footer-links-container
+			{
+				.infos-socials-container
+				{
+					width: 70%;
+				}
+			}
+		}
+	}
+}
+
+@media only screen and (max-width: 768px)
+{
+	.header-container
+	{
+		header
+		{
+			flex-direction: column;
+
+			.logo-nav-menu-button-container
+			{
+				display: flex;
+				flex-direction: row;
+				justify-content: space-between;
+				align-items: center;
+				width: 100%;
+			}
+
+			.header-links
+			{
+				display: none;
+				flex-direction: column;
+				justify-content: center;
+				align-items: center;
+
+				.header-link 
+				{
+					padding: 10px 0;
+				}
+			}
+
+			.nav-menu-icon 
+			{
+				display: block;
+			}
+
+			.show 
+			{
+				display: flex;
+			}
+		}
+	}
+
+	.footer-container
+	{
+		footer 
+		{
+			.footer-links-container
+			{
+				align-items: baseline;
+
+				.footer-links 
+				{
+					font-size: 1.1em;
+				}
+
+				.infos-socials-container
+				{
+					flex-direction: column;
+					align-items: center;
+					justify-content: center;
+
+					.infos-container
+					{
+						a
+						{
+							font-size: 0.7em;
+						}
+					}
+
+					.socials-container
+					{
+						width: 50%;
+						ul 
+						{
+							display: flex;
+							flex-direction: row;
+							justify-content: space-between;
+						}
+					}
+				}
 			}
 		}
 	}
