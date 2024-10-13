@@ -66,26 +66,6 @@ function createAsideLinks(headingsElements: NodeListOf<HTMLHeadingElement>): voi
 	let li: HTMLLIElement | null;
 	let node: Text | null;
 
-	// for (let headingElement of headingsElements)
-	// {
-	// 	li = document.createElement("li");
-	// 	if (headingElement.textContent !== null)
-	// 	{
-	// 		node = document.createTextNode(headingElement.textContent);
-	// 		if (ul !== null)
-	// 		{
-	// 			li.appendChild(node); 
-	// 			li.classList.add("table-of-contents-link");
-	// 			li.addEventListener("click", () => {
-	// 				smoothScrollTo(headingElement.id)
-	// 			});
-
-
-
-	// 			ul.appendChild(li);
-	// 		}
-	// 	}
-	// }
 	for (let i = 0; i < headingsElements.length; i++)
 	{
 		li = document.createElement("li");
