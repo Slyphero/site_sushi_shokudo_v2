@@ -13,19 +13,14 @@ import { RouterLink } from "vue-router";
 				Restaurant familial de <strong class="accent-text">Sushis</strong>
 			</h1>
 
-			<ul class="home-buttons-container">
-				<li>
-					<RouterLink class="primary-button home-link link" to="/menu">
-						Menus
-					</RouterLink>
-				</li>
-
-				<li>
-					<RouterLink class="secondary-button home-link link" to="/commander">
-						Commander
-					</RouterLink>
-				</li>
-			</ul>
+			<div class="home-buttons-container">
+				<RouterLink class="primary-button home-link link" to="/menu">
+					Menus
+				</RouterLink>
+				<RouterLink class="secondary-button home-link link" to="/commander">
+					Commander
+				</RouterLink>
+			</div>
 		</section>
 	</div>
 </div>
@@ -59,7 +54,7 @@ import { RouterLink } from "vue-router";
 			flex-direction: column;
 			justify-content: space-between;
 			height: 50%;
-			width: 50%;
+			width: 60%;
 
 			h1 
 			{
@@ -96,6 +91,118 @@ import { RouterLink } from "vue-router";
 				.secondary-button 
 				{
 					@include property-color-opacity(background-color, $secondary-color, 1);
+				}
+			}
+		}
+	}
+}
+
+@media only screen and (max-width: 1500px)
+{
+	.home-container 
+	{
+		.home-slide-container
+		{
+			.home-title-buttons-container
+			{
+				.home-buttons-container
+				{
+					width: 70%;
+				}
+			}
+		}
+	}
+}
+
+@media only screen and (max-width: 1200px)
+{
+	.home-container 
+	{
+		.home-slide-container
+		{
+			width: 90%;
+			.home-title-buttons-container
+			{
+				width: 60%;
+				.home-buttons-container
+				{
+					width: 70%;
+				}
+			}
+		}
+	}
+}
+
+@media only screen and (max-width: 900px)
+{
+	.home-container
+	{
+		.home-slide-container
+		{
+			.homepage-logo
+			{
+				height: 300px;
+			}
+		}
+	}
+}
+
+@media only screen and (max-width: 900px)
+{
+	.home-container
+	{
+		.home-slide-container
+		{
+			.homepage-logo
+			{
+				height: 250px;
+			}
+	
+		}
+		
+		.home-title-buttons-container
+		{
+			.home-buttons-container
+			{
+				width: 100%;
+			}
+		}
+	}
+}
+
+@media only screen and (max-width: 768px)
+{
+	.home-container
+	{
+		.home-slide-container
+		{
+			flex-direction: column;
+			padding: 20px 0;
+			justify-content: space-between;
+			align-items: center;
+
+			.home-title-buttons-container
+			{
+				height: 80%;
+				align-items: center;
+				h1 
+				{
+					text-align: center;
+				}
+
+				.home-buttons-container
+				{
+					height: 40%;
+					width: 90%;
+					flex-direction: column;
+					justify-content: space-between;
+					align-items: center;
+
+					.home-link 
+					{
+						width: 70%;
+						text-align: center;
+					}
 				}
 			}
 		}
