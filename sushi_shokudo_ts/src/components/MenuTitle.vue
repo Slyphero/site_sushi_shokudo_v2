@@ -103,16 +103,50 @@ defineProps<{
 
 @media only screen and (max-width: 1200px)
 {
-
+	.menu-title-container 
+	{
+		.menu-image-title-container
+		{
+			width: 90%;
+		}
+	}
 }
 
 @media only screen and (max-width: 900px)
 {
+	.menu-title-container 
+	{
+		.menu-image-title-container 
+		{
+			.menu-image-container 
+			{
+				img 
+				{
+					height: 150px;
+				}
+			}
+			
+			.menu-title-description-container
+			{
+				.menu-title 
+				{
+					h2 
+					{
+						font-size: 3em;
+					}
+				}
 
+				.menu-description 
+				{
+					font-size: 1.1em;
+				}
+			}
+		}
+	}
 }
 
 @media only screen and (max-width: 600px)
 {
-	
+
 }
 </style>

@@ -75,7 +75,7 @@ defineProps<{
 			
 			h6 
 			{
-				font-size: 24px;
+				font-size: 1.3em;
 			}
 		}
 

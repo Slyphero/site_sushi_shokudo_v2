@@ -121,7 +121,7 @@ function showNavMenu(): void
 		position: fixed; 
 		bottom: 30px;
 		right: 30px;
-		font-size: 36px; 
+		font-size: 2em; 
 		width: 60px;
 		height: 60px;
 		@include property-color-opacity(background-color, $secondary-color, 1);
@@ -199,7 +199,7 @@ function showNavMenu(): void
 
 		.header-links 
 		{
-			font-size: 24px;
+			font-size: 1.5em;
 			width: 50%;
 			display: flex;
 			justify-content: space-between;
@@ -250,7 +250,7 @@ function showNavMenu(): void
 				display: flex;
 				flex-direction: column;
 				justify-content: space-between;
-				font-size: 28px;
+				font-size: 2em;
 				height: 80%;
 			}
 
@@ -266,7 +266,7 @@ function showNavMenu(): void
 				{
 					.info-entry 
 					{
-						font-size: 24px;
+						font-size: 1.5em;
 					}
 				}
 
@@ -274,7 +274,7 @@ function showNavMenu(): void
 				{
 					.social-link 
 					{
-						font-size: 72px;
+						font-size: 4em;
 						padding: 10px 0;
 					}
 				}

@@ -224,4 +224,18 @@ function formatAlcoolEntry(
 		}
 	}
 }
+
+@media only screen and (max-width: 900px)
+{
+	.menus-page-container 
+	{
+		.category-container
+		{
+			.category-list-container
+			{
+				justify-content: center;
+			}
+		}
+	}
+}
 </style>
