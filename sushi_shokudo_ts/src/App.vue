@@ -85,6 +85,12 @@ function showNavMenu(): void
 								<FontAwesomeIcon :icon="faPhone" /> 09 82 78 19 41
 							</a>
 						</li>
+						<li class="info-entry">
+							Lundi-Samedi : 11h - 14h30 / 18h - 22h
+						</li>
+						<li class="info-entry">
+							Dimanche : 18h - 22h
+						</li>
 					</ul>
 				</div>
 
