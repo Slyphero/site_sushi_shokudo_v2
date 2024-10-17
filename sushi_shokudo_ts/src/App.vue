@@ -70,7 +70,7 @@ function showNavMenu(): void
 					<ul>
 						<li class="info-entry">
 							<a href="https://maps.app.goo.gl/gUXJruNjZMACemWh9" class="link">
-								<FontAwesomeIcon :icon="faLocationDot" /> 124 Cours Lafayette, 69003 Lyon 3
+								<FontAwesomeIcon :icon="faLocationDot" /> 124 Cours Lafayette, 69003 Lyon 
 							</a>
 						</li>
 
