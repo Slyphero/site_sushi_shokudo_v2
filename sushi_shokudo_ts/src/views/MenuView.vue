@@ -76,7 +76,8 @@ function createAsideLinks(headingsElements: NodeListOf<HTMLHeadingElement>): voi
 			{
 				li.appendChild(node); 
 				li.classList.add("table-of-contents-link");
-				li.setAttribute("style", "padding: 10px 30px; font-size: 1.5em; cursor: pointer; overflow: auto")
+				li.setAttribute("style", "padding: 10px 30px; font-size: 1.5em; cursor: pointer; overflow: auto");
+
 				li.addEventListener("click", () => {
 					smoothScrollTo(headingsElements[i].id)
 				});

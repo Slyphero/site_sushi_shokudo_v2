@@ -442,7 +442,7 @@ function showNavMenu(): void
 
 					.infos-container
 					{
-						a
+						.info-entry
 						{
 							font-size: 0.7em;
 						}
