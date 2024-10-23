@@ -41,8 +41,7 @@ defineProps<{
 </template>
 
 <style scoped lang="scss">
-.menu-entry-container 
-{
+.menu-entry-container {
 	width: 30%;
 	@include property-color-opacity(background-color, $secondary-color, .2);
 	margin: 10px 0;
@@ -53,60 +52,48 @@ defineProps<{
 	align-items: center;
 	border-radius: 5px;
 
-	.entry-image-container 
-	{
-		img 
-		{
+	.entry-image-container {
+		img {
 			height: 15vh;
 		}
 	}
 
-	.entry-description-container 
-	{
+	.entry-description-container {
 		display: flex;
 		flex-direction: column;
 		justify-content: center;
 
-		.entry-title-container 
-		{
+		.entry-title-container {
 			display: flex;
 			justify-content: center;
 			text-align: center;
 			
-			h6 
-			{
+			h6 {
 				font-size: 1.3em;
 			}
 		}
 
-		.entry-elements-container 
-		{
+		.entry-elements-container {
 			display: flex;
 			justify-content: center;
 		}
 	}
 }
 
-@media only screen and (max-width: 1200px) 
-{
-	.menu-entry-container 
-	{
+@media only screen and (max-width: 1200px) {
+	.menu-entry-container {
 		width: 40%;
 	}
 }
 
-@media only screen and (max-width: 900px) 
-{
-	.menu-entry-container 
-	{
+@media only screen and (max-width: 900px) {
+	.menu-entry-container {
 		width: 80%;
 	}
 }
 
-@media only screen and (max-width: 600px) 
-{
-	.menu-entry-container 
-	{
+@media only screen and (max-width: 600px) {
+	.menu-entry-container {
 		width: 90%;
 	}
 }

@@ -116,14 +116,12 @@ function showNavMenu(): void
 </template>
 
 <style lang="scss">
-* 
-{
+* {
 	margin: 0;
 	padding: 0;
 	font-family: $body-font;
 
-	.scroll-up-button 
-	{
+	.scroll-up-button {
 		position: fixed; 
 		bottom: 30px;
 		right: 30px;
@@ -135,58 +133,49 @@ function showNavMenu(): void
 		border: none;
 	}
 
-	.scroll-up-button:hover 
-	{
+	.scroll-up-button:hover {
 		cursor: pointer;
 		@include property-color-opacity(background-color, $primary-color, 1);
 		transition: 0.2s ease-in-out;
 	}
 
-	ul 
-	{
+	ul {
 		list-style-type: none;
 	}
 
-	.link 
-	{
+	.link {
 		@include property-color-opacity(color, $text-color, 1);
 		text-decoration: none;
 	}
 
-	.link:hover 
-	{
+	.link:hover {
 		@include property-color-opacity(color, $primary-color, 1);
 		transition: 0.2s ease-in-out;
 	}
 
-	.heading 
-	{
+	.heading {
 		font-family: $headings-font;
 		border-bottom: 1px solid rgba($primary-color, .2);
 		text-transform: uppercase;
 		margin: 10px 0;
 	}
 
-	h2 
-	{
+	h2 {
 		font-size: 36px;
 	}
 
-	.heading, .accent-text 
-	{
+	.heading, .accent-text {
 		@include property-color-opacity(color, $primary-color, 1);
 	}
 }
 
-.header-container 
-{
+.header-container {
 	@include property-color-opacity(background-color, $secondary-color, .2);
 	width: 100%;
 	display: flex;
 	justify-content: center;
 
-	header 
-	{
+	header {
 		width: 60%;
 		min-height: 12vh;
 		display: flex;
@@ -194,65 +183,56 @@ function showNavMenu(): void
 		align-items: center;
 		justify-content: space-between;
 
-		.header-logo-container 
-		{
+		.header-logo-container {
 			padding: 10px 0px;
-			.header-logo 
-			{
+
+			.header-logo {
 				height: 10vh;
 			}
 		}
 
-		.header-links 
-		{
+		.header-links {
 			font-size: 1.5em;
 			width: 50%;
 			display: flex;
 			justify-content: space-between;
 		}
 
-		.nav-menu-icon 
-		{
+		.nav-menu-icon {
 			display: none;
 			font-size: 2em;
 		}
 	}
 }
 
-.footer-container 
-{
+.footer-container {
 	width: 100%;
 	@include property-color-opacity(background-color, $secondary-color, .2);
 	display: flex;
 	justify-content: center;
 
-	footer 
-	{
+	footer {
 		width: 70%;
 		display: flex;
 		justify-content: space-between;
 		align-items: center;
 
-		.footer-logo-container 
-		{
+		.footer-logo-container {
 			padding: 20px 0px;
 
-			.footer-logo 
-			{
+			.footer-logo {
 				height: 20vh;
 			}
 		}
 
-		.footer-links-container
-		{
+		.footer-links-container {
 			width: 70%;
 			display: flex;
 			flex-direction: row;
 			justify-content: space-between;
 			align-items: center;
 
-			.footer-links 
-			{
+			.footer-links {
 				display: flex;
 				flex-direction: column;
 				justify-content: space-between;
@@ -260,26 +240,21 @@ function showNavMenu(): void
 				height: 80%;
 			}
 
-			.infos-socials-container
-			{
+			.infos-socials-container {
 				width: 65%;
 				display: flex;
 				flex-direction: row;
 				justify-content: space-between;
 				align-items: center;
 
-				.infos-container 
-				{
-					.info-entry 
-					{
+				.infos-container {
+					.info-entry {
 						font-size: 1.5em;
 					}
 				}
 
-				.socials-container 
-				{
-					.social-link 
-					{
+				.socials-container {
+					.social-link {
 						font-size: 4em;
 						padding: 10px 0;
 					}
@@ -289,26 +264,19 @@ function showNavMenu(): void
 	}
 }
 
-@media only screen and (max-width: 1500px)
-{
-	.header-container 
-	{
-		header 
-		{
+@media only screen and (max-width: 1500px) {
+	.header-container {
+		header {
 			width: 80%;
 		}
 	}
 
-	.footer-container
-	{
-		footer 
-		{
-			.footer-links-container
-			{
+	.footer-container {
+		footer {
+			.footer-links-container {
 				width: 80%;
 
-				.infos-socials-container
-				{
+				.infos-socials-container {
 					width: 70%;
 				}
 			}
@@ -316,32 +284,24 @@ function showNavMenu(): void
 	}
 }
 
-@media only screen and (max-width: 1200px) 
-{
-	.header-container
-	{
-		header
-		{
-			.header-links
-			{
+@media only screen and (max-width: 1200px) {
+	.header-container {
+		header {
+			.header-links {
 				width: 70%;
 			}
 		}
 	}
 
-	.footer-container 
-	{
-		footer 
-		{
+	.footer-container {
+		footer {
 			width: 90%;
 			flex-direction: column;
-			.footer-links-container
-			{
+			.footer-links-container {
 				width: 90%;
 				justify-content: space-between;
 
-				.infos-socials-container
-				{
+				.infos-socials-container {
 					width: 65%;
 				}
 			}
@@ -349,28 +309,20 @@ function showNavMenu(): void
 	}
 }
 
-@media only screen and (max-width: 900px)
-{
-	.header-container
-	{
-		header 
-		{
-			.header-links 
-			{
+@media only screen and (max-width: 900px) {
+	.header-container {
+		header {
+			.header-links {
 				width: 80%;
 			}
 		}
 	}
 
-	.footer-container 
-	{
-		footer 
-		{
+	.footer-container {
+		footer {
 			width: 98%;
-			.footer-links-container
-			{
-				.infos-socials-container
-				{
+			.footer-links-container {
+				.infos-socials-container {
 					width: 70%;
 				}
 			}
@@ -378,16 +330,12 @@ function showNavMenu(): void
 	}
 }
 
-@media only screen and (max-width: 768px)
-{
-	.header-container
-	{
-		header
-		{
+@media only screen and (max-width: 768px) {
+	.header-container {
+		header {
 			flex-direction: column;
 
-			.logo-nav-menu-button-container
-			{
+			.logo-nav-menu-button-container {
 				display: flex;
 				flex-direction: row;
 				justify-content: space-between;
@@ -395,64 +343,52 @@ function showNavMenu(): void
 				width: 100%;
 			}
 
-			.header-links
-			{
+			.header-links {
 				display: none;
 				top: -100%;
 				flex-direction: column;
 				justify-content: center;
 				align-items: center;
 
-				.header-link 
-				{
+				.header-link {
 					padding: 10px 0;
 				}
 			}
 
-			.nav-menu-icon 
-			{
+			.nav-menu-icon {
 				display: block;
 			}
 
-			.show 
-			{
+			.show {
 				display: flex;
 			}
 		}
 	}
 
-	.footer-container
-	{
-		footer 
-		{
-			.footer-links-container
-			{
+	.footer-container {
+		footer {
+			.footer-links-container {
 				align-items: baseline;
 
-				.footer-links 
-				{
+				.footer-links {
 					font-size: 1.1em;
 				}
 
-				.infos-socials-container
-				{
+				.infos-socials-container {
 					flex-direction: column;
 					align-items: center;
 					justify-content: center;
 
-					.infos-container
-					{
-						.info-entry
-						{
+					.infos-container {
+						.info-entry {
 							font-size: 0.7em;
 						}
 					}
 
-					.socials-container
-					{
+					.socials-container {
 						width: 50%;
-						ul 
-						{
+
+						ul {
 							display: flex;
 							flex-direction: row;
 							justify-content: space-between;
