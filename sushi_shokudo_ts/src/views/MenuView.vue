@@ -4,6 +4,10 @@ import { onMounted } from "vue";
 import MenuEntry from "@/components/MenuEntry.vue";
 import MenuTitle from "@/components/MenuTitle.vue";
 
+import boissonsImage from "@/assets/img/sushi_shokudo.webp"
+
+import type { MenuTitleEntry } from "@/assets/models/menuTitleEntryInterface"
+
 import { menuCategories } from "@/assets/constants/menuCategoriesConstants";
 
 import { drinksEntries } from "@/assets/constants/drinksEntriesConstants";
@@ -17,6 +21,12 @@ const vinsArray: DrinkEntry[] = alcoolsEntries.slice(-1);
 const vins: DrinkEntry = vinsArray[0];
 
 let h2Array: NodeListOf<HTMLHeadingElement>;
+
+let drinksTitle: MenuTitleEntry = {
+	title: "Boissons",
+	image: boissonsImage,
+	description: "Notre sélection de boissons."
+}
 
 function createIndexPrefixId(prefix: string, index: number): string {
 	return prefix.concat(
@@ -118,8 +128,9 @@ onMounted(() => {
 		</div>
 	</div>
 
-	<div class="drinks-container-title">
-		<h2 id="drinks-title" class="drinks-title">Boissons</h2>
+	<div class="category-title-container">
+		<!-- <h2 id="drinks-title" class="drinks-title">Boissons</h2> -->
+		<MenuTitle :menuTitle=drinksTitle :index=0 />
 	</div>
 
 	<h3>Sans alcool</h3>

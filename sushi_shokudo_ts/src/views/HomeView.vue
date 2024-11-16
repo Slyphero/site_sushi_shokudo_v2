@@ -33,6 +33,8 @@ import { RouterLink } from "vue-router";
 	justify-content: center;
 	min-height: 88vh;
 
+	background-image: url("@/assets/img/photo_page_accueil.jpg");
+
 	.home-slide-container {
 		display: flex;
 		flex-direction: row;

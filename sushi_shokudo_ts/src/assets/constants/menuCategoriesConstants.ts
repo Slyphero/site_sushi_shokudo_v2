@@ -146,5 +146,5 @@ export const menuCategories: MenuCategory[] = [
 			description: "Notre sélection de desserts."
 		},
 		foodEntriesArray: dessertsEntries,
-	}, 
+	}
 ];
