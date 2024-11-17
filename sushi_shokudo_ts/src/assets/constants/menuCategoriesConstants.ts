@@ -22,7 +22,7 @@ export const menuCategories: MenuCategory[] = [
 	{
 		menuTitleEntry: {
 			title: "Menus",
-			image: imageFolderPath.concat("_NIC1692.png"),
+			image: imageFolderPath.concat("plateau_gourmand.png"),
 			description: "Notre sélection de menus."
 		},
 		foodEntriesArray: menusEntries,

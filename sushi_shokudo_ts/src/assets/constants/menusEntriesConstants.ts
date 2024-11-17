@@ -5,7 +5,7 @@ export const menusEntries: FoodEntry[] = [
 	{
 		title: "Plateau Original",
 		piecesNumber: 12,
-		image: imageFolderPath.concat("sushi_shokudo.webp"),
+		image: imageFolderPath.concat("plateau_original.png"),
 		price: 13.90,
 		elements: [
 			"6 californias saumon avocat",
@@ -18,8 +18,8 @@ export const menusEntries: FoodEntry[] = [
 	{
 		title: "Plateau Maki",
 		piecesNumber: 18,
-		image: imageFolderPath.concat("sushi_shokudo.webp"),
-		price: 14.95,
+		image: imageFolderPath.concat("plateau_maki.png"),
+		price: 13.90,
 		elements: [
 			"6 makis saumon",
 			"6 makis thon",
@@ -31,7 +31,7 @@ export const menusEntries: FoodEntry[] = [
 	{
 		title: "Plateau Végétarien",
 		piecesNumber: 15,
-		image: imageFolderPath.concat("sushi_shokudo.webp"),
+		image: imageFolderPath.concat("plateau_vege.png"),
 		price: 13.50,
 		elements: [
 			"6 californias végétariens",
@@ -44,7 +44,7 @@ export const menusEntries: FoodEntry[] = [
 	{
 		title: "Plateau Sushi Saumon",
 		piecesNumber: 10,
-		image: imageFolderPath.concat("sushi_shokudo.webp"),
+		image: imageFolderPath.concat("plateau_sushi.png"),
 		price: 15.95,
 		elements: [
 			"10 sushis saumon",
@@ -55,7 +55,7 @@ export const menusEntries: FoodEntry[] = [
 	{
 		title: "Plateau Sushi Mix",
 		piecesNumber: 10,
-		image: imageFolderPath.concat("sushi_shokudo.webp"),
+		image: imageFolderPath.concat("plateau_sushi_mix.png"),
 		price: 17.5,
 		elements: [
 			"5 sushis saumon",
@@ -67,7 +67,7 @@ export const menusEntries: FoodEntry[] = [
 	{
 		title: "Sushi Lovers",
 		piecesNumber: 18,
-		image: imageFolderPath.concat("sushi_shokudo.webp"),
+		image: imageFolderPath.concat("plateau_sushi_lovers.png"),
 		price: 17.9,
 		elements: [
 			"6 californias saumon avocat",
@@ -78,9 +78,9 @@ export const menusEntries: FoodEntry[] = [
 		],
 	},
 	{
-		title: "Sushi Assortiment",
+		title: "Plateau Sushi Assortiment",
 		piecesNumber: 10,
-		image: imageFolderPath.concat("sushi_shokudo.webp"),
+		image: imageFolderPath.concat("plateau_sushi_assortiment.png"),
 		price: 19.5,
 		elements: [
 			"2 sushis saumon",
@@ -95,7 +95,7 @@ export const menusEntries: FoodEntry[] = [
   	{
 		title: "Plateau California",
 		piecesNumber: 18,
-		image: imageFolderPath.concat("sushi_shokudo.webp"),
+		image: imageFolderPath.concat("plateau_california.png"),
 		price: 16.95,
 		elements: [
 			"3 californias saumon avocat",
@@ -110,7 +110,7 @@ export const menusEntries: FoodEntry[] = [
  	{
 		title: "Plateau Spring",
 		piecesNumber: 18,
-		image: imageFolderPath.concat("sushi_shokudo.webp"),
+		image: imageFolderPath.concat("plateau_spring.png"),
 		price: 17.5,
 		elements: [
 			"3 springs saumon avocat",
@@ -125,7 +125,7 @@ export const menusEntries: FoodEntry[] = [
 	{
 		title: "Plateau Salmon",
 		piecesNumber: 24,
-		image: imageFolderPath.concat("sushi_shokudo.webp"),
+		image: imageFolderPath.concat("plateau_salmon.png"),
 		price: 21.9,
 		elements: [
 			"6 californias saumon avocat",
@@ -139,7 +139,7 @@ export const menusEntries: FoodEntry[] = [
 	{
 		title: "Plateau Assortiment",
 		piecesNumber: 18,
-		image: imageFolderPath.concat("sushi_shokudo.webp"),
+		image: imageFolderPath.concat("plateau_assortiment.png"),
 		price: 17.5,
 		elements: [
 			"3 californias saumon avocat",
@@ -154,7 +154,7 @@ export const menusEntries: FoodEntry[] = [
 	{
 		title: "Plateau Royal",
 		piecesNumber: 18,
-		image: imageFolderPath.concat("sushi_shokudo.webp"),
+		image: imageFolderPath.concat("plateau_royal.png"),
 		price: 21.9,
 		elements: [
 			"3 californias saumon avocat",
@@ -171,7 +171,7 @@ export const menusEntries: FoodEntry[] = [
 	{
 		title: "Plateau Gourmand",
 		piecesNumber: 20,
-		image: imageFolderPath.concat("sushi_shokudo.webp"),
+		image: imageFolderPath.concat("plateau_gourmand.png"),
 		price: 23.9,
 		elements: [
 			"6 californias saumon avocat",
@@ -188,7 +188,7 @@ export const menusEntries: FoodEntry[] = [
 	{
 		title: "Box pour 2 ou 3",
 		piecesNumber: 42,
-		image: imageFolderPath.concat("sushi_shokudo.webp"),
+		image: imageFolderPath.concat("box_pour_2_v2.png"),
 		price: 44,
 		elements: [
 			"6 makis salmon roll",
@@ -205,7 +205,7 @@ export const menusEntries: FoodEntry[] = [
 	{
 		title: "Box Sushi Shokudo",
 		piecesNumber: 46,
-		image: imageFolderPath.concat("sushi_shokudo.webp"),
+		image: imageFolderPath.concat("box_sushi_shokudo.png"),
 		price: 55,
 		elements: [
 			"4 sushis saumon",
@@ -219,25 +219,4 @@ export const menusEntries: FoodEntry[] = [
 			"8 tazuna rolls salmon teriyaki",
 		],
 	},
-	{
-		title: "Box à partager",
-		piecesNumber: 60,
-		image: imageFolderPath.concat("sushi_shokudo.webp"),
-		price: 74,
-		elements: [
-			"6 sushis saumon",
-			"4 sushis thon",
-			"2 sushis crevette",
-			"2 sushis tartare saumon",
-			"2 sushis tartare thon",
-			"6 makis salmon roll",
-			"6 makis thon",
-			"6 californias saumon avocat",
-			"6 californias thon cuit avocat",
-			"6 springs tataki saumon",
-			"6 springs saumon avocat",
-			"4 sashimis saumon",
-			"4 sashimis thon",
-		],
-	}
 ];
