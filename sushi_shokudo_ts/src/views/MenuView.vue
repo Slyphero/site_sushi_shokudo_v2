@@ -28,31 +28,19 @@ let drinksTitle: MenuTitleEntry = {
 	description: "Notre sélection de boissons."
 }
 
-function createIndexPrefixId(prefix: string, index: number): string {
-	return prefix.concat(
-		"-", 
-		index.toString()
-	);
+const createIndexPrefixId = (prefix: string, index: number): string => {
+	return prefix.concat("-", index.toString());
 }
 
-function formatDrinkEntry(title: string, quantity: number): string {
-	return title.concat(
-		" (", 
-		quantity.toString(), 
-		" cL)"
-	);
+const formatDrinkEntry = (title: string, quantity: number): string => { 
+	return title.concat(" (", quantity.toString(), " cL)");
 }
 
-function formatAlcoolEntry(title: string, quantity: number, 
-						   degree: number): string {
-	return formatDrinkEntry(title, quantity).concat(
-		" (", 
-		degree.toString(), 
-		" %)"
-	);
+const formatAlcoolEntry = (title: string, quantity: number, degree: number): string => { 
+	return formatDrinkEntry(title, quantity).concat(" (", degree.toString(), " %)");
 }
 
-function smoothScrollTo(target: string): void {
+const smoothScrollTo = (target: string): void => {
 	let titleElement: HTMLElement | null = document.getElementById(target);
 	if (titleElement) {
 		window.scrollTo({
@@ -62,7 +50,7 @@ function smoothScrollTo(target: string): void {
 	}
 }
 
-function createAsideLinks(headingsElements: NodeListOf<HTMLHeadingElement>): void {
+const createAsideLinks = (headingsElements: NodeListOf<HTMLHeadingElement>): void => {
 	const ul: HTMLElement | null = document.getElementById("table-of-contents-links");
 	let li: HTMLLIElement | null;
 	let node: Text | null;
@@ -87,11 +75,11 @@ function createAsideLinks(headingsElements: NodeListOf<HTMLHeadingElement>): voi
 	}
 }
 
-function showTableOfContents(): void {
+const showTableOfContents = (): void => {
 	document.getElementById("aside-container")?.classList.add("show");
 }
 
-function hideTableOfContents(): void {
+const hideTableOfContents = (): void => {
 	document.getElementById("aside-container")?.classList.remove("show");
 }
 
@@ -151,10 +139,11 @@ onMounted(() => {
 						{{ 
 							formatDrinkEntry(
 								drinkEntry.title, 
-								drinkEntry.piecesNumber).concat(
-									" : ", 
-									drinkEntry.elements.join(", ")
-								) 
+								drinkEntry.piecesNumber
+							).concat(
+								" : ", 
+								drinkEntry.elements.join(", ")
+							) 
 						}}
 					</td>
 					<td class="price-column">{{ drinkEntry.price.toFixed(2) }}€</td>

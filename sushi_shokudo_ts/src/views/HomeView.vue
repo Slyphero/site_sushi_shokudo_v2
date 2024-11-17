@@ -9,7 +9,7 @@ import { RouterLink } from "vue-router";
 		<img class="homepage-logo" :src="logo" alt="">
 
 		<section class="home-title-buttons-container">
-			<h1>
+			<h1 style="color: white">
 				Restaurant familial de <strong class="accent-text">Sushis</strong>
 			</h1>
 

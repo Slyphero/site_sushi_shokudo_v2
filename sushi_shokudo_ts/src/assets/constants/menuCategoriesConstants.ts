@@ -22,7 +22,7 @@ export const menuCategories: MenuCategory[] = [
 	{
 		menuTitleEntry: {
 			title: "Menus",
-			image: imageFolderPath.concat("sushi_shokudo.webp"),
+			image: imageFolderPath.concat("_NIC1692.png"),
 			description: "Notre sélection de menus."
 		},
 		foodEntriesArray: menusEntries,
@@ -30,7 +30,7 @@ export const menuCategories: MenuCategory[] = [
 	{
 		menuTitleEntry: {
 			title: "Sushis",
-			image: imageFolderPath.concat("sushi_shokudo.webp"),
+			image: imageFolderPath.concat("_NIC1708.png"),
 			description: "Un sushi est une quenelle de riz vinaigré sur laquelle nous déposons une tranche de poisson."
 		},
 		foodEntriesArray: sushisEntries,
@@ -38,7 +38,7 @@ export const menuCategories: MenuCategory[] = [
 	{
 		menuTitleEntry: {
 			title: "Temakis",
-			image: imageFolderPath.concat("sushi_shokudo.webp"),
+			image: imageFolderPath.concat("_NIC1756.png"),
 			description: "Notre sélection de temakis."
 		},
 		foodEntriesArray: temakisEntries,
@@ -46,7 +46,7 @@ export const menuCategories: MenuCategory[] = [
 	{
 		menuTitleEntry: {
 			title: "Makis",
-			image: imageFolderPath.concat("sushi_shokudo.webp"),
+			image: imageFolderPath.concat("_NIC1721.png"),
 			description: "Un maki est un cube de riz entouré d'une feuille de nori. Il est agrémenté de poisson cru et de crudités."
 		},
 		foodEntriesArray: makisEntries,
@@ -54,7 +54,7 @@ export const menuCategories: MenuCategory[] = [
 	{
 		menuTitleEntry: {
 			title: "Californias",
-			image: imageFolderPath.concat("sushi_shokudo.webp"),
+			image: imageFolderPath.concat("_NIC1732.png"),
 			description: "Un california est un cube de riz agrémenté de sésame à l'extérieur ainsi que d'une feuille de nori et de poisson à l'intérieur."
 		},
 		foodEntriesArray: californiasEntries,
@@ -62,7 +62,7 @@ export const menuCategories: MenuCategory[] = [
 	{
 		menuTitleEntry: {
 			title: "Springs",
-			image: imageFolderPath.concat("sushi_shokudo.webp"),
+			image: imageFolderPath.concat("_NIC1735.png"),
 			description: "Un spring est un cube de riz agrémenté de poisson et de crudités entouré d'une feuille de riz."
 		},
 		foodEntriesArray: springsEntries,
@@ -70,7 +70,7 @@ export const menuCategories: MenuCategory[] = [
 	{
 		menuTitleEntry: {
 			title: "Tazunas",
-			image: imageFolderPath.concat("sushi_shokudo.webp"),
+			image: imageFolderPath.concat("_NIC1742.png"),
 			description: "Notre sélection de tazunas."
 		},
 		foodEntriesArray: tazunasEntries,
@@ -78,7 +78,7 @@ export const menuCategories: MenuCategory[] = [
 	{
 		menuTitleEntry: {
 			title: "Sashimis",
-			image: imageFolderPath.concat("sushi_shokudo.webp"),
+			image: imageFolderPath.concat("_NIC1751.png"),
 			description: "Un sashimi est une tranche de poisson frais."
 		},
 		foodEntriesArray: sashimisEntries,
@@ -110,7 +110,7 @@ export const menuCategories: MenuCategory[] = [
 	{
 		menuTitleEntry: {
 			title: "Yakitoris",
-			image: imageFolderPath.concat("sushi_shokudo.webp"),
+			image: imageFolderPath.concat("_NIC1790.png"),
 			description: "Notre sélection de yakitoris."
 		},
 		foodEntriesArray: yakitorisEntries,
@@ -118,7 +118,7 @@ export const menuCategories: MenuCategory[] = [
 	{
 		menuTitleEntry: {
 			title: "Gyozas",
-			image: imageFolderPath.concat("sushi_shokudo.webp"),
+			image: imageFolderPath.concat("_NIC1754.png"),
 			description: "Un gyoza est un ravioli japonais, à la fois grillé à la poêle et cuit à la vapeur d'eau."
 		},
 		foodEntriesArray: gyozasEntries,
@@ -126,7 +126,7 @@ export const menuCategories: MenuCategory[] = [
 	{
 		menuTitleEntry: {
 			title: "Fritures",
-			image: imageFolderPath.concat("sushi_shokudo.webp"),
+			image: imageFolderPath.concat("_NIC1791.png"),
 			description: "Notre sélection de fritures."
 		},
 		foodEntriesArray: friedEntries,
@@ -142,7 +142,7 @@ export const menuCategories: MenuCategory[] = [
 	{
 		menuTitleEntry: {
 			title: "Desserts",
-			image: imageFolderPath.concat("sushi_shokudo.webp"),
+			image: imageFolderPath.concat("_NIC1800.png"),
 			description: "Notre sélection de desserts."
 		},
 		foodEntriesArray: dessertsEntries,
