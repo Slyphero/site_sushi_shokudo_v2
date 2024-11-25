@@ -86,7 +86,7 @@ export const menuCategories: MenuCategory[] = [
 	{
 		menuTitleEntry: {
 			title: "Tartares",
-			image: imageFolderPath.concat("sushi_shokudo.webp"),
+			image: imageFolderPath.concat("tartare_saumon_avocat.png"),
 			description: "Notre sélection de tartares"
 		},
 		foodEntriesArray: tartaresEntries,
@@ -94,7 +94,7 @@ export const menuCategories: MenuCategory[] = [
 	{
 		menuTitleEntry: {
 			title: "Chirashis",
-			image: imageFolderPath.concat("sushi_shokudo.webp"),
+			image: imageFolderPath.concat("chirashi_saumon_avocat.png"),
 			description: "Un chirashi est un plat à base de tranches de poissons sur un lit de riz vinaigré. Nous l'accompagnons d'une soupe miso."
 		},
 		foodEntriesArray: chirashisEntries,
@@ -102,7 +102,7 @@ export const menuCategories: MenuCategory[] = [
 	{
 		menuTitleEntry: {
 			title: "Poke Bowls",
-			image: imageFolderPath.concat("sushi_shokudo.webp"),
+			image: imageFolderPath.concat("Poke_bowl_saumon.png"),
 			description: "Un poke bowl est un plat composé d'une base de riz vinaigré. Tous nos poke bowls sont agrémentés d'avocat, d'edamame, de concombre, de radis, de tomates cerises, de carottes et de sésame."
 		},
 		foodEntriesArray: pokeBowlsEntries,

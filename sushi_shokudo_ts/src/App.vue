@@ -9,17 +9,14 @@ import { faFacebook, faInstagram } from "@fortawesome/free-brands-svg-icons";
 
 import { navEntries } from "./assets/constants/navEntriesConstants";
 
-function scrollToTop(): void
-{
- 	window.scrollTo({top: 0, behavior: "smooth"})
+const scrollToTop = (): void => {
+	window.scrollTo({top: 0, behavior: "smooth"});
 }
 
-function showNavMenu(): void
-{
+const showNavMenu = (): void => {
 	let nav: HTMLElement | null = document.getElementById("nav-menu");
 
-	if (nav !== null)
-	{
+	if (nav !== null) {
 		nav.classList.toggle("show");
 	}
 }

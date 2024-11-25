@@ -117,7 +117,6 @@ onMounted(() => {
 	</div>
 
 	<div class="category-title-container">
-		<!-- <h2 id="drinks-title" class="drinks-title">Boissons</h2> -->
 		<MenuTitle :menuTitle=drinksTitle :index=0 />
 	</div>
 
