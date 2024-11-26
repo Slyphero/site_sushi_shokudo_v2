@@ -126,8 +126,8 @@ const showNavMenu = (): void => {
 
 	.scroll-up-button {
 		position: fixed; 
-		bottom: 30px;
-		right: 30px;
+		bottom: 5%;
+		right: 2%;
 		font-size: 2em; 
 		width: 60px;
 		height: 60px;
@@ -350,6 +350,10 @@ const showNavMenu = (): void => {
 }
 
 @media only screen and (max-width: 768px) {
+	.scroll-up-button {
+		bottom: 10%;
+		right: 18%;
+	}
 	.header-container {
 		header {
 			flex-direction: column;
