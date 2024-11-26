@@ -13,6 +13,7 @@ import { menuCategories } from "@/assets/constants/menuCategoriesConstants";
 import { drinksEntries } from "@/assets/constants/drinksEntriesConstants";
 import { alcoolsEntries } from "@/assets/constants/alcoolsEntriesConstants";
 import type { DrinkEntry } from "@/assets/models/drinkEntryInterface";
+import type { FoodEntry } from "@/assets/models/foodEntryInterface";
 
 import { FontAwesomeIcon } from "@fortawesome/vue-fontawesome";
 import { faX, faArrowRight } from "@fortawesome/free-solid-svg-icons";
@@ -30,6 +31,27 @@ let drinksTitle: MenuTitleEntry = {
 
 const createIndexPrefixId = (prefix: string, index: number): string => {
 	return prefix.concat("-", index.toString());
+}
+
+const formatFoodEntry = (foodEntry: FoodEntry): string => {
+	let result = foodEntry.title;
+
+	if (foodEntry.piecesNumber !== undefined) {
+		console.log(foodEntry.piecesNumber);
+		result = result.concat(" (", foodEntry.piecesNumber.toString(), " pièces) ");
+	}
+
+	if (foodEntry.elements !== undefined) {
+		console.log(foodEntry.elements);
+		result = result.concat(" : ");
+		foodEntry.elements.forEach((element) => {
+			result = result.concat(element, ", ");
+		})
+	}
+
+	result = result.slice(0, -2);
+
+	return result;
 }
 
 const formatDrinkEntry = (title: string, quantity: number): string => { 
@@ -111,8 +133,23 @@ onMounted(() => {
 		<div class="category-title-container">
 			<MenuTitle :menuTitle=menuCategory.menuTitleEntry :index=index />
 		</div>
-		<div class="category-list-container">
+		<div v-if="index === 0" class="category-list-container">
 			<MenuEntry v-for="entry in menuCategory.foodEntriesArray" :foodEntry=entry />
+		</div>
+		<div v-else class="drinks-container">
+			<table>
+				<thead>
+					<th class="drink-column">{{ menuCategory.menuTitleEntry.title }}</th>
+					<th class="price-column">Prix</th>
+				</thead>
+
+				<tbody>
+					<tr v-for="entry in menuCategory.foodEntriesArray">
+						<td class="drink-column">{{ formatFoodEntry(entry) }}</td>
+						<td class="price-column">{{ entry.price.toString().concat("€") }}</td>
+					</tr>
+				</tbody>
+			</table>
 		</div>
 	</div>
 
@@ -236,6 +273,7 @@ onMounted(() => {
 		flex-direction: column;
 		justify-content: center;
 		align-items: center;
+		width: 100%;
 
 		.category-title-container {
 			width: 100%;
@@ -272,6 +310,7 @@ onMounted(() => {
 		display: flex;
 		justify-content: center;
 		align-items: center;
+		width: 100%;
 
 		table {
 			width: 50%;
