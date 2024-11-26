@@ -10,7 +10,7 @@ import { RouterLink } from "vue-router";
 
 		<section class="home-title-buttons-container">
 			<h1 style="color: white">
-				Restaurant familial de <strong class="accent-text">Sushis</strong>
+				Restaurant local de <strong class="accent-text">Sushis</strong>
 			</h1>
 
 			<div class="home-buttons-container">
