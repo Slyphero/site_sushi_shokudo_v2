@@ -43,7 +43,9 @@ const showNavMenu = (): void => {
 			<RouterLink class="header-link link" v-for="navEntry in navEntries" :to=navEntry.link>
 				{{ navEntry.name }}
 			</RouterLink>
-			<a href="https://www.ubereats.com/fr/store/sushi-shokudo/nAaJVHvcWCe88ZtaBJGXhA" target="_blank"><button class="order-button">Commander</button></a>
+			<a href="https://www.ubereats.com/store/sushi-shokudo/nAaJVHvcWCe88ZtaBJGXhA?diningMode=DELIVERY&pl=JTdCJTIyYWRkcmVzcyUyMiUzQSUyMldlbGxpbyUyMEx5b24lMjBQYXJ0LURpZXUlMjIlMkMlMjJyZWZlcmVuY2UlMjIlM0ElMjJDaElKa1p1aHVLanI5RWNSYmpTZWhvZ1hOcW8lMjIlMkMlMjJyZWZlcmVuY2VUeXBlJTIyJTNBJTIyZ29vZ2xlX3BsYWNlcyUyMiUyQyUyMmxhdGl0dWRlJTIyJTNBNDUuNzU5MjcyNCUyQyUyMmxvbmdpdHVkZSUyMiUzQTQuODU1OTEzMDk5OTk5OTk5JTdE&ps=1&utm_source=menu-maker
+
+" target="_blank"><button class="order-button">Commander</button></a>
 		</nav>
 	</header>
 </div>
@@ -61,7 +63,9 @@ const showNavMenu = (): void => {
 				<RouterLink class="footer-link link" v-for="navEntry in navEntries" :to=navEntry.link>
 					{{ navEntry.name }}
 				</RouterLink>
-				<a href="https://www.ubereats.com/fr/store/sushi-shokudo/nAaJVHvcWCe88ZtaBJGXhA" target="_blank" class="link">Commander</a>
+				<a href="https://www.ubereats.com/store/sushi-shokudo/nAaJVHvcWCe88ZtaBJGXhA?diningMode=DELIVERY&pl=JTdCJTIyYWRkcmVzcyUyMiUzQSUyMldlbGxpbyUyMEx5b24lMjBQYXJ0LURpZXUlMjIlMkMlMjJyZWZlcmVuY2UlMjIlM0ElMjJDaElKa1p1aHVLanI5RWNSYmpTZWhvZ1hOcW8lMjIlMkMlMjJyZWZlcmVuY2VUeXBlJTIyJTNBJTIyZ29vZ2xlX3BsYWNlcyUyMiUyQyUyMmxhdGl0dWRlJTIyJTNBNDUuNzU5MjcyNCUyQyUyMmxvbmdpdHVkZSUyMiUzQTQuODU1OTEzMDk5OTk5OTk5JTdE&ps=1&utm_source=menu-maker
+
+" target="_blank" class="link">Commander</a>
 			</nav>
 
 			<div class="infos-socials-container">

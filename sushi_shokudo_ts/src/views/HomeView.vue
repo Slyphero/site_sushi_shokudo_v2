@@ -17,7 +17,9 @@ import { RouterLink } from "vue-router";
 				<RouterLink class="primary-button home-link link" to="/menu">
 					Menus
 				</RouterLink>
-				<a class="secondary-button home-link link" href="https://www.ubereats.com/fr/store/sushi-shokudo/nAaJVHvcWCe88ZtaBJGXhA" target="_blank">
+				<a class="secondary-button home-link link" href="https://www.ubereats.com/store/sushi-shokudo/nAaJVHvcWCe88ZtaBJGXhA?diningMode=DELIVERY&pl=JTdCJTIyYWRkcmVzcyUyMiUzQSUyMldlbGxpbyUyMEx5b24lMjBQYXJ0LURpZXUlMjIlMkMlMjJyZWZlcmVuY2UlMjIlM0ElMjJDaElKa1p1aHVLanI5RWNSYmpTZWhvZ1hOcW8lMjIlMkMlMjJyZWZlcmVuY2VUeXBlJTIyJTNBJTIyZ29vZ2xlX3BsYWNlcyUyMiUyQyUyMmxhdGl0dWRlJTIyJTNBNDUuNzU5MjcyNCUyQyUyMmxvbmdpdHVkZSUyMiUzQTQuODU1OTEzMDk5OTk5OTk5JTdE&ps=1&utm_source=menu-maker
+
+" target="_blank">
 					Commander
 				</a>
 			</div>
