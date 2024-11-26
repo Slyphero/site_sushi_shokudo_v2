@@ -36,7 +36,7 @@ const createIndexPrefixId = (prefix: string, index: number): string => {
 const formatFoodEntry = (foodEntry: FoodEntry): string => {
 	let result = foodEntry.title;
 
-	if (foodEntry.piecesNumber !== undefined) {
+	if (foodEntry.piecesNumber !== undefined && foodEntry.piecesNumber > 1) {
 		console.log(foodEntry.piecesNumber);
 		result = result.concat(" (", foodEntry.piecesNumber.toString(), " pièces) ");
 	}
@@ -47,9 +47,8 @@ const formatFoodEntry = (foodEntry: FoodEntry): string => {
 		foodEntry.elements.forEach((element) => {
 			result = result.concat(element, ", ");
 		})
+		result = result.slice(0, -2);
 	}
-
-	result = result.slice(0, -2);
 
 	return result;
 }

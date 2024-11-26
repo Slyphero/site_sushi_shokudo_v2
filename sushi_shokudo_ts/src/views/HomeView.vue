@@ -17,9 +17,9 @@ import { RouterLink } from "vue-router";
 				<RouterLink class="primary-button home-link link" to="/menu">
 					Menus
 				</RouterLink>
-				<RouterLink class="secondary-button home-link link" to="/commander">
+				<a class="secondary-button home-link link" href="https://www.ubereats.com/fr/store/sushi-shokudo/nAaJVHvcWCe88ZtaBJGXhA" target="_blank">
 					Commander
-				</RouterLink>
+				</a>
 			</div>
 		</section>
 	</div>

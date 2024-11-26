@@ -43,6 +43,7 @@ const showNavMenu = (): void => {
 			<RouterLink class="header-link link" v-for="navEntry in navEntries" :to=navEntry.link>
 				{{ navEntry.name }}
 			</RouterLink>
+			<a href="https://www.ubereats.com/fr/store/sushi-shokudo/nAaJVHvcWCe88ZtaBJGXhA" target="_blank"><button class="order-button">Commander</button></a>
 		</nav>
 	</header>
 </div>
@@ -60,6 +61,7 @@ const showNavMenu = (): void => {
 				<RouterLink class="footer-link link" v-for="navEntry in navEntries" :to=navEntry.link>
 					{{ navEntry.name }}
 				</RouterLink>
+				<a href="https://www.ubereats.com/fr/store/sushi-shokudo/nAaJVHvcWCe88ZtaBJGXhA" target="_blank" class="link">Commander</a>
 			</nav>
 
 			<div class="infos-socials-container">
@@ -94,16 +96,16 @@ const showNavMenu = (): void => {
 				<div class="socials-container">
 					<ul>
 						<li>
-							<a href="#">
+							<a href="https://www.instagram.com/sushi.shokudo.lyon/">
 								<FontAwesomeIcon :icon="faInstagram" class="social-link link" />
 							</a>
 						</li>
 
-						<li>
+						<!-- <li>
 							<a href="#">
 								<FontAwesomeIcon :icon="faFacebook" class="social-link link" />
 							</a>
-						</li>
+						</li> -->
 					</ul>
 				</div>
 			</div>
@@ -193,6 +195,22 @@ const showNavMenu = (): void => {
 			width: 50%;
 			display: flex;
 			justify-content: space-between;
+			align-items: center;
+
+			.order-button {
+				padding: 10px;
+				@include property-color-opacity(color, $background-color, 1);
+				@include property-color-opacity(background-color, $primary-color, 1);
+				border: 0px;
+				border-radius: 5px;
+				font-size: 0.8em;
+			}
+			
+			.order-button:hover {
+				@include property-color-opacity(background-color, $background-color, 1);
+				@include property-color-opacity(color, $text-color, 1);
+				transition: 0.2s ease-in-out;
+			}
 		}
 
 		.nav-menu-icon {

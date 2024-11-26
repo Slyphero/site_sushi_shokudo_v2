@@ -10,10 +10,6 @@ export const navEntries: NavEntry[] = [
 		link: "/menu" 
 	},
 	{ 
-		name: "Commander", 
-		link: "/commander" 
-	},
-	{ 
 		name: "A propos", 
 		link: "/a-propos" 
 	}
