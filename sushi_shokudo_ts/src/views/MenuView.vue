@@ -80,7 +80,8 @@ const createAsideLinks = (headingsElements: NodeListOf<HTMLHeadingElement>): voi
 		li = document.createElement("li");
 
 		if (headingsElements[i].textContent !== null) {
-			node = document.createTextNode(headingsElements[i].textContent);
+			const textContent: string = headingsElements[i].textContent ?? "";
+			node = document.createTextNode(textContent);
 			if (ul !== null) {
 				li.appendChild(node); 
 				li.classList.add("table-of-contents-link");
