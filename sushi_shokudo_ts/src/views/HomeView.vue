@@ -34,7 +34,7 @@ import { uberLink } from "@/assets/constants/constants";
 	justify-content: center;
 	min-height: 88vh;
 
-	background-image: url("@/assets/img/photo_page_accueil.jpg");
+	background-image: url("/photo_page_accueil.jpg");
 
 	.home-slide-container {
 		display: flex;
