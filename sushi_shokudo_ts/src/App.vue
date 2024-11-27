@@ -96,7 +96,7 @@ const showNavMenu = (): void => {
 				<div class="socials-container">
 					<ul>
 						<li>
-							<a :href=instagramLink>
+							<a :href=instagramLink target="_blank">
 								<FontAwesomeIcon :icon="faInstagram" class="social-link link" />
 							</a>
 						</li>
