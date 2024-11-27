@@ -1,6 +1,7 @@
 <script setup lang="ts">
 import logo from "@/assets/img/sushi_shokudo.webp";
 import { RouterLink } from "vue-router";
+import { uberLink } from "@/assets/constants/constants";
 </script>
 
 <template>
@@ -17,9 +18,7 @@ import { RouterLink } from "vue-router";
 				<RouterLink class="primary-button home-link link" to="/menu">
 					Menus
 				</RouterLink>
-				<a class="secondary-button home-link link" href="https://www.ubereats.com/store/sushi-shokudo/nAaJVHvcWCe88ZtaBJGXhA?diningMode=DELIVERY&pl=JTdCJTIyYWRkcmVzcyUyMiUzQSUyMldlbGxpbyUyMEx5b24lMjBQYXJ0LURpZXUlMjIlMkMlMjJyZWZlcmVuY2UlMjIlM0ElMjJDaElKa1p1aHVLanI5RWNSYmpTZWhvZ1hOcW8lMjIlMkMlMjJyZWZlcmVuY2VUeXBlJTIyJTNBJTIyZ29vZ2xlX3BsYWNlcyUyMiUyQyUyMmxhdGl0dWRlJTIyJTNBNDUuNzU5MjcyNCUyQyUyMmxvbmdpdHVkZSUyMiUzQTQuODU1OTEzMDk5OTk5OTk5JTdE&ps=1&utm_source=menu-maker
-
-" target="_blank">
+				<a class="secondary-button home-link link" :href=uberLink target="_blank">
 					Commander
 				</a>
 			</div>

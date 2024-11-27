@@ -9,6 +9,8 @@ import { faFacebook, faInstagram } from "@fortawesome/free-brands-svg-icons";
 
 import { navEntries } from "./assets/constants/navEntriesConstants";
 
+import { uberLink, instagramLink, mapsLink, address, email, phone, weekSchedules, sundaySchedules } from "./assets/constants/constants";
+
 const scrollToTop = (): void => {
 	window.scrollTo({top: 0, behavior: "smooth"});
 }
@@ -43,9 +45,7 @@ const showNavMenu = (): void => {
 			<RouterLink class="header-link link" v-for="navEntry in navEntries" :to=navEntry.link>
 				{{ navEntry.name }}
 			</RouterLink>
-			<a href="https://www.ubereats.com/store/sushi-shokudo/nAaJVHvcWCe88ZtaBJGXhA?diningMode=DELIVERY&pl=JTdCJTIyYWRkcmVzcyUyMiUzQSUyMldlbGxpbyUyMEx5b24lMjBQYXJ0LURpZXUlMjIlMkMlMjJyZWZlcmVuY2UlMjIlM0ElMjJDaElKa1p1aHVLanI5RWNSYmpTZWhvZ1hOcW8lMjIlMkMlMjJyZWZlcmVuY2VUeXBlJTIyJTNBJTIyZ29vZ2xlX3BsYWNlcyUyMiUyQyUyMmxhdGl0dWRlJTIyJTNBNDUuNzU5MjcyNCUyQyUyMmxvbmdpdHVkZSUyMiUzQTQuODU1OTEzMDk5OTk5OTk5JTdE&ps=1&utm_source=menu-maker
-
-" target="_blank"><button class="order-button">Commander</button></a>
+			<a :href=uberLink target="_blank"><button class="order-button">Commander</button></a>
 		</nav>
 	</header>
 </div>
@@ -63,36 +63,32 @@ const showNavMenu = (): void => {
 				<RouterLink class="footer-link link" v-for="navEntry in navEntries" :to=navEntry.link>
 					{{ navEntry.name }}
 				</RouterLink>
-				<a href="https://www.ubereats.com/store/sushi-shokudo/nAaJVHvcWCe88ZtaBJGXhA?diningMode=DELIVERY&pl=JTdCJTIyYWRkcmVzcyUyMiUzQSUyMldlbGxpbyUyMEx5b24lMjBQYXJ0LURpZXUlMjIlMkMlMjJyZWZlcmVuY2UlMjIlM0ElMjJDaElKa1p1aHVLanI5RWNSYmpTZWhvZ1hOcW8lMjIlMkMlMjJyZWZlcmVuY2VUeXBlJTIyJTNBJTIyZ29vZ2xlX3BsYWNlcyUyMiUyQyUyMmxhdGl0dWRlJTIyJTNBNDUuNzU5MjcyNCUyQyUyMmxvbmdpdHVkZSUyMiUzQTQuODU1OTEzMDk5OTk5OTk5JTdE&ps=1&utm_source=menu-maker
-
-" target="_blank" class="link">Commander</a>
+				<a :href=uberLink target="_blank" class="link">Commander</a>
 			</nav>
 
 			<div class="infos-socials-container">
 				<div class="infos-container">
 					<ul>
 						<li class="info-entry">
-							<a href="https://maps.app.goo.gl/gUXJruNjZMACemWh9" class="link">
-								<FontAwesomeIcon :icon="faLocationDot" /> 124 Cours Lafayette, 69003 Lyon 
+							<a :href=mapsLink class="link">
+								<FontAwesomeIcon :icon="faLocationDot" /> {{ address }} 
 							</a>
 						</li>
 
 						<li class="info-entry">
-							<a href="mailto:sushi.shokudo.lyon@gmail.com" class="link">
-								<FontAwesomeIcon :icon="faEnvelope" /> sushi.shokudo.lyon@gmail.com
+							<a href="mailto:{{ email }}" class="link">
+								<FontAwesomeIcon :icon="faEnvelope" /> {{ email }}
 							</a>
 						</li>
 
 						<li class="info-entry">
-							<a href="tel:0982781941" class="link">
-								<FontAwesomeIcon :icon="faPhone" /> 09 82 78 19 41
-							</a>
+							<FontAwesomeIcon :icon="faPhone" /> {{ phone }}
 						</li>
 						<li class="info-entry">
-							Lundi-Samedi : 11h - 14h30 / 18h - 22h
+							{{ weekSchedules }}
 						</li>
 						<li class="info-entry">
-							Dimanche : 18h - 22h
+							{{ sundaySchedules }}
 						</li>
 					</ul>
 				</div>
@@ -100,7 +96,7 @@ const showNavMenu = (): void => {
 				<div class="socials-container">
 					<ul>
 						<li>
-							<a href="https://www.instagram.com/sushi.shokudo.lyon/">
+							<a :href=instagramLink>
 								<FontAwesomeIcon :icon="faInstagram" class="social-link link" />
 							</a>
 						</li>
