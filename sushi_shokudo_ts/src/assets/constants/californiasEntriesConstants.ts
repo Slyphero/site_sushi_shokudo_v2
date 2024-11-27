@@ -1,12 +1,11 @@
 import type { FoodEntry } from "../models/foodEntryInterface";
-import { imageFolderPath } from "./imageFolderPathConstant";
 
 export const californiasEntries: FoodEntry[] = [
     {
         title: "California saumon avocat",
         piecesNumber: 6,
         price: 5.5,
-        image: imageFolderPath.concat("sushi_shokudo.webp"),
+        image: "/sushi_shokudo.webp",
         elements: [
             "saumon",
             "avocat",
@@ -17,7 +16,7 @@ export const californiasEntries: FoodEntry[] = [
 		title: "California saumon avocat cheese",
 		piecesNumber: 6,
 		price: 6.8,
-		image: imageFolderPath.concat("sushi_shokudo.webp"),
+		image: "/sushi_shokudo.webp",
 		elements: [
 			"Tartare de saumon",
 			"cream cheese",
@@ -31,7 +30,7 @@ export const californiasEntries: FoodEntry[] = [
 		title: "California saumon wasabi",
 		piecesNumber: 6,
 		price: 6.9,
-		image: imageFolderPath.concat("sushi_shokudo.webp"),
+		image: "/sushi_shokudo.webp",
 		elements: [
 			"Sésame wasabi",
 			"mayonnaise wasabi",
@@ -44,7 +43,7 @@ export const californiasEntries: FoodEntry[] = [
 		title: "California thon avocat",	
 		piecesNumber: 6,
 		price: 5.8,
-		image: imageFolderPath.concat("sushi_shokudo.webp"),
+		image: "/sushi_shokudo.webp",
 		elements: [
 			"Thon",
 			"avocat",
@@ -55,7 +54,7 @@ export const californiasEntries: FoodEntry[] = [
 		title: "California thon cuit avocat",
 		piecesNumber: 6,
 		price: 5.8,
-		image: imageFolderPath.concat("sushi_shokudo.webp"),
+		image: "/sushi_shokudo.webp",
 		elements: [
 			"Thon cuit",
 			"avocat",
@@ -66,7 +65,7 @@ export const californiasEntries: FoodEntry[] = [
 		title: "California Ebi fry",
 		piecesNumber: 6,
 		price: 7,
-		image: imageFolderPath.concat("sushi_shokudo.webp"),
+		image: "/sushi_shokudo.webp",
 		elements: [
 			"Sésame",
 			"mayonnaise épicée",
@@ -77,7 +76,7 @@ export const californiasEntries: FoodEntry[] = [
 	{
 		title: "California Salmon Burrito",
 		piecesNumber: 6,
-		image: imageFolderPath.concat("sushi_shokudo.webp"),
+		image: "/sushi_shokudo.webp",
 		price: 7.5,
 		elements: [
 			"Saumon snacké aux 7 épices",
@@ -89,7 +88,7 @@ export const californiasEntries: FoodEntry[] = [
 	{
 		title: "California végétarien",
 		piecesNumber: 6,
-		image: imageFolderPath.concat("sushi_shokudo.webp"),
+		image: "/sushi_shokudo.webp",
 		price: 5.5,
 		elements: [
 			"Sésame",
@@ -103,7 +102,7 @@ export const californiasEntries: FoodEntry[] = [
 	{
 		title: "California daurade wasabi",
 		piecesNumber: 6,
-		image: imageFolderPath.concat("sushi_shokudo.webp"),
+		image: "/sushi_shokudo.webp",
 		price: 6.9,
 		elements: [
 			"Sésame wasabi",
@@ -117,7 +116,7 @@ export const californiasEntries: FoodEntry[] = [
 	{
 		title: "California foie gras",
 		piecesNumber: 6,
-		image: imageFolderPath.concat("sushi_shokudo.webp"),
+		image: "/sushi_shokudo.webp",
 		price: 7.9,
 		elements: [
 			"Foie gras",
@@ -129,7 +128,7 @@ export const californiasEntries: FoodEntry[] = [
 	{
 		title: "California poulet pané",
 		piecesNumber: 6,
-		image: imageFolderPath.concat("sushi_shokudo.webp"),
+		image: "/sushi_shokudo.webp",
 		price: 5.9,
 		elements: [
 			"Poulet pané",
@@ -142,7 +141,7 @@ export const californiasEntries: FoodEntry[] = [
 	{
 		title: "California crabe avocat",
 		piecesNumber: 6,
-		image: imageFolderPath.concat("sushi_shokudo.webp"),
+		image: "/sushi_shokudo.webp",
 		price: 7.5,
 		elements: [
 			"Masago",
@@ -155,7 +154,7 @@ export const californiasEntries: FoodEntry[] = [
 		title: "California crevette avocat sésame",
 		piecesNumber: 6,
 		price: 7,
-		image: imageFolderPath.concat("sushi_shokudo.webp"),
+		image: "/sushi_shokudo.webp",
 		elements: [
 			"Crevette",
 			"Avocat",

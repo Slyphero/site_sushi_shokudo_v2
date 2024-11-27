@@ -1,5 +1,4 @@
 import type { MenuCategory } from "../models/menuCategoryInterface";
-import { imageFolderPath } from "@/assets/constants/imageFolderPathConstant";
 
 import { menusEntries } from "./menusEntriesConstants";
 import { sushisEntries } from "./sushisEntriesConstants";
@@ -22,7 +21,7 @@ export const menuCategories: MenuCategory[] = [
 	{
 		menuTitleEntry: {
 			title: "Menus",
-			image: imageFolderPath.concat("plateau_gourmand.png"),
+			image: "/plateau_gourmand.png",
 			description: "Notre sélection de menus."
 		},
 		foodEntriesArray: menusEntries,
@@ -30,7 +29,7 @@ export const menuCategories: MenuCategory[] = [
 	{
 		menuTitleEntry: {
 			title: "Sushis",
-			image: imageFolderPath.concat("_NIC1708.png"),
+			image: "/_NIC1708.png",
 			description: "Un sushi est une quenelle de riz vinaigré sur laquelle nous déposons une tranche de poisson."
 		},
 		foodEntriesArray: sushisEntries,
@@ -38,7 +37,7 @@ export const menuCategories: MenuCategory[] = [
 	{
 		menuTitleEntry: {
 			title: "Temakis",
-			image: imageFolderPath.concat("_NIC1756.png"),
+			image: "/_NIC1756.png",
 			description: "Notre sélection de temakis."
 		},
 		foodEntriesArray: temakisEntries,
@@ -46,7 +45,7 @@ export const menuCategories: MenuCategory[] = [
 	{
 		menuTitleEntry: {
 			title: "Makis",
-			image: imageFolderPath.concat("_NIC1721.png"),
+			image: "/_NIC1721.png",
 			description: "Un maki est un cube de riz entouré d'une feuille de nori. Il est agrémenté de poisson cru et de crudités."
 		},
 		foodEntriesArray: makisEntries,
@@ -54,7 +53,7 @@ export const menuCategories: MenuCategory[] = [
 	{
 		menuTitleEntry: {
 			title: "Californias",
-			image: imageFolderPath.concat("_NIC1732.png"),
+			image: "/_NIC1732.png",
 			description: "Un california est un cube de riz agrémenté de sésame à l'extérieur ainsi que d'une feuille de nori et de poisson à l'intérieur."
 		},
 		foodEntriesArray: californiasEntries,
@@ -62,7 +61,7 @@ export const menuCategories: MenuCategory[] = [
 	{
 		menuTitleEntry: {
 			title: "Springs",
-			image: imageFolderPath.concat("_NIC1735.png"),
+			image: "/_NIC1735.png",
 			description: "Un spring est un cube de riz agrémenté de poisson et de crudités entouré d'une feuille de riz."
 		},
 		foodEntriesArray: springsEntries,
@@ -70,7 +69,7 @@ export const menuCategories: MenuCategory[] = [
 	{
 		menuTitleEntry: {
 			title: "Tazunas",
-			image: imageFolderPath.concat("_NIC1742.png"),
+			image: "/_NIC1742.png",
 			description: "Notre sélection de tazunas."
 		},
 		foodEntriesArray: tazunasEntries,
@@ -78,7 +77,7 @@ export const menuCategories: MenuCategory[] = [
 	{
 		menuTitleEntry: {
 			title: "Sashimis",
-			image: imageFolderPath.concat("_NIC1751.png"),
+			image: "/_NIC1751.png",
 			description: "Un sashimi est une tranche de poisson frais."
 		},
 		foodEntriesArray: sashimisEntries,
@@ -86,7 +85,7 @@ export const menuCategories: MenuCategory[] = [
 	{
 		menuTitleEntry: {
 			title: "Tartares",
-			image: imageFolderPath.concat("tartare_saumon_avocat.png"),
+			image: "/tartare_saumon_avocat.png",
 			description: "Notre sélection de tartares"
 		},
 		foodEntriesArray: tartaresEntries,
@@ -94,7 +93,7 @@ export const menuCategories: MenuCategory[] = [
 	{
 		menuTitleEntry: {
 			title: "Chirashis",
-			image: imageFolderPath.concat("chirashi_saumon_avocat.png"),
+			image: "/chirashi_saumon_avocat.png",
 			description: "Un chirashi est un plat à base de tranches de poissons sur un lit de riz vinaigré. Nous l'accompagnons d'une soupe miso."
 		},
 		foodEntriesArray: chirashisEntries,
@@ -102,7 +101,7 @@ export const menuCategories: MenuCategory[] = [
 	{
 		menuTitleEntry: {
 			title: "Poke Bowls",
-			image: imageFolderPath.concat("Poke_bowl_saumon.png"),
+			image: "/Poke_bowl_saumon.png",
 			description: "Un poke bowl est un plat composé d'une base de riz vinaigré. Tous nos poke bowls sont agrémentés d'avocat, d'edamame, de concombre, de radis, de tomates cerises, de carottes et de sésame."
 		},
 		foodEntriesArray: pokeBowlsEntries,
@@ -110,7 +109,7 @@ export const menuCategories: MenuCategory[] = [
 	{
 		menuTitleEntry: {
 			title: "Yakitoris",
-			image: imageFolderPath.concat("_NIC1790.png"),
+			image: "/_NIC1790.png",
 			description: "Notre sélection de yakitoris."
 		},
 		foodEntriesArray: yakitorisEntries,
@@ -118,7 +117,7 @@ export const menuCategories: MenuCategory[] = [
 	{
 		menuTitleEntry: {
 			title: "Gyozas",
-			image: imageFolderPath.concat("_NIC1754.png"),
+			image: "/_NIC1754.png",
 			description: "Un gyoza est un ravioli japonais, à la fois grillé à la poêle et cuit à la vapeur d'eau."
 		},
 		foodEntriesArray: gyozasEntries,
@@ -126,7 +125,7 @@ export const menuCategories: MenuCategory[] = [
 	{
 		menuTitleEntry: {
 			title: "Fritures",
-			image: imageFolderPath.concat("_NIC1791.png"),
+			image: "/_NIC1791.png",
 			description: "Notre sélection de fritures."
 		},
 		foodEntriesArray: friedEntries,
@@ -134,7 +133,7 @@ export const menuCategories: MenuCategory[] = [
 	{
 		menuTitleEntry: {
 			title: "Accompagnements",
-			image: imageFolderPath.concat("sushi_shokudo.webp"),
+			image: "/sushi_shokudo.webp",
 			description: "Notre sélection d'accompagnements."
 		},
 		foodEntriesArray: sidesEntries,
@@ -142,7 +141,7 @@ export const menuCategories: MenuCategory[] = [
 	{
 		menuTitleEntry: {
 			title: "Desserts",
-			image: imageFolderPath.concat("_NIC1800.png"),
+			image: "/_NIC1800.png",
 			description: "Notre sélection de desserts."
 		},
 		foodEntriesArray: dessertsEntries,

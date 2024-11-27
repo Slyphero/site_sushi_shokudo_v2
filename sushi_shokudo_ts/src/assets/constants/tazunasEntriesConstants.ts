@@ -1,12 +1,11 @@
 import type { FoodEntry } from "../models/foodEntryInterface";
-import { imageFolderPath } from "./imageFolderPathConstant";
 
 export const tazunasEntries: FoodEntry[] = [
 	{
 		title: "Dragon Roll",
 		price: 11.9,
 		piecesNumber: 8,
-		image: imageFolderPath.concat("sushi_shokudo.webp"),
+		image: "/sushi_shokudo.webp",
 		elements: [
 			"Dessus : Avocat, mayonnaise",
 			"Intérieur : Mayonnaise, crevette panée, avocat"
@@ -15,7 +14,7 @@ export const tazunasEntries: FoodEntry[] = [
 	{
 		title: "Salmon Teriyaki",
 		price: 11.5,
-		image: imageFolderPath.concat("sushi_shokudo.webp"),
+		image: "/sushi_shokudo.webp",
 		piecesNumber: 8,
 		elements: [
 			"Dessus : saumon snacké, sauce teriyaki, chips, piment, ciboulette",
@@ -25,7 +24,7 @@ export const tazunasEntries: FoodEntry[] = [
 	{
 		title: "Tuna Spicy",
 		price: 11,
-		image: imageFolderPath.concat("sushi_shokudo.webp"),
+		image: "/sushi_shokudo.webp",
 		piecesNumber: 8,
 		elements: [
 			"Dessus : Tartare de thon épicée, sauce épicée, ciboulette",
@@ -35,7 +34,7 @@ export const tazunasEntries: FoodEntry[] = [
 	{
 		title: "Wakame",
 		price: 11.5,
-		image: imageFolderPath.concat("sushi_shokudo.webp"),
+		image: "/sushi_shokudo.webp",
 		piecesNumber: 8,
 		elements: [
 			"Dessus : Wakame, 7 épices",

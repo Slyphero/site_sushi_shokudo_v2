@@ -1,11 +1,10 @@
 import type { FoodEntry } from "../models/foodEntryInterface";
-import { imageFolderPath } from "./imageFolderPathConstant";
 
 export const tartaresEntries: FoodEntry[] = [
     {
         title: "Tartare saumon avocat",
         price: 15.5,
-        image: imageFolderPath.concat("sushi_shokudo.webp"),
+        image: "/sushi_shokudo.webp",
         elements: [
             "Saumon",
             "Persil",
@@ -18,7 +17,7 @@ export const tartaresEntries: FoodEntry[] = [
     {
         title: "Tartare thon avocat",
         price: 15.9,
-        image: imageFolderPath.concat("sushi_shokudo.webp"),
+        image: "/sushi_shokudo.webp",
         elements: [
             "Thon",
             "Persil",
@@ -31,7 +30,7 @@ export const tartaresEntries: FoodEntry[] = [
     {
         title: "Tartare daurade mangue",
         price: 16.5,
-        image: imageFolderPath.concat("sushi_shokudo.webp"),
+        image: "/sushi_shokudo.webp",
         elements: [
             "Daurade",
             "Mangue",
@@ -45,7 +44,7 @@ export const tartaresEntries: FoodEntry[] = [
     {
         title: "Tartare mix thon saumon mariné",
         price: 15.8,
-        image: imageFolderPath.concat("sushi_shokudo.webp"),
+        image: "/sushi_shokudo.webp",
         elements: [
             "Saumon",
             "Thon",
