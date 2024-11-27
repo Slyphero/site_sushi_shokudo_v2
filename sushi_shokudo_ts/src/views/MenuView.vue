@@ -4,7 +4,7 @@ import { onMounted } from "vue";
 import MenuEntry from "@/components/MenuEntry.vue";
 import MenuTitle from "@/components/MenuTitle.vue";
 
-import boissonsImage from "@/assets/img/sushi_shokudo.webp"
+import boissonsImage from "/sushi_shokudo.webp";
 
 import type { MenuTitleEntry } from "@/assets/models/menuTitleEntryInterface"
 

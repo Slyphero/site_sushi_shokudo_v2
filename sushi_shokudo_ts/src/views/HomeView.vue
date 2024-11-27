@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import logo from "@/assets/img/sushi_shokudo.webp";
+import logo from "/sushi_shokudo.webp";
 import { RouterLink } from "vue-router";
 import { uberLink } from "@/assets/constants/constants";
 </script>

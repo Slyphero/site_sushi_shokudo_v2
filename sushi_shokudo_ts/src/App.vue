@@ -1,7 +1,7 @@
 <script setup lang="ts">
 
 import { RouterLink, RouterView } from "vue-router";
-import logo from "@/assets/img/sushi_shokudo.webp";
+import logo from "/sushi_shokudo.webp";
 
 import { FontAwesomeIcon } from "@fortawesome/vue-fontawesome";
 import { faEnvelope, faPhone, faLocationDot, faArrowUp, faBars } from "@fortawesome/free-solid-svg-icons";
@@ -70,7 +70,7 @@ const showNavMenu = (): void => {
 				<div class="infos-container">
 					<ul>
 						<li class="info-entry">
-							<a :href=mapsLink class="link">
+							<a :href=mapsLink class="link" target="_blank">
 								<FontAwesomeIcon :icon="faLocationDot" /> {{ address }} 
 							</a>
 						</li>
