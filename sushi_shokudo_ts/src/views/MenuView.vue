@@ -189,12 +189,20 @@ onMounted(() => {
 <style scoped lang="scss">
 .table-of-contents-button-container {
 	position: fixed;
-	top: 0;
+	top: 3%;
+	left: 2%;
 	padding: 10px;
+	background-color: $primary-color;
+	border-radius: 50%;
 
 	.table-of-contents-button {
 		font-size: 2em;
 	}
+}
+
+.table-of-contents-button-container:hover {
+	opacity: 0.5;
+	transition: 0.2s ease-in-out;
 }
 
 .aside-container {

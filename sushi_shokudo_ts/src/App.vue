@@ -9,7 +9,7 @@ import { faFacebook, faInstagram } from "@fortawesome/free-brands-svg-icons";
 
 import { navEntries } from "./assets/constants/navEntriesConstants";
 
-import { uberLink, instagramLink, mapsLink, address, email, phone, weekSchedules, sundaySchedules } from "./assets/constants/constants";
+import { uberLink, instagramLink, mapsLink, address, email, phone, weekSchedules, sundaySchedules, mailto } from "./assets/constants/constants";
 
 const scrollToTop = (): void => {
 	window.scrollTo({top: 0, behavior: "smooth"});
@@ -76,7 +76,7 @@ const showNavMenu = (): void => {
 						</li>
 
 						<li class="info-entry">
-							<a href="mailto:{{ email }}" class="link">
+							<a :href=mailto class="link">
 								<FontAwesomeIcon :icon="faEnvelope" /> {{ email }}
 							</a>
 						</li>

@@ -46,6 +46,7 @@ import { uberLink } from "@/assets/constants/constants";
 
 		.homepage-logo {
 			height: 500px;
+			filter: drop-shadow(1px 1px 12px black);
 		}
 
 		.home-title-buttons-container {
@@ -57,6 +58,7 @@ import { uberLink } from "@/assets/constants/constants";
 
 			h1 {
 				font-size: 72px;
+				text-shadow: 1px 1px 12px black;
 			}
 
 			.home-buttons-container {
