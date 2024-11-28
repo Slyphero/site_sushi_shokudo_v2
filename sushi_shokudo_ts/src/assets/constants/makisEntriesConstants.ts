@@ -94,16 +94,6 @@ export const makisEntries: FoodEntry[] = [
 		],
 	},
 	{
-		title: "Maki crabe",
-		piecesNumber: 6,
-		price: 6.2,
-		image: "/sushi_shokudo.webp",
-		elements: [
-			"crabe",
-			"mayonnaise"
-		],
-	},
-	{
 		title: "Maki végétarien",
 		piecesNumber: 6,
 		price: 4.5,

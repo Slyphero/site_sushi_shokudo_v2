@@ -27,11 +27,6 @@ export const sidesEntries: FoodEntry[] = [
         image: "/sushi_shokudo.webp",
     },
     {
-        title: 'Salade calamar',
-        price: 5.5,
-        image: "/sushi_shokudo.webp",
-    },
-    {
         title: 'Salade de choux saumon',
         price: 6.49,
         image: "/sushi_shokudo.webp",

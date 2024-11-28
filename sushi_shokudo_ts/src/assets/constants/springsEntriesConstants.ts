@@ -158,17 +158,6 @@ export const springsEntries: FoodEntry[] = [
 		]
 	},
 	{
-		title: "Spring chili crabe",
-		piecesNumber: 6,
-		price: 7.5,
-		image: "/sushi_shokudo.webp",
-		elements: [
-			"Laitue",
-			"Crabe mayonnaise",
-			"Avocat"
-		]
-	},
-	{
 		title: "Spring thon cuit concombre",
 		piecesNumber: 6,
 		price: 6.5,

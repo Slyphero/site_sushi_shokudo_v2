@@ -139,18 +139,6 @@ export const californiasEntries: FoodEntry[] = [
 		],
 	},
 	{
-		title: "California crabe avocat",
-		piecesNumber: 6,
-		image: "/sushi_shokudo.webp",
-		price: 7.5,
-		elements: [
-			"Masago",
-			"Crabe",
-			"Mayonnaise japonaise",
-			"Avocat"
-		],
-	},
-	{
 		title: "California crevette avocat sésame",
 		piecesNumber: 6,
 		price: 7,

@@ -88,12 +88,6 @@ export const sushisEntries: FoodEntry[] = [
 		image: "/sushi_shokudo.webp", 
 	},
 	{
-		title: "Sushi crabe",
-		piecesNumber: 2,
-		price: 6,
-		image: "/sushi_shokudo.webp", 
-	},
-	{
 		title: "Sushi tulip ikura saumon",
 		piecesNumber: 3,
 		price: 10.5,

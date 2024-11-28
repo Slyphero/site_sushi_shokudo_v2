@@ -21,24 +21,4 @@ export const tazunasEntries: FoodEntry[] = [
 			"Intérieur : Thon, mayonnaise épicée, avocat, masago"
 		]
 	},
-	{
-		title: "Tuna Spicy",
-		price: 11,
-		image: "/sushi_shokudo.webp",
-		piecesNumber: 8,
-		elements: [
-			"Dessus : Tartare de thon épicée, sauce épicée, ciboulette",
-			"Intérieur : Mayonnaise, crevette panée, avocat"
-		]
-	},
-	{
-		title: "Wakame",
-		price: 11.5,
-		image: "/sushi_shokudo.webp",
-		piecesNumber: 8,
-		elements: [
-			"Dessus : Wakame, 7 épices",
-			"Intérieur : Thon, avocat"
-		]
-	},
 ];

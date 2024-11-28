@@ -7,7 +7,7 @@ export const sashimisEntries: FoodEntry[] = [
 		price: 14.9,
 		image: "/sushi_shokudo.webp",
 		elements: [
-			"Prix 6 pièces : 7,90 €"
+			"Prix 6 pièces : 8,50 €"
 		]
 	},
 	{
