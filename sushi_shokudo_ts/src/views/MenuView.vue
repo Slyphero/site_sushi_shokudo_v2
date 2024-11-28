@@ -146,46 +146,11 @@ onMounted(() => {
 				<tbody>
 					<tr v-for="entry in menuCategory.foodEntriesArray">
 						<td class="drink-column">{{ formatFoodEntry(entry) }}</td>
-						<td class="price-column">{{ entry.price.toString().concat("€") }}</td>
+						<td class="price-column">{{ entry.price.toFixed(2).toString().concat("€") }}</td>
 					</tr>
 				</tbody>
 			</table>
 		</div>
-	</div>
-
-	<div class="category-title-container">
-		<MenuTitle :menuTitle=drinksTitle :index=0 />
-	</div>
-
-	<h3>Sans alcool</h3>
-	<div class="drinks-container">
-		<table>
-			<thead>
-				<tr>
-					<th class="drink-column">Boisson</th>
-					<th class="price-column">Prix</th>
-				</tr>
-			</thead>
-			<tbody>
-				<tr v-for="drinkEntry in drinksEntries">
-					<td v-if="drinkEntry.piecesNumber !== undefined && drinkEntry.elements === undefined">
-						{{ formatDrinkEntry(drinkEntry.title, drinkEntry.piecesNumber) }}
-					</td>
-					<td v-else-if="drinkEntry.piecesNumber !== undefined && drinkEntry.elements !== undefined">
-						{{ 
-							formatDrinkEntry(
-								drinkEntry.title, 
-								drinkEntry.piecesNumber
-							).concat(
-								" : ", 
-								drinkEntry.elements.join(", ")
-							) 
-						}}
-					</td>
-					<td class="price-column">{{ drinkEntry.price.toFixed(2) }}€</td>
-				</tr>
-			</tbody>
-		</table>
 	</div>
 
 	<h3>Alcools</h3>
@@ -193,7 +158,7 @@ onMounted(() => {
 		<table>
 			<thead>
 				<tr>
-					<th class="drink-column">Alcool</th>
+					<th class="drink-column">Alcools</th>
 					<th class="price-column">Prix</th>
 				</tr>
 			</thead>

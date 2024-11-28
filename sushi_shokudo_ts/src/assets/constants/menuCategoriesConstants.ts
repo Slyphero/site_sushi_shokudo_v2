@@ -16,6 +16,7 @@ import { pokeBowlsEntries } from "./pokeBowlsEntriesConstants";
 import { friedEntries } from "./friedEntriesConstants";
 import { sidesEntries } from "./sidesEntriesConstants";
 import { dessertsEntries } from "./dessertsEntriesConstants";
+import { drinksEntries } from "./drinksEntriesConstants";
 
 export const menuCategories: MenuCategory[] = [
 	{
@@ -145,5 +146,13 @@ export const menuCategories: MenuCategory[] = [
 			description: "Notre sélection de desserts."
 		},
 		foodEntriesArray: dessertsEntries,
+	},
+	{
+		menuTitleEntry: {
+			title: "Boissons",
+			image: "/sushi_shokudo.webp",
+			description: "Notre sélection de boissons"
+		},
+		foodEntriesArray: drinksEntries,
 	}
 ];
