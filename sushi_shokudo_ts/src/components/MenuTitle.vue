@@ -61,18 +61,12 @@ function createIdTitle(index: number): string {
 	justify-content: center;
 
 	.menu-image-title-container {
-		display: flex;
-		flex-direction: row;
-		align-items: center;
-		justify-content: space-between;
+		@include flex-direction-alignment(row, space-between, center);
 		width: 50%;
 
 		.menu-title-description-container {
 			width: 70%;
-			display: flex;
-			flex-direction: column;
-			justify-content: center;
-			align-items: center;
+			@include flex-direction-alignment(column, center, center);
 
 			.menu-title {
 				h2 {

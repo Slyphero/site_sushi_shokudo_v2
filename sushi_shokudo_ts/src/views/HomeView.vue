@@ -37,10 +37,7 @@ import { uberLink } from "@/assets/constants/constants";
 	background-image: url("/photo_page_accueil.jpg");
 
 	.home-slide-container {
-		display: flex;
-		flex-direction: row;
-		align-items: center;
-		justify-content: space-between;
+		@include flex-direction-alignment(row, space-between, center);
 		width: 70%;
 		padding: 100px 0;
 
@@ -149,10 +146,8 @@ import { uberLink } from "@/assets/constants/constants";
 @media only screen and (max-width: 768px) {
 	.home-container {
 		.home-slide-container {
-			flex-direction: column;
+			@include flex-direction-alignment(column, space-between, center);
 			padding: 20px 0;
-			justify-content: space-between;
-			align-items: center;
 
 			.home-title-buttons-container {
 				height: 80%;
@@ -165,9 +160,7 @@ import { uberLink } from "@/assets/constants/constants";
 				.home-buttons-container {
 					height: 40%;
 					width: 90%;
-					flex-direction: column;
-					justify-content: space-between;
-					align-items: center;
+					@include flex-direction-alignment(column, space-between, center);
 
 					.home-link {
 						width: 70%;

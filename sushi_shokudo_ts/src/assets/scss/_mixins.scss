@@ -23,3 +23,10 @@ apply to a css class : set $property with $color and $opacity
 		@warn "check $property, $color, $opacity values";
 	}
 }
+
+@mixin flex-direction-alignment($direction, $justify-content, $align-items) {
+	display: flex;
+	flex-direction: $direction;
+	justify-content: $justify-content;
+	align-items: $align-items;
+}

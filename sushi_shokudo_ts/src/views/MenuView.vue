@@ -242,10 +242,7 @@ onMounted(() => {
 
 .menus-page-container {
 	.category-container {
-		display: flex; 
-		flex-direction: column;
-		justify-content: center;
-		align-items: center;
+		@include flex-direction-alignment(column, center, center);
 		width: 100%;
 
 		.category-title-container {
@@ -262,10 +259,7 @@ onMounted(() => {
 	}
 
 	.drinks-container-title {
-		display: flex;
-		flex-direction: row;
-		justify-content: center;
-		align-items: center;
+		@include flex-direction-alignment(row, center, center);
 		height: 20vh;
 
 		h2 {
@@ -280,9 +274,7 @@ onMounted(() => {
 
 	.drinks-container {
 		font-size: 1.1em;
-		display: flex;
-		justify-content: center;
-		align-items: center;
+		@include flex-direction-alignment(row, center, center);
 		width: 100%;
 
 		table {

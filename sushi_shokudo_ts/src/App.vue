@@ -171,16 +171,12 @@ const showNavMenu = (): void => {
 .header-container {
 	@include property-color-opacity(background-color, $secondary-color, .2);
 	width: 100%;
-	display: flex;
-	justify-content: center;
+	@include flex-direction-alignment(row, center, center);
 
 	header {
 		width: 60%;
 		min-height: 12vh;
-		display: flex;
-		flex-direction: row;
-		align-items: center;
-		justify-content: space-between;
+		@include flex-direction-alignment(row, space-between, center);
 
 		.header-logo-container {
 			padding: 10px 0px;
@@ -193,9 +189,7 @@ const showNavMenu = (): void => {
 		.header-links {
 			font-size: 1.5em;
 			width: 50%;
-			display: flex;
-			justify-content: space-between;
-			align-items: center;
+			@include flex-direction-alignment(row, space-between, center);
 
 			.order-button {
 				padding: 10px;
@@ -223,14 +217,11 @@ const showNavMenu = (): void => {
 .footer-container {
 	width: 100%;
 	@include property-color-opacity(background-color, $secondary-color, .2);
-	display: flex;
-	justify-content: center;
+	@include flex-direction-alignment(row, center, center);
 
 	footer {
 		width: 70%;
-		display: flex;
-		justify-content: space-between;
-		align-items: center;
+		@include flex-direction-alignment(row, space-between, center);
 
 		.footer-logo-container {
 			padding: 20px 0px;
@@ -242,25 +233,17 @@ const showNavMenu = (): void => {
 
 		.footer-links-container {
 			width: 70%;
-			display: flex;
-			flex-direction: row;
-			justify-content: space-between;
-			align-items: center;
+			@include flex-direction-alignment(row, space-between, center);
 
 			.footer-links {
-				display: flex;
-				flex-direction: column;
-				justify-content: space-between;
 				font-size: 2em;
 				height: 80%;
+				@include flex-direction-alignment(column, space-between, start);
 			}
 
 			.infos-socials-container {
 				width: 65%;
-				display: flex;
-				flex-direction: row;
-				justify-content: space-between;
-				align-items: center;
+				@include flex-direction-alignment(row, space-between, center);
 
 				.infos-container {
 					.info-entry {
@@ -355,19 +338,14 @@ const showNavMenu = (): void => {
 			flex-direction: column;
 
 			.logo-nav-menu-button-container {
-				display: flex;
-				flex-direction: row;
-				justify-content: space-between;
-				align-items: center;
+				@include flex-direction-alignment(row, space-between, center);
 				width: 100%;
 			}
 
 			.header-links {
+				@include flex-direction-alignment(column, center, center);
 				display: none;
 				top: -100%;
-				flex-direction: column;
-				justify-content: center;
-				align-items: center;
 
 				.header-link {
 					padding: 10px 0;

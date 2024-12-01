@@ -46,10 +46,7 @@ defineProps<{
 	@include property-color-opacity(background-color, $secondary-color, .2);
 	margin: 10px 0;
 	padding: 10px;
-	display: flex;
-	flex-direction: column;
-	justify-content: left;
-	align-items: center;
+	@include flex-direction-alignment(column, left, center);
 	border-radius: 5px;
 
 	.entry-image-container {

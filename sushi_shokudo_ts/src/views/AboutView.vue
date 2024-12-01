@@ -37,10 +37,7 @@
 
 <style scoped lang="scss">
     .page-container {
-        display: flex;
-        flex-direction: row;
-        justify-content: center;
-        align-items: center;
+        @include flex-direction-alignment(row, center, center);
 
         h1 {
             font-size: 3em;
