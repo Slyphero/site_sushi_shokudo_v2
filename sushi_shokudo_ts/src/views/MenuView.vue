@@ -56,13 +56,8 @@ const formatFoodEntry = (foodEntry: FoodEntry, isDrink: boolean): string => {
 	return result;
 }
 
-const formatDrinkEntry = (title: string, quantity: number | undefined): string => {
-	if (quantity !== undefined)	 {
-		return title.concat(" (", quantity.toString(), " cL)");
-	} else {
-		return title;
-	}
-	
+const formatDrinkEntry = (title: string, quantity: number): string => {
+	return title.concat(" (", quantity.toString(), " cL)");
 }
 
 const formatAlcoolEntry = (title: string, quantity: number, degree: number): string => { 
