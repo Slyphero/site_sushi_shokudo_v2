@@ -10,7 +10,6 @@ import type { MenuTitleEntry } from "@/assets/models/menuTitleEntryInterface"
 
 import { menuCategories } from "@/assets/constants/menuCategoriesConstants";
 
-import { drinksEntries } from "@/assets/constants/drinksEntriesConstants";
 import { alcoolsEntries } from "@/assets/constants/alcoolsEntriesConstants";
 import type { DrinkEntry } from "@/assets/models/drinkEntryInterface";
 import type { FoodEntry } from "@/assets/models/foodEntryInterface";
@@ -33,12 +32,16 @@ const createIndexPrefixId = (prefix: string, index: number): string => {
 	return prefix.concat("-", index.toString());
 }
 
-const formatFoodEntry = (foodEntry: FoodEntry): string => {
+const formatFoodEntry = (foodEntry: FoodEntry, isDrink: boolean): string => {
 	let result = foodEntry.title;
 
 	if (foodEntry.piecesNumber !== undefined && foodEntry.piecesNumber > 1) {
 		console.log(foodEntry.piecesNumber);
-		result = result.concat(" (", foodEntry.piecesNumber.toString(), " pièces) ");
+		if (!isDrink) {
+			result = result.concat(" (", foodEntry.piecesNumber.toString(), " pièces) ");
+		} else {
+			result = result.concat(" (", foodEntry.piecesNumber.toString(), " cL) ");
+		}
 	}
 
 	if (foodEntry.elements !== undefined) {
@@ -53,8 +56,13 @@ const formatFoodEntry = (foodEntry: FoodEntry): string => {
 	return result;
 }
 
-const formatDrinkEntry = (title: string, quantity: number): string => { 
-	return title.concat(" (", quantity.toString(), " cL)");
+const formatDrinkEntry = (title: string, quantity: number | undefined): string => {
+	if (quantity !== undefined)	 {
+		return title.concat(" (", quantity.toString(), " cL)");
+	} else {
+		return title;
+	}
+	
 }
 
 const formatAlcoolEntry = (title: string, quantity: number, degree: number): string => { 
@@ -145,7 +153,12 @@ onMounted(() => {
 
 				<tbody>
 					<tr v-for="entry in menuCategory.foodEntriesArray">
-						<td class="drink-column">{{ formatFoodEntry(entry) }}</td>
+						<td v-if="menuCategory.menuTitleEntry.title !== 'Boissons'" class="drink-column">
+							{{ formatFoodEntry(entry, false) }}
+						</td>
+						<td v-else class="drink-column">
+							{{ formatFoodEntry(entry, true) }}
+						</td>
 						<td class="price-column">{{ entry.price.toFixed(2).toString().concat("€") }}</td>
 					</tr>
 				</tbody>
