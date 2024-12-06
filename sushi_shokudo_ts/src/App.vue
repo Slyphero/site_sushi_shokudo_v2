@@ -11,6 +11,19 @@ import { navEntries } from "./assets/constants/navEntriesConstants";
 
 import { uberLink, instagramLink, mapsLink, address, email, phone, weekSchedules, sundaySchedules, mailto } from "./assets/constants/constants";
 
+import { ref, computed, onMounted } from 'vue';
+import Popup  from '@/components/Popup.vue';
+
+const showPopup = ref(false);
+
+const startHour = 18;
+const endHour = 22;
+
+const shouldShowPopup = computed(() => {
+	const currentHour = new Date().getHours();
+	return currentHour >= startHour && currentHour < endHour;
+});
+
 const scrollToTop = (): void => {
 	window.scrollTo({top: 0, behavior: "smooth"});
 }
@@ -23,9 +36,19 @@ const showNavMenu = (): void => {
 	}
 }
 
+onMounted(() => {
+	if (shouldShowPopup.value) {
+		showPopup.value = true;
+	}
+});
+
 </script>
 
 <template>
+
+<div>
+	<Popup v-if="showPopup" @close="showPopup = false" />
+</div>
 
 <button @click="scrollToTop" class="scroll-up-button" id="scroll-up-button">
   	<FontAwesomeIcon :icon=faArrowUp />
