@@ -13,7 +13,7 @@ function closePopup() {
     <div class="popup-overlay">
         <div class="popup-container">
             <div class="popup-content">
-                <h1>20% de réduction sur l'ensemble de la carte</h1>
+                <h1>20% de réduction sur l'ensemble de la carte (soir uniquement), offre valable jusqu'au 24 décembre 2024.</h1>
                 <button @click="closePopup">Fermer</button>
             </div>
         </div>

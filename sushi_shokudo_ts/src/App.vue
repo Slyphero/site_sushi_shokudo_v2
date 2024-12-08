@@ -16,7 +16,7 @@ import Popup  from '@/components/Popup.vue';
 
 const showPopup = ref(false);
 
-const startHour = 18;
+const startHour = 5;
 const endHour = 22;
 
 const shouldShowPopup = computed(() => {
