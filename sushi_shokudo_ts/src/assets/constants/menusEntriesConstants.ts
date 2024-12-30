@@ -18,7 +18,7 @@ export const menusEntries: FoodEntry[] = [
 		title: "Plateau Maki",
 		piecesNumber: 18,
 		image: "/plateau_maki.png",
-		price: 13.90,
+		price: 13.50,
 		elements: [
 			"6 makis saumon",
 			"6 makis thon",

@@ -76,4 +76,36 @@ export const drinksEntries: DrinkEntry[] = [
             "Cola"
         ]
     },
+    {
+        title: 'Bubble Tea Oolong',
+        piecesNumber: 24,
+        price: 3.5,
+        elements: [
+            'Litchi', 
+            'Pêche'
+        ]
+    },
+    {
+        title: 'Kimino Yuzu', 
+        piecesNumber: 25,
+        price: 4.9
+    },
+    {
+        title: 'Ginger Beer Bio',
+        piecesNumber: 27.5,
+        price: 3.9
+    },
+    {
+        title: 'Café',
+        price: 1.9
+    },
+    {
+        title: 'Thé',
+        price: 1.9,
+        elements: [
+            'Vert SENCHA japonais',
+            'Vert',
+            'Menthe'
+        ]
+    }
 ]
