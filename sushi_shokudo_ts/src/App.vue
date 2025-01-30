@@ -68,7 +68,6 @@ onMounted(() => {
 			<RouterLink class="header-link link" v-for="navEntry in navEntries" :to=navEntry.link>
 				{{ navEntry.name }}
 			</RouterLink>
-			<a href="#footer"><button class="order-button">Appeler</button></a>
 		</nav>
 	</header>
 </div>
@@ -86,7 +85,6 @@ onMounted(() => {
 				<RouterLink class="footer-link link" v-for="navEntry in navEntries" :to=navEntry.link>
 					{{ navEntry.name }}
 				</RouterLink>
-				<a :href=uberLink target="_blank" class="link">Commander</a>
 			</nav>
 
 			<div class="infos-socials-container">

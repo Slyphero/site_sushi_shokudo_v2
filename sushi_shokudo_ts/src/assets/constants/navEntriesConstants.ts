@@ -13,4 +13,8 @@ export const navEntries: NavEntry[] = [
 		name: "A propos", 
 		link: "/a-propos" 
 	},
+	{
+		name: "Commander",
+		link: "/commander"
+	}
 ];

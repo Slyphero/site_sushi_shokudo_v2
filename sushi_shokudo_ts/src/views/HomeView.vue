@@ -18,9 +18,9 @@ import { uberLink } from "@/assets/constants/constants";
 				<RouterLink class="primary-button home-link link" to="/menu">
 					Menus
 				</RouterLink>
-				<a class="secondary-button home-link link" href="#footer">
-					Appeler
-				</a>
+				<RouterLink class="secondary-button home-link link" to="/commander">
+					Commander
+				</RouterLink>
 			</div>
 		</section>
 	</div>
