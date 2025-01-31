@@ -4,27 +4,41 @@
 
 <template>
     <div class="order-container">
-        <h1>Pour commander (livraison / à emporter)</h1>
-        <div class="order-buttons-container">
-            <a href="#" tareget="_blank">
-                <button class="primary-button order-link">
-                    Uber Eats
-                </button>
-            </a>
-            <a href="https://menu.lyoneats.fr/menu/items/sushi_shokudo" target="_blank">
-                <button class="secondary-button order-link">
-                    Lyon Eats
-                </button>
-            </a>
-        </div>
+        <section>
+            <h1>Pour commander (livraison / à emporter)</h1>
+            <div class="order-buttons-container">
+                <!-- <a href="#" target="_blank">
+                    <button class="primary-button order-link">
+                        Uber Eats
+                    </button>
+                </a> -->
+                <a href="https://menu.lyoneats.fr/menu/items/sushi_shokudo" target="_blank">
+                    <button class="secondary-button order-link">
+                        Lyon Eats
+                    </button>
+                </a>
+            </div>
+        </section>
     </div>
-    
 </template>
 
 <style scoped lang="scss">
+.order-container {
+    @include flex-direction-alignment(column, center, center);
+
+    section {
+        width: 50%;
+        text-align: center;
+        h1 {
+            color: $primary-color;
+            font-size: 3em;
+        }
+    }
+
     .order-buttons-container {
         @include flex-direction-alignment(row, center, center);
-        min-height: 90vh;
+        min-height: 80vh;
+
         a {
             .order-link {
                 text-decoration: none;
@@ -49,4 +63,5 @@
             }
         }
     }
+}
 </style>
