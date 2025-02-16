@@ -47,7 +47,7 @@ onMounted(() => {
 <template>
 
 <div id="popup">
-	<!-- <Popup v-if="showPopup" @close="showPopup = false" /> -->
+	<Popup v-if="showPopup" @close="showPopup = false" />
 </div>
 
 <button @click="scrollToTop" class="scroll-up-button" id="scroll-up-button">
