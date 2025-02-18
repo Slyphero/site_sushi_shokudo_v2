@@ -13,8 +13,9 @@ function closePopup() {
     <div class="popup-overlay">
         <div class="popup-container">
             <div class="popup-content">
-                <h1>Une boisson sans alcool ou 2 ebi fries offerts à l'achat d'un plateau ou d'une box.
+                <h1>Une boisson parmi : San Pellegrino, Evian, Coca-Cola ou 2 Ebi Fries offerts à l'achat d'un plateau ou d'une box.
                     Uniquement le soir du dimanche au jeudi.
+                    Offre à durée limitée jusqu'au 28 février 2025 (inclus).
                 </h1>
                 <button @click="closePopup">Fermer</button>
             </div>
