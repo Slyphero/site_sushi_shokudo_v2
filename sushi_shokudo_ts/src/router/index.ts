@@ -10,23 +10,26 @@ const router = createRouter({
 	routes: [
 		{
 			path: "/",
-			alias: "",
 			redirect: "/accueil"
 		},
 		{
 			path: "/accueil",
+			name: "home",
 			component: HomeView
 		},
 		{
 			path: "/menu",
+			name: "menu",
 			component: MenuView
 		},
 		{
 			path: "/a-propos",
+			name: "about",
 			component: AboutView
 		},
 		{
 			path: "/commander",
+			name: "order",
 			component: OrderView
 		}
 	]

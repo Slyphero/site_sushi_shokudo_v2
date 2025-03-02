@@ -31,13 +31,15 @@ const scrollToTop = (): void => {
 const showNavMenu = (): void => {
 	let nav: HTMLElement | null = document.getElementById("nav-menu");
 
-	if (nav !== null) {
+	if (nav !== null) 
+	{
 		nav.classList.toggle("show");
 	}
 }
 
 onMounted(() => {
-	if (shouldShowPopup.value) {
+	if (shouldShowPopup.value) 
+	{
 		showPopup.value = true;
 	}
 });
@@ -47,7 +49,7 @@ onMounted(() => {
 <template>
 
 <div id="popup">
-	<Popup v-if="showPopup" @close="showPopup = false" />
+	<!-- <Popup v-if="showPopup" @close="showPopup = false" /> -->
 </div>
 
 <button @click="scrollToTop" class="scroll-up-button" id="scroll-up-button">
@@ -58,7 +60,7 @@ onMounted(() => {
 	<header>
 		<div class="logo-nav-menu-button-container">
 			<div class="header-logo-container">
-				<img class="header-logo" :src="logo" alt="">
+				<img class="header-logo" :src="logo" alt="" loading="lazy">
 			</div>
 
 			<FontAwesomeIcon @click="showNavMenu()" :icon="faBars" class="nav-menu-icon" />
@@ -136,12 +138,14 @@ onMounted(() => {
 </template>
 
 <style lang="scss">
-* {
+* 
+{
 	margin: 0;
 	padding: 0;
 	font-family: $body-font;
 
-	.scroll-up-button {
+	.scroll-up-button 
+	{
 		position: fixed; 
 		bottom: 5%;
 		right: 2%;
@@ -153,66 +157,79 @@ onMounted(() => {
 		border: none;
 	}
 
-	.scroll-up-button:hover {
+	.scroll-up-button:hover 
+	{
 		cursor: pointer;
 		@include property-color-opacity(background-color, $primary-color, 1);
 		transition: 0.2s ease-in-out;
 	}
 
-	ul {
+	ul 
+	{
 		list-style-type: none;
 	}
 
-	.link {
+	.link 
+	{
 		@include property-color-opacity(color, $text-color, 1);
 		text-decoration: none;
 	}
 
-	.link:hover {
+	.link:hover 
+	{
 		@include property-color-opacity(color, $primary-color, 1);
 		transition: 0.2s ease-in-out;
 	}
 
-	.heading {
+	.heading 
+	{
 		font-family: $headings-font;
 		border-bottom: 1px solid rgba($primary-color, .2);
 		text-transform: uppercase;
 		margin: 10px 0;
 	}
 
-	h2 {
+	h2 
+	{
 		font-size: 36px;
 	}
 
-	.heading, .accent-text {
+	.heading, .accent-text 
+	{
 		@include property-color-opacity(color, $primary-color, 1);
 	}
 }
 
-.header-container {
+.header-container 
+{
 	@include property-color-opacity(background-color, $secondary-color, .2);
 	width: 100%;
 	@include flex-direction-alignment(row, center, center);
 
-	header {
+	header 
+	{
 		width: 60%;
 		min-height: 12vh;
 		@include flex-direction-alignment(row, space-between, center);
 
-		.header-logo-container {
+		.header-logo-container 
+		{
 			padding: 10px 0px;
 
-			.header-logo {
+			.header-logo 
+			{
 				height: 10vh;
 			}
 		}
 
-		.header-links {
+		.header-links 
+		{
 			font-size: 1.5em;
 			width: 50%;
 			@include flex-direction-alignment(row, space-between, center);
 
-			.order-button {
+			.order-button 
+			{
 				padding: 10px;
 				@include property-color-opacity(color, $background-color, 1);
 				@include property-color-opacity(background-color, $primary-color, 1);
@@ -221,59 +238,72 @@ onMounted(() => {
 				font-size: 0.8em;
 			}
 			
-			.order-button:hover {
+			.order-button:hover 
+			{
 				@include property-color-opacity(background-color, $background-color, 1);
 				@include property-color-opacity(color, $text-color, 1);
 				transition: 0.2s ease-in-out;
 			}
 		}
 
-		.nav-menu-icon {
+		.nav-menu-icon 
+		{
 			display: none;
 			font-size: 2em;
 		}
 	}
 }
 
-.footer-container {
+.footer-container 
+{
 	width: 100%;
 	@include property-color-opacity(background-color, $secondary-color, .2);
 	@include flex-direction-alignment(row, center, center);
 
-	footer {
+	footer 
+	{
 		width: 70%;
 		@include flex-direction-alignment(row, space-between, center);
 
-		.footer-logo-container {
+		.footer-logo-container 
+		{
 			padding: 20px 0px;
 
-			.footer-logo {
+			.footer-logo 
+			{
 				height: 20vh;
 			}
 		}
 
-		.footer-links-container {
+		.footer-links-container 
+		{
 			width: 70%;
 			@include flex-direction-alignment(row, space-between, center);
 
-			.footer-links {
+			.footer-links 
+			{
 				font-size: 2em;
 				height: 80%;
 				@include flex-direction-alignment(column, space-between, start);
 			}
 
-			.infos-socials-container {
+			.infos-socials-container 
+			{
 				width: 65%;
 				@include flex-direction-alignment(row, space-between, center);
 
-				.infos-container {
-					.info-entry {
+				.infos-container 
+				{
+					.info-entry 
+					{
 						font-size: 1.5em;
 					}
 				}
 
-				.socials-container {
-					.social-link {
+				.socials-container 
+				{
+					.social-link 
+					{
 						font-size: 4em;
 						padding: 10px 0;
 					}
@@ -283,19 +313,26 @@ onMounted(() => {
 	}
 }
 
-@media only screen and (max-width: 1500px) {
-	.header-container {
-		header {
+@media only screen and (max-width: 1500px) 
+{
+	.header-container 
+	{
+		header 
+		{
 			width: 80%;
 		}
 	}
 
-	.footer-container {
-		footer {
-			.footer-links-container {
+	.footer-container 
+	{
+		footer 
+		{
+			.footer-links-container 
+			{
 				width: 80%;
 
-				.infos-socials-container {
+				.infos-socials-container 
+				{
 					width: 70%;
 				}
 			}
@@ -303,24 +340,32 @@ onMounted(() => {
 	}
 }
 
-@media only screen and (max-width: 1200px) {
-	.header-container {
-		header {
-			.header-links {
+@media only screen and (max-width: 1200px) 
+{
+	.header-container 
+	{
+		header 
+		{
+			.header-links 
+			{
 				width: 70%;
 			}
 		}
 	}
 
-	.footer-container {
-		footer {
+	.footer-container 
+	{
+		footer 
+		{
 			width: 90%;
 			flex-direction: column;
-			.footer-links-container {
+			.footer-links-container 
+			{
 				width: 90%;
 				justify-content: space-between;
 
-				.infos-socials-container {
+				.infos-socials-container 
+				{
 					width: 65%;
 				}
 			}
@@ -328,20 +373,29 @@ onMounted(() => {
 	}
 }
 
-@media only screen and (max-width: 900px) {
-	.header-container {
-		header {
-			.header-links {
+@media only screen and (max-width: 900px) 
+{
+	.header-container 
+	{
+		header 
+		{
+			.header-links 
+			{
 				width: 80%;
 			}
 		}
 	}
 
-	.footer-container {
-		footer {
+	.footer-container 
+	{
+		footer 
+		{
 			width: 98%;
-			.footer-links-container {
-				.infos-socials-container {
+
+			.footer-links-container 
+			{
+				.infos-socials-container 
+				{
 					width: 70%;
 				}
 			}
@@ -349,64 +403,82 @@ onMounted(() => {
 	}
 }
 
-@media only screen and (max-width: 768px) {
-	.scroll-up-button {
+@media only screen and (max-width: 768px) 
+{
+	.scroll-up-button 
+	{
 		bottom: 10%;
 		right: 18%;
 	}
-	.header-container {
-		header {
+	.header-container 
+	{
+		header 
+		{
 			flex-direction: column;
 
-			.logo-nav-menu-button-container {
+			.logo-nav-menu-button-container 
+			{
 				@include flex-direction-alignment(row, space-between, center);
 				width: 100%;
 			}
 
-			.header-links {
+			.header-links 
+			{
 				@include flex-direction-alignment(column, center, center);
 				display: none;
 				top: -100%;
 
-				.header-link {
+				.header-link 
+				{
 					padding: 10px 0;
 				}
 			}
 
-			.nav-menu-icon {
+			.nav-menu-icon 
+			{
 				display: block;
 			}
 
-			.show {
+			.show 
+			{
 				display: flex;
 			}
 		}
 	}
 
-	.footer-container {
-		footer {
-			.footer-links-container {
+	.footer-container 
+	{
+		footer 
+		{
+			.footer-links-container 
+			{
 				align-items: baseline;
 
-				.footer-links {
+				.footer-links 
+				{
 					font-size: 1.1em;
 				}
 
-				.infos-socials-container {
+				.infos-socials-container 
+				{
 					flex-direction: column;
 					align-items: center;
 					justify-content: center;
 
-					.infos-container {
-						.info-entry {
+					.infos-container 
+					{
+						.info-entry 
+						{
 							font-size: 0.7em;
 						}
 					}
 
-					.socials-container {
+					.socials-container 
+					{
 						width: 50%;
 
-						ul {
+						ul 
+						{
 							display: flex;
 							flex-direction: row;
 							justify-content: space-between;

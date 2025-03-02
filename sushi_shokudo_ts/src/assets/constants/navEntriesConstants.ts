@@ -3,18 +3,18 @@ import type { NavEntry } from "../models/navEntryInterface";
 export const navEntries: NavEntry[] = [   
 	{ 
 		name: "Accueil", 
-		link: "/accueil" 
+		link: {name: 'home'} 
 	},
 	{ 
 		name: "Menu", 
-		link: "/menu" 
+		link: {name: 'menu'} 
 	},
 	{ 
 		name: "A propos", 
-		link: "/a-propos" 
+		link: {name: 'about'}
 	},
 	{
 		name: "Commander",
-		link: "/commander"
+		link: {name: 'order'}
 	}
 ];

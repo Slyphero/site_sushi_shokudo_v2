@@ -7,7 +7,7 @@ import { uberLink } from "@/assets/constants/constants";
 <template>
 <div class="home-container">
 	<div class="home-slide-container">
-		<img class="homepage-logo" :src="logo" alt="">
+		<img class="homepage-logo" :src="logo" alt="" loading="lazy">
 
 		<section class="home-title-buttons-container">
 			<h1 style="color: white">
@@ -28,7 +28,8 @@ import { uberLink } from "@/assets/constants/constants";
 </template>
 
 <style scoped lang="scss">
-.home-container {
+.home-container 
+{
 	@include property-color-opacity(background-color, $complementary-color, 0.3);
 	display: flex;
 	justify-content: center;
@@ -36,52 +37,61 @@ import { uberLink } from "@/assets/constants/constants";
 
 	background-image: url("/photo_page_accueil.jpg");
 
-	.home-slide-container {
+	.home-slide-container 
+	{
 		@include flex-direction-alignment(row, space-between, center);
 		width: 70%;
 		padding: 100px 0;
 
-		.homepage-logo {
+		.homepage-logo 
+		{
 			height: 500px;
 			filter: drop-shadow(1px 1px 12px black);
 		}
 
-		.home-title-buttons-container {
+		.home-title-buttons-container 
+		{
 			display: flex;
 			flex-direction: column;
 			justify-content: space-between;
 			height: 50%;
 			width: 60%;
 
-			h1 {
+			h1 
+			{
 				font-size: 72px;
 				text-shadow: 1px 1px 12px black;
 			}
 
-			.home-buttons-container {
+			.home-buttons-container 
+			{
 				width: 50%;
 				display: flex;
 				justify-content: space-between;
 
-				.home-link {
+				.home-link 
+				{
 					text-decoration: none;
 					font-size: 24px;
 					padding: 20px;
 					border-radius: 5px;
 				}
 
-				.home-link:hover {
+				.home-link:hover 
+				{
 					@include property-color-opacity(background-color, $background-color, 1);
 					@include property-color-opacity(color, $text-color, 1);
 					transition: 0.2s ease-in-out;
 				}
 
-				.primary-button {
+				.primary-button 
+				{
 					@include property-color-opacity(color, white, 1);
 					@include property-color-opacity(background-color, $primary-color, 1);
 				}
 
-				.secondary-button {
+				.secondary-button 
+				{
 					@include property-color-opacity(background-color, $secondary-color, 1);
 				}
 			}
@@ -89,11 +99,16 @@ import { uberLink } from "@/assets/constants/constants";
 	}
 }
 
-@media only screen and (max-width: 1500px) {
-	.home-container {
-		.home-slide-container {
-			.home-title-buttons-container {
-				.home-buttons-container {
+@media only screen and (max-width: 1500px) 
+{
+	.home-container 
+	{
+		.home-slide-container 
+		{
+			.home-title-buttons-container 
+			{
+				.home-buttons-container 
+				{
 					width: 70%;
 				}
 			}
@@ -101,15 +116,20 @@ import { uberLink } from "@/assets/constants/constants";
 	}
 }
 
-@media only screen and (max-width: 1200px) {
-	.home-container {
-		.home-slide-container {
+@media only screen and (max-width: 1200px) 
+{
+	.home-container 
+	{
+		.home-slide-container 
+		{
 			width: 90%;
 
-			.home-title-buttons-container {
+			.home-title-buttons-container 
+			{
 				width: 60%; 
 
-				.home-buttons-container {
+				.home-buttons-container 
+				{
 					width: 70%;
 				}
 			}
@@ -117,52 +137,69 @@ import { uberLink } from "@/assets/constants/constants";
 	}
 }
 
-@media only screen and (max-width: 900px) {
-	.home-container {
-		.home-slide-container {
-			.homepage-logo {
+@media only screen and (max-width: 900px) 
+{
+	.home-container 
+	{
+		.home-slide-container 
+		{
+			.homepage-logo 
+			{
 				height: 300px;
 			}
 		}
 	}
 }
 
-@media only screen and (max-width: 900px) {
-	.home-container {
-		.home-slide-container {
-			.homepage-logo {
+@media only screen and (max-width: 900px) 
+{
+	.home-container 
+	{
+		.home-slide-container 
+		{
+			.homepage-logo 
+			{
 				height: 250px;
 			}
 		}
 		
-		.home-title-buttons-container {
-			.home-buttons-container {
+		.home-title-buttons-container 
+		{
+			.home-buttons-container 
+			{
 				width: 100%;
 			}
 		}
 	}
 }
 
-@media only screen and (max-width: 768px) {
-	.home-container {
-		.home-slide-container {
+@media only screen and (max-width: 768px) 
+{
+	.home-container 
+	{
+		.home-slide-container 
+		{
 			@include flex-direction-alignment(column, space-between, center);
 			padding: 20px 0;
 
-			.home-title-buttons-container {
+			.home-title-buttons-container 
+			{
 				height: 80%;
 				align-items: center;
 
-				h1 {
+				h1 
+				{
 					text-align: center;
 				}
 
-				.home-buttons-container {
+				.home-buttons-container 
+				{
 					height: 40%;
 					width: 90%;
 					@include flex-direction-alignment(column, space-between, center);
 
-					.home-link {
+					.home-link 
+					{
 						width: 70%;
 						text-align: center;
 					}

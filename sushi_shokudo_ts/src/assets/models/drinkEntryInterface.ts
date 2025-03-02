@@ -1,5 +1,6 @@
 import type { FoodEntry } from "./foodEntryInterface";
 
-export interface DrinkEntry extends FoodEntry {
+export interface DrinkEntry extends FoodEntry 
+{
 	alcoolVolume?: number;
 }
