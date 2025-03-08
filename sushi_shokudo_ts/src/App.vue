@@ -12,7 +12,7 @@ import { navEntries } from "./assets/constants/navEntriesConstants";
 import { uberLink, instagramLink, mapsLink, address, email, phone, weekSchedules, sundaySchedules, mailto } from "./assets/constants/constants";
 
 import { ref, computed, onMounted } from 'vue';
-import Popup  from '@/components/Popup.vue';
+import Popup from '@/components/Popup.vue';
 
 const showPopup = ref(false);
 
@@ -25,7 +25,7 @@ const shouldShowPopup = computed(() => {
 });
 
 const scrollToTop = (): void => {
-	window.scrollTo({top: 0, behavior: "smooth"});
+	window.scrollTo({ top: 0, behavior: "smooth" });
 }
 
 const showNavMenu = (): void => {
@@ -46,93 +46,93 @@ onMounted(() => {
 
 <template>
 
-<div id="popup">
-	<!-- <Popup v-if="showPopup" @close="showPopup = false" /> -->
-</div>
+	<div id="popup">
+		<!-- <Popup v-if="showPopup" @close="showPopup = false" /> -->
+	</div>
 
-<button @click="scrollToTop" class="scroll-up-button" id="scroll-up-button">
-  	<FontAwesomeIcon :icon=faArrowUp />
-</button>
+	<button @click="scrollToTop" class="scroll-up-button" id="scroll-up-button">
+		<FontAwesomeIcon :icon=faArrowUp />
+	</button>
 
-<div class="header-container">
-	<header>
-		<div class="logo-nav-menu-button-container">
-			<div class="header-logo-container">
-				<img class="header-logo" :src="logo" alt="" loading="lazy">
+	<div class="header-container">
+		<header>
+			<div class="logo-nav-menu-button-container">
+				<div class="header-logo-container">
+					<img class="header-logo" :src="logo" alt="" loading="lazy">
+				</div>
+
+				<FontAwesomeIcon @click="showNavMenu()" :icon="faBars" class="nav-menu-icon" />
 			</div>
 
-			<FontAwesomeIcon @click="showNavMenu()" :icon="faBars" class="nav-menu-icon" />
-		</div>
-
-		<nav id="nav-menu" class="header-links">
-			<RouterLink class="header-link link" v-for="navEntry in navEntries" :to=navEntry.link>
-				{{ navEntry.name }}
-			</RouterLink>
-		</nav>
-	</header>
-</div>
-
-<RouterView />
-
-<div class="footer-container">
-	<footer id="footer">
-		<div class="footer-logo-container">
-			<img class="footer-logo" :src="logo" alt="">
-		</div>
-		
-		<div class="footer-links-container">
-			<nav class="footer-links">
-				<RouterLink class="footer-link link" v-for="navEntry in navEntries" :to=navEntry.link>
+			<nav id="nav-menu" class="header-links">
+				<RouterLink class="header-link link" v-for="navEntry in navEntries" :to=navEntry.link>
 					{{ navEntry.name }}
 				</RouterLink>
 			</nav>
+		</header>
+	</div>
 
-			<div class="infos-socials-container">
-				<div class="infos-container">
-					<ul>
-						<li class="info-entry">
-							<a :href=mapsLink class="link" target="_blank">
-								<FontAwesomeIcon :icon="faLocationDot" /> {{ address }} 
-							</a>
-						</li>
+	<RouterView />
 
-						<li class="info-entry">
-							<a :href=mailto class="link">
-								<FontAwesomeIcon :icon="faEnvelope" /> {{ email }}
-							</a>
-						</li>
+	<div class="footer-container">
+		<footer id="footer">
+			<div class="footer-logo-container">
+				<img class="footer-logo" :src="logo" alt="">
+			</div>
 
-						<li class="info-entry">
-							<FontAwesomeIcon :icon="faPhone" /> {{ phone }}
-						</li>
-						<li class="info-entry">
-							{{ weekSchedules }}
-						</li>
-						<li class="info-entry">
-							{{ sundaySchedules }}
-						</li>
-					</ul>
-				</div>
+			<div class="footer-links-container">
+				<nav class="footer-links">
+					<RouterLink class="footer-link link" v-for="navEntry in navEntries" :to=navEntry.link>
+						{{ navEntry.name }}
+					</RouterLink>
+				</nav>
 
-				<div class="socials-container">
-					<ul>
-						<li>
-							<a :href=instagramLink target="_blank">
-								<FontAwesomeIcon :icon="faInstagram" class="social-link link" />
-							</a>
-						</li>
+				<div class="infos-socials-container">
+					<div class="infos-container">
+						<ul>
+							<li class="info-entry">
+								<a :href=mapsLink class="link" target="_blank">
+									<FontAwesomeIcon :icon="faLocationDot" /> {{ address }}
+								</a>
+							</li>
 
-						<!-- <li>
+							<li class="info-entry">
+								<a :href=mailto class="link">
+									<FontAwesomeIcon :icon="faEnvelope" /> {{ email }}
+								</a>
+							</li>
+
+							<li class="info-entry">
+								<FontAwesomeIcon :icon="faPhone" /> {{ phone }}
+							</li>
+							<li class="info-entry">
+								{{ weekSchedules }}
+							</li>
+							<li class="info-entry">
+								{{ sundaySchedules }}
+							</li>
+						</ul>
+					</div>
+
+					<div class="socials-container">
+						<ul>
+							<li>
+								<a :href=instagramLink target="_blank">
+									<FontAwesomeIcon :icon="faInstagram" class="social-link link" />
+								</a>
+							</li>
+
+							<!-- <li>
 							<a href="#">
 								<FontAwesomeIcon :icon="faFacebook" class="social-link link" />
 							</a>
 						</li> -->
-					</ul>
+						</ul>
+					</div>
 				</div>
 			</div>
-		</div>
-	</footer>
-</div>
+		</footer>
+	</div>
 </template>
 
 <style lang="scss">
@@ -142,10 +142,10 @@ onMounted(() => {
 	font-family: $body-font;
 
 	.scroll-up-button {
-		position: fixed; 
+		position: fixed;
 		bottom: 5%;
 		right: 2%;
-		font-size: 2em; 
+		font-size: 2em;
 		width: 60px;
 		height: 60px;
 		@include property-color-opacity(background-color, $secondary-color, 1);
@@ -184,7 +184,8 @@ onMounted(() => {
 		font-size: 36px;
 	}
 
-	.heading, .accent-text {
+	.heading,
+	.accent-text {
 		@include property-color-opacity(color, $primary-color, 1);
 	}
 }
@@ -356,6 +357,7 @@ onMounted(() => {
 		bottom: 10%;
 		right: 18%;
 	}
+
 	.header-container {
 		header {
 			flex-direction: column;
@@ -420,4 +422,3 @@ onMounted(() => {
 	}
 }
 </style>
-
