@@ -7,8 +7,7 @@ defineProps<{
     index: number;
 }>()
 
-function createIdTitle(index: number): string 
-{
+function createIdTitle(index: number): string {
 	return "category-" + index;
 }
 </script>
@@ -56,44 +55,36 @@ function createIdTitle(index: number): string
 </template>
 
 <style scoped lang="scss">
-.menu-title-container 
-{
+.menu-title-container {
 	@include property-color-opacity(background-color, $complementary-color, 0.3);
 	display: flex;
 	justify-content: center;
 
-	.menu-image-title-container 
-	{
+	.menu-image-title-container {
 		@include flex-direction-alignment(row, space-between, center);
 		width: 50%;
 
-		.menu-title-description-container 
-		{
+		.menu-title-description-container {
 			width: 70%;
 			@include flex-direction-alignment(column, center, center);
 
-			.menu-title 
-			{
-				h2 
-				{
+			.menu-title {
+				h2 {
 					font-size: 72px;
 				}
 			}
 
-			.menu-description 
-			{
+			.menu-description {
 				font-size: 24px;
 			}
 		}
 
-		.menu-image-container 
-		{
+		.menu-image-container {
 			width: 30%;
 			display: flex;
 			justify-content: center;
 
-			img 
-			{
+			img {
 				height: 30vh;
 			}
 
@@ -102,43 +93,31 @@ function createIdTitle(index: number): string
 	}
 }
 
-@media only screen and (max-width: 1200px)
-{
-	.menu-title-container 
-	{
-		.menu-image-title-container 
-		{
+@media only screen and (max-width: 1200px) {
+	.menu-title-container {
+		.menu-image-title-container {
 			width: 90%;
 		}
 	}
 }
 
-@media only screen and (max-width: 900px) 
-{
-	.menu-title-container 
-	{
-		.menu-image-title-container 
-		{
-			.menu-image-container 
-			{
-				img 
-				{
+@media only screen and (max-width: 900px) {
+	.menu-title-container {
+		.menu-image-title-container {
+			.menu-image-container {
+				img {
 					height: 150px;
 				}
 			}
 			
-			.menu-title-description-container 
-			{
-				.menu-title 
-				{
-					h2 
-					{
+			.menu-title-description-container {
+				.menu-title {
+					h2 {
 						font-size: 3em;
 					}
 				}
 
-				.menu-description 
-				{
+				.menu-description {
 					font-size: 1.1em;
 				}
 			}

@@ -36,33 +36,27 @@
 </template>
 
 <style scoped lang="scss">
-    .page-container 
-    {
+    .page-container {
         @include flex-direction-alignment(row, center, center);
 
-        h1 
-        {
+        h1 {
             font-size: 3em;
         }
 
-        h3 
-        {
+        h3 {
             font-size: 1.5em;
         }
 
-        .title 
-        {
+        .title {
             @include property-color-opacity(color, $primary-color, 1);
             padding: 5px 0;
         }
 
-        section 
-        {
+        section {
             width: 50%;
         }
 
-        p 
-        {
+        p {
             font-size: 1.3em;
             margin: 10px 0;   
         }

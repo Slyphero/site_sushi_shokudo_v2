@@ -23,68 +23,60 @@
 </template>
 
 <style scoped lang="scss">
-.order-container 
-{
+.order-container {
     @include flex-direction-alignment(column, center, center);
 
-    section 
-    {
+    section {
         width: 50%;
         text-align: center;
-        h1 
-        {
+
+        h1 {
             color: $primary-color;
             font-size: 3em;
         }
     }
 
-    .order-buttons-container 
-    {
+    .order-buttons-container {
         @include flex-direction-alignment(row, center, center);
         min-height: 60vh;
 
-        a 
-        {
-            .order-link 
-            {
+        a {
+            .order-link {
                 text-decoration: none;
                 font-size: 24px;
                 padding: 20px;
                 border-radius: 5px;
             }
 
-            .order-link:hover 
-            {
-                @include property-color-opacity(background-color, $background-color, 1);
-					@include property-color-opacity(color, $text-color, 1);
-					transition: 0.2s ease-in-out;
+            .order-link:hover {
+                @include property-color-opacity(
+                    background-color, $background-color, 1
+                );
+				@include property-color-opacity(color, $text-color, 1);
+				transition: 0.2s ease-in-out;
             }
 
-            .primary-button 
-            {
+            .primary-button {
 					@include property-color-opacity(color, white, 1);
 					@include property-color-opacity(background-color, $primary-color, 1);
             }
 
-            .secondary-button 
-            {
-                @include property-color-opacity(background-color, $secondary-color, 1);
+            .secondary-button {
+                @include property-color-opacity(
+                    background-color, $secondary-color, 1
+                );
             }
         }
     }
 }
 
-@media only screen and (max-width: 768px) 
-{
-    .order-container 
-    {
-        section 
-        {
+@media only screen and (max-width: 768px) {
+    .order-container {
+        section {
             width: 90%;
         }
 
-        .order-buttons-container 
-        {
+        .order-buttons-container {
             flex-direction: column;
         }
     }

@@ -24,8 +24,7 @@ function closePopup() {
 </template>
 
 <style scoped lang="scss">
-.popup-overlay 
-{
+.popup-overlay {
     position: fixed;
     top: 0;
     left: 0;
@@ -35,26 +34,22 @@ function closePopup() {
     @include flex-direction-alignment(row, center, center);
     z-index: 1000;
 
-    .popup-container 
-    {
+    .popup-container {
         width: 60%;
         height: 70%;
 
-        .popup-content 
-        {
+        .popup-content {
             background-color: $background-color;
             border-radius: 5px;
             padding: 5%;
 
-            h1 
-            {
+            h1 {
                 font-size: 2em;
             }
                 
             @include flex-direction-alignment(column, center, center);
 
-            button 
-            {
+            button {
                 background-color: $primary-color;
                 border-radius: 5px;
                 border: none;
@@ -65,18 +60,13 @@ function closePopup() {
     }
 }
 
-@media only screen and (max-width: 768px) 
-{
-    .popup-overlay 
-    {
-        .popup-container 
-        {
+@media only screen and (max-width: 768px) {
+    .popup-overlay {
+        .popup-container {
             width: 70%;
 
-            .popup-content 
-            {
-                h1 
-                {
+            .popup-content {
+                h1 {
                     font-size: 1.5em;
                 }
             }

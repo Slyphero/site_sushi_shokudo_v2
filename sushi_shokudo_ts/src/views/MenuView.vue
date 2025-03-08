@@ -35,21 +35,24 @@ const createIndexPrefixId = (prefix: string, index: number): string => {
 const formatFoodEntry = (foodEntry: FoodEntry, isDrink: boolean): string => {
 	let result = foodEntry.title;
 
-	if (foodEntry.piecesNumber !== undefined && foodEntry.piecesNumber > 1) 
-	{
+	if (foodEntry.piecesNumber !== undefined && foodEntry.piecesNumber > 1) {
 		console.log(foodEntry.piecesNumber);
-		if (!isDrink) 
-		{
-			result = result.concat(" (", foodEntry.piecesNumber.toString(), " pièces) ");
-		} 
-		else 
-		{
-			result = result.concat(" (", foodEntry.piecesNumber.toString(), " cL) ");
+		if (!isDrink) {
+			result = result.concat(
+				" (", 
+				foodEntry.piecesNumber.toString(), 
+				" pièces) "
+			);
+		} else {
+			result = result.concat(
+				" (", 
+				foodEntry.piecesNumber.toString(), 
+				" cL) "
+			);
 		}
 	}
 
-	if (foodEntry.elements !== undefined) 
-	{
+	if (foodEntry.elements !== undefined) {
 		console.log(foodEntry.elements);
 		result = result.concat(" : ");
 		foodEntry.elements.forEach((element) => {
@@ -65,14 +68,19 @@ const formatDrinkEntry = (title: string, quantity: number): string => {
 	return title.concat(" (", quantity.toString(), " cL)");
 }
 
-const formatAlcoolEntry = (title: string, quantity: number, degree: number): string => { 
-	return formatDrinkEntry(title, quantity).concat(" (", degree.toString(), " %)");
+const formatAlcoolEntry = (
+	title: string, quantity: number, degree: number
+): string => { 
+	return formatDrinkEntry(title, quantity).concat(
+		" (", 
+		degree.toString(), 
+		" %)"
+	);
 }
 
 const smoothScrollTo = (target: string): void => {
 	let titleElement: HTMLElement | null = document.getElementById(target);
-	if (titleElement) 
-	{
+	if (titleElement) {
 		window.scrollTo({
 			top: titleElement.offsetTop,
 			behavior: "smooth"
@@ -80,21 +88,20 @@ const smoothScrollTo = (target: string): void => {
 	}
 }
 
-const createAsideLinks = (headingsElements: NodeListOf<HTMLHeadingElement>): void => {
+const createAsideLinks = (
+	headingsElements: NodeListOf<HTMLHeadingElement>
+): void => {
 	const ul: HTMLElement | null = document.getElementById("table-of-contents-links");
 	let li: HTMLLIElement | null;
 	let node: Text | null;
 
-	for (let i = 0; i < headingsElements.length; i++) 
-	{
+	for (let i = 0; i < headingsElements.length; i++) {
 		li = document.createElement("li");
 
-		if (headingsElements[i].textContent !== null) 
-		{
+		if (headingsElements[i].textContent !== null) {
 			const textContent: string = headingsElements[i].textContent ?? "";
 			node = document.createTextNode(textContent);
-			if (ul !== null) 
-			{
+			if (ul !== null) {
 				li.appendChild(node); 
 				li.classList.add("table-of-contents-link");
 				li.setAttribute("style", "padding: 10px 30px; font-size: 1.5em; cursor: pointer; overflow: auto");
@@ -204,8 +211,7 @@ onMounted(() => {
 </template>
 
 <style scoped lang="scss">
-.table-of-contents-button-container 
-{
+.table-of-contents-button-container {
 	position: fixed;
 	top: 3%;
 	left: 2%;
@@ -213,20 +219,17 @@ onMounted(() => {
 	background-color: $primary-color;
 	border-radius: 50%;
 
-	.table-of-contents-button 
-	{
+	.table-of-contents-button {
 		font-size: 2em;
 	}
 }
 
-.table-of-contents-button-container:hover 
-{
+.table-of-contents-button-container:hover {
 	opacity: 0.5;
 	transition: 0.2s ease-in-out;
 }
 
-.aside-container 
-{
+.aside-container {
 	position: fixed;
 	left: -100%;
 	top: 0;
@@ -234,22 +237,18 @@ onMounted(() => {
 	height: 100%;
 	width: 25%;
 
-	aside 
-	{
+	aside {
 		height: 100%;
 
-		h5 
-		{
+		h5 {
 			font-size: 2em;
 			text-align: center;
 		}
 
-		.close-table-of-contents-button-container 
-		{
+		.close-table-of-contents-button-container {
 			padding: 10px 30px;
 
-			.table-of-contents-close-button 
-			{
+			.table-of-contents-close-button {
 				font-size: 2em;
 			}
 		}
@@ -258,28 +257,21 @@ onMounted(() => {
 	transition: 0.5s ease-in-out;
 }
 
-.show 
-{
+.show {
 	left: 0;
 	transition: 0.5s ease-in-out;
 }
 
-
-
-.menus-page-container 
-{
-	.category-container 
-	{
+.menus-page-container {
+	.category-container {
 		@include flex-direction-alignment(column, center, center);
 		width: 100%;
 
-		.category-title-container 
-		{
+		.category-title-container {
 			width: 100%;
 		}
 
-		.category-list-container 
-		{
+		.category-list-container {
 			width: 70%;
 			display: flex;
 			flex-direction: row;
@@ -288,51 +280,42 @@ onMounted(() => {
 		}
 	}
 
-	.drinks-container-title 
-	{
+	.drinks-container-title {
 		@include flex-direction-alignment(row, center, center);
 		height: 20vh;
 
-		h2 
-		{
+		h2 {
 			font-size: 72px;
 		}
 	}
 
-	h3 
-	{
+	h3 {
 		text-align: center;
 		font-size: 48px;
 	}
 
-	.drinks-container 
-	{
+	.drinks-container {
 		font-size: 1.1em;
 		@include flex-direction-alignment(row, center, center);
 		width: 100%;
 
-		table 
-		{
+		table {
 			width: 50%;
 
-			td, th 
-			{
+			td, th {
 				padding: 10px 0;
 			}
 
-			th 
-			{
+			th {
 				font-size: 1.2em;
 			}
 
-			.drink-column 
-			{
+			.drink-column {
 				width: 90%;
 				text-align: left;
 			}
 
-			.price-column 
-			{
+			.price-column {
 				text-align: right;
 				width: 10%;
 			}
@@ -340,46 +323,34 @@ onMounted(() => {
 	}
 }
 
-@media only screen and (max-width: 1500px) 
-{
-	.aside-container 
-	{
+@media only screen and (max-width: 1500px) {
+	.aside-container {
 		width: 30%;
 	}
 
-	.menus-page-container 
-	{
-		.category-container 
-		{
-			.category-list-container 
-			{
+	.menus-page-container {
+		.category-container {
+			.category-list-container {
 				width: 90%;
 			}
 		}
 
-		.drinks-container 
-		{
-			table 
-			{
+		.drinks-container {
+			table {
 				width: 90%;
 			}
 		}
 	}
 }
 
-@media only screen and (max-width: 900px) 
-{
-	.aside-container 
-	{
+@media only screen and (max-width: 900px) {
+	.aside-container {
 		width: 100%;
 	}
 
-	.menus-page-container 
-	{
-		.category-container 
-		{
-			.category-list-container 
-			{
+	.menus-page-container {
+		.category-container {
+			.category-list-container {
 				justify-content: center;
 			}
 		}
